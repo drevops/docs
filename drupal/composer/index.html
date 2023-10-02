@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-drupal/composer" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.1.1">
+<title data-rh="true">Composer | Scaffold for Drupal</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.drevops.com/img/drevops_services_dark.png"><meta data-rh="true" name="twitter:image" content="https://docs.drevops.com/img/drevops_services_dark.png"><meta data-rh="true" property="og:url" content="https://docs.drevops.com/drupal/composer"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Composer | Scaffold for Drupal"><meta data-rh="true" name="description" content="Composer is a dependency manager for PHP projects, including Drupal. It allows"><meta data-rh="true" property="og:description" content="Composer is a dependency manager for PHP projects, including Drupal. It allows"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.drevops.com/drupal/composer"><link data-rh="true" rel="alternate" href="https://docs.drevops.com/drupal/composer" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.drevops.com/drupal/composer" hreflang="x-default"><link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9T1JR2V5RL"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-9T1JR2V5RL",{anonymize_ip:!0})</script><link rel="stylesheet" href="/assets/css/styles.8ddc1583.css">
+<script src="/assets/js/runtime~main.a34e02c5.js" defer="defer"></script>
+<script src="/assets/js/main.fd0b2308.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();null!==e?t(e):window.matchMedia("(prefers-color-scheme: dark)").matches?t("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,t("light"))}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo-dark.svg" alt="Scaffold Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo-light.svg" alt="Scaffold Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div></a><a class="navbar__item navbar__link" href="/drupal">Drupal</a><a class="navbar__item navbar__link" href="/workflows">Workflows</a><a class="navbar__item navbar__link" href="/tools">Tools</a><a class="navbar__item navbar__link" href="/integrations">Integrations</a><a class="navbar__item navbar__link" href="/contributing">Contributing</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/drevops/scaffold" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link" title="View source on GitHub">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z"><input placeholder="Search" aria-label="Search" class="navbar__search-input"><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/">Introduction</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/getting-started/">Getting started</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" aria-expanded="true" href="/drupal/">Drupal</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/drupal/">Overview</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/drupal/composer">Composer</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/drupal/settings">Settings</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/drupal/provision">Provision</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/drupal/module-scaffold">Module scaffold</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/drupal/theme-scaffold">Theme scaffold</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/workflows/">Workflows</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/tools/">Tools</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/integrations/">Integrations</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/contributing/">Contributing</a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Drupal</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Composer</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>Composer</h1>
+<p>Composer is a dependency manager for PHP projects, including Drupal. It allows
+you to declare the libraries your project depends on and manages (
+install/update) them for you.</p>
+<p>Scaffold comes with a pre-configured <code>composer.json</code> file based on
+the <a href="https://github.com/drupal-composer/drupal-project" target="_blank" rel="noopener noreferrer">Drupal Composer project</a>,
+extended to support additional features and tools.</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>See <a href="/workflows/packages">Working with packages</a> for more information
+on how to add and manage dependencies in your project.</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="drupal-composer-project">Drupal Composer project<a href="#drupal-composer-project" class="hash-link" aria-label="Direct link to Drupal Composer project" title="Direct link to Drupal Composer project">​</a></h2>
+<p><a href="https://github.com/drupal-composer/drupal-project" target="_blank" rel="noopener noreferrer">Drupal Composer project</a>
+provides a starter kit for managing your site dependencies with Composer.</p>
+<p>Scaffold extends the Drupal Composer project&#x27;s <code>composer.json</code> to support
+additional features and tools.</p>
+<p>DrevOps team will keep the <code>composer.json</code> file up-to-date with the latest
+version of the <code>composer.json</code> in the Drupal Composer project, so you can always
+make sure you are using the best community practices.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="composerjson"><code>composer.json</code><a href="#composerjson" class="hash-link" aria-label="Direct link to composerjson" title="Direct link to composerjson">​</a></h2>
+<p>The <code>composer.json</code> file is the core configuration file for Composer, detailing
+your project&#x27;s dependencies, scripts, and settings.</p>
+<p>This section provides an overview of each part of the <code>composer.json</code> file,
+explaining its role and how it contributes to your project&#x27;s setup and
+management.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="name"><code>name</code><a href="#name" class="hash-link" aria-label="Direct link to name" title="Direct link to name">​</a></h3>
+<p><a href="https://getcomposer.org/doc/01-basic-usage.md#package-names" target="_blank" rel="noopener noreferrer"><code>name</code></a> is a
+unique identifier for the project in Composer&#x27;s ecosystem consisting of a vendor
+name and the project&#x27;s name.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="description"><code>description</code><a href="#description" class="hash-link" aria-label="Direct link to description" title="Direct link to description">​</a></h3>
+<p>A brief summary of the project&#x27;s purpose.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="type"><code>type</code><a href="#type" class="hash-link" aria-label="Direct link to type" title="Direct link to type">​</a></h3>
+<p><code>type</code> is used to specify the type of the package. This is important because it
+tells Composer and any systems integrating with Composer how to treat the
+package. The type key can influence how the package is installed and used.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="license"><code>license</code><a href="#license" class="hash-link" aria-label="Direct link to license" title="Direct link to license">​</a></h3>
+<p><a href="https://getcomposer.org/doc/04-schema.md#license" target="_blank" rel="noopener noreferrer">license</a> indicates the
+licence of the project. Since Scaffold is a template for your consumer sites that
+are usually proprietary, we use <code>proprietary</code> as the default value. More license
+identifiers are listed at
+the <a href="https://spdx.org/licenses/" target="_blank" rel="noopener noreferrer">SPDX Open Source License Registry</a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="repositories"><code>repositories</code><a href="#repositories" class="hash-link" aria-label="Direct link to repositories" title="Direct link to repositories">​</a></h3>
+<p>The <a href="https://getcomposer.org/doc/04-schema.md#repositories" target="_blank" rel="noopener noreferrer"><code>repositories</code></a>
+section defines custom package repositories, essential for accessing packages
+outside the default Packagist repository.</p>
+<p>See <a href="/workflows/packages">Working with packages</a> for more information on
+how to provide custom and override existing packages in your project.</p>
+<ul>
+<li><a href="https://www.drupal.org/docs/develop/using-composer/using-packagesdrupalorg" target="_blank" rel="noopener noreferrer"><code>drupal</code></a>:
+Serves as the official source for Drupal modules, themes, and distributions.
+It&#x27;s crucial for a Drupal project using Composer, as it allows access to
+Drupal-specific packages not available on Packagist.</li>
+<li><a href="https://asset-packagist.org/" target="_blank" rel="noopener noreferrer"><code>asset-packagist</code></a>: Enables the installation of
+Bower and NPM packages via Composer. This is especially important for Drupal
+projects needing front-end libraries and tools, bridging the gap between
+Composer&#x27;s PHP-centric ecosystem and the broader world of front-end package
+management.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="require"><code>require</code><a href="#require" class="hash-link" aria-label="Direct link to require" title="Direct link to require">​</a></h3>
+<p>The <a href="https://getcomposer.org/doc/04-schema.md#require" target="_blank" rel="noopener noreferrer"><code>require</code></a> section
+specifies the essential packages and libraries your project needs.</p>
+<ul>
+<li><code>php</code>: Specifies the minimum PHP version required to run this project. This
+should be specified as a range rather than an exact version number.
+E.g. <code>&gt;=8.2</code> and not <code>8.2.0</code>.</li>
+<li><a href="https://github.com/composer/installers" target="_blank" rel="noopener noreferrer"><code>composer/installers</code></a>: Allows to
+install packages to the correct location based on the specified package type
+such as <code>drupal-module</code>, <code>drupal-theme</code>, <code>drupal-profile</code>, etc.</li>
+<li><a href="https://github.com/cweagans/composer-patches" target="_blank" rel="noopener noreferrer"><code>cweagans/composer-patches</code></a>:
+Allows applying patches to Composer packages, useful for incorporating fixes
+not yet in official releases.
+See <a href="/workflows/packages#patching">Working with packages</a> for more
+information on how to work with patches.</li>
+<li><code>drupal/admin_toolbar</code>, <code>drupal/clamav</code>, <code>drupal/coffee</code>, etc. - Drupal
+modules that provide various site administration and development helping
+functionalities that is usually installed across all of your Drupal sites.
+Scaffold comes with <a href="/drupal/settings">pre-configured settings</a> for some of the
+modules to make them work out of the box.</li>
+<li><a href="https://github.com/drupal/core-recommended" target="_blank" rel="noopener noreferrer"><code>drupal/core-recommended</code></a>: A
+package that provides a carefully selected set of dependencies, including
+specific versions, which are tested and recommended for a particular Drupal
+core version. It simplifies dependency management by ensuring compatibility
+and stability, as these dependencies are maintained and curated by the Drupal
+community.</li>
+<li><a href="https://www.drupal.org/docs/develop/using-composer/using-drupals-composer-scaffold" target="_blank" rel="noopener noreferrer"><code>drupal/core-composer-scaffold</code></a>:
+Allows downloading and placing scaffold files (like <code>index.php</code>, <code>update.php</code>,
+etc.) from the <code>drupal/core</code> project into their desired location inside the
+web root.</li>
+<li><a href="https://github.com/drush-ops/drush" target="_blank" rel="noopener noreferrer"><code>drush/drush</code></a>: A command-line shell and
+scripting interface for Drupal, providing a wide range of utilities to manage
+and interact with your Drupal sites.</li>
+<li><a href="https://github.com/oomphinc/composer-installers-extender" target="_blank" rel="noopener noreferrer"><code>oomphinc/composer-installers-extender</code></a>:
+Allows any package to be installed to a directory other than the
+default <code>vendor</code> directory within a project on a package-by-package basis.
+This plugin extends the <code>composer/installers</code> plugin to allow any arbitrary
+package type to be handled by their custom installer.</li>
+<li><a href="https://github.com/vlucas/phpdotenv" target="_blank" rel="noopener noreferrer"><code>vlucas/phpdotenv</code></a>: Allows to load
+environment variables from <code>.env</code> files into PHP so that they become available
+to the application and can be accessed via <code>getenv()</code>, <code>$_ENV</code>,
+and <code>$_SERVER</code>.</li>
+<li><a href="https://github.com/webflo/drupal-finder" target="_blank" rel="noopener noreferrer"><code>webflo/drupal-finder</code></a>: Locates
+Drupal installations in a directory structure.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="require-dev"><code>require-dev</code><a href="#require-dev" class="hash-link" aria-label="Direct link to require-dev" title="Direct link to require-dev">​</a></h3>
+<p>The <a href="https://getcomposer.org/doc/04-schema.md#require-dev" target="_blank" rel="noopener noreferrer"><code>require-dev</code></a>
+section lists packages used for development purposes, like code quality checks
+and testing. These tools are essential for development but not required in
+production environments. This distinction helps to keep the production
+deployment streamlined and efficient, while still supporting a comprehensive and
+effective development environment.</p>
+<ul>
+<li><a href="https://github.com/Behat/Behat" target="_blank" rel="noopener noreferrer"><code>behat/behat</code></a>: A PHP framework for
+Behavior-Driven Development (BDD), allowing you to write human-readable
+stories that describe the behavior of your application. It facilitates
+communication between developers, stakeholders, and clients.</li>
+<li><a href="https://github.com/Dealerdirect/phpcodesniffer-composer-installer" target="_blank" rel="noopener noreferrer"><code>dealerdirect/phpcodesniffer-composer-installer</code></a>:
+This tool automatically configures PHP_CodeSniffer to use the coding
+standards (like PSR-2 or Drupal coding standards) installed in a project.</li>
+<li><a href="https://github.com/drevops/behat-format-progress-fail" target="_blank" rel="noopener noreferrer"><code>drevops/behat-format-progress-fail</code></a>:
+Enhances the output format of Behat tests, focusing specifically on progress
+and failure scenarios. This makes it easier to spot and address test failures.</li>
+<li><a href="https://github.com/drevops/behat-screenshot" target="_blank" rel="noopener noreferrer"><code>drevops/behat-screenshot</code></a>: An
+extension for Behat that automatically captures screenshots when tests fail.
+This is helpful for debugging and understanding why a test failed.</li>
+<li><a href="https://github.com/drevops/behat-steps" target="_blank" rel="noopener noreferrer"><code>drevops/behat-steps</code></a>: Provides a
+collection of pre-defined step definitions for Behat. This package speeds up
+the process of writing new Behat tests by providing common step
+implementations.</li>
+<li><a href="https://www.drupal.org/project/drupal" target="_blank" rel="noopener noreferrer"><code>drupal/core-dev</code></a>: Includes
+development-specific dependencies and tools primarily for testing and code
+analysis, including PHPUnit, PHP_CodeSniffer with rules (
+via <a href="https://www.drupal.org/project/coder" target="_blank" rel="noopener noreferrer">Coder</a> module).</li>
+<li><a href="https://github.com/jhedstrom/drupalextension" target="_blank" rel="noopener noreferrer"><code>drupal/drupal-extension</code></a>: A
+Behat extension that provides integration with Drupal, offering step
+definitions specific to Drupal functionality. It facilitates the creation and
+management of Drupal sites for testing purposes.</li>
+<li><a href="https://github.com/VincentLanglet/Twig-CS-Fixer" target="_blank" rel="noopener noreferrer"><code>VincentLanglet/Twig-CS-Fixer</code></a>: This tool
+ensures that Twig templates adhere to a set coding standard, helping maintain
+consistency and readability in template files.</li>
+<li><a href="https://github.com/mglaman/phpstan-drupal" target="_blank" rel="noopener noreferrer"><code>mglaman/phpstan-drupal</code></a>:
+Integrates PHPStan static analysis with Drupal-specific code, helping identify
+potential issues and bugs in Drupal modules and themes.</li>
+<li><a href="https://github.com/palantirnet/drupal-rector" target="_blank" rel="noopener noreferrer"><code>palantirnet/drupal-rector</code></a>:
+Automates the process of updating deprecated code, making Drupal upgrade
+processes more efficient.</li>
+<li><a href="https://github.com/PHPCompatibility/PHPCompatibility" target="_blank" rel="noopener noreferrer"><code>phpcompatibility/php-compatibility</code></a>:
+Provides a collection of sniffs for PHP_CodeSniffer to check PHP code for
+compatibility with different PHP versions, crucial for ensuring long-term
+maintainability.</li>
+<li><a href="https://github.com/phpmd/phpmd" target="_blank" rel="noopener noreferrer"><code>phpmd/phpmd</code></a>: PHP Mess Detector is a
+user-friendly tool that helps you detect several potential problems in your
+PHP code, including possible bugs, suboptimal code, and overcomplicated
+expressions.</li>
+<li><a href="https://github.com/phpspec/prophecy-phpunit" target="_blank" rel="noopener noreferrer"><code>phpspec/prophecy-phpunit</code></a>:
+Integrates the Prophecy mocking library with PHPUnit to provide advanced
+mocking capabilities in tests.</li>
+<li><a href="https://github.com/phpstan/extension-installer" target="_blank" rel="noopener noreferrer"><code>phpstan/extension-installer</code></a>:
+This package automatically installs and enables PHPStan extensions,
+streamlining the setup process for PHPStan in your project.</li>
+<li><a href="https://github.com/pyrech/composer-changelogs" target="_blank" rel="noopener noreferrer"><code>pyrech/composer-changelogs</code></a>:
+Provides a summary of package changes (like updates, removals, and additions)
+after running <code>composer update</code>, improving the visibility of package changes
+and updates in your project.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="conflict"><code>conflict</code><a href="#conflict" class="hash-link" aria-label="Direct link to conflict" title="Direct link to conflict">​</a></h3>
+<p>The <a href="https://getcomposer.org/doc/04-schema.md#conflict" target="_blank" rel="noopener noreferrer"><code>conflict</code></a> section
+prevents installation conflicts with standalone Drupal core, crucial for
+avoiding version clashes and ensuring consistency in core files.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="minimum-stability"><code>minimum-stability</code><a href="#minimum-stability" class="hash-link" aria-label="Direct link to minimum-stability" title="Direct link to minimum-stability">​</a></h3>
+<p>The <a href="https://getcomposer.org/doc/04-schema.md#minimum-stability" target="_blank" rel="noopener noreferrer"><code>minimum-stability</code></a>
+setting controls the minimum stability level of the packages that Composer is
+allowed to install. By setting it to <code>&quot;stable&quot;</code>, you are instructing Composer to
+prefer stable versions of packages over their unstable (like <code>beta</code> or <code>alpha</code>)
+versions.\</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="prefer-stable"><code>prefer-stable</code><a href="#prefer-stable" class="hash-link" aria-label="Direct link to prefer-stable" title="Direct link to prefer-stable">​</a></h3>
+<p>The <a href="https://getcomposer.org/doc/04-schema.md#prefer-stable" target="_blank" rel="noopener noreferrer"><code>prefer-stable</code></a>
+settings, when set to <code>true</code>, instructs Composer to prefer stable versions of
+packages even when the <code>minimum-stability</code> setting allows less stable versions.
+This is especially useful in a mixed stability scenario where some dependencies
+might not have a stable release yet. It ensures that Composer will use stable
+versions wherever possible, thus providing a balance between stability and the
+need for newer features or fixes that might only be available in a less stable
+package version.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="config"><code>config</code><a href="#config" class="hash-link" aria-label="Direct link to config" title="Direct link to config">​</a></h3>
+<p>The <a href="https://getcomposer.org/doc/04-schema.md#config" target="_blank" rel="noopener noreferrer"><code>config</code></a> section
+specifies key configurations for Composer&#x27;s behavior in the project.</p>
+<ul>
+<li><a href="https://getcomposer.org/doc/06-config.md#discard-changes" target="_blank" rel="noopener noreferrer"><code>discard-changes</code></a>:
+When set to <code>true</code>, any local changes made to the dependencies (packages under
+version control like Git) are discarded without prompting when you run
+composer install or composer update. Composer will overwrite the local changes
+with the data from the source repository.</li>
+<li><a href="https://getcomposer.org/doc/06-config.md#sort-packages" target="_blank" rel="noopener noreferrer"><code>sort-packages</code></a>:
+When set to <code>true</code>, this configuration ensures that packages are sorted
+in <code>composer.json</code> and <code>composer.lock</code>. It makes these files more readable and
+helps reduce merge conflicts in version control.</li>
+<li><a href="https://getcomposer.org/doc/06-config.md#allow-plugins" target="_blank" rel="noopener noreferrer"><code>allow-plugins</code></a>:
+This setting specifies which Composer plugins are allowed to run. It&#x27;s a
+security measure to prevent the execution of untrusted code from third-party
+plugins. Each plugin needs to be explicitly allowed to ensure it can execute.</li>
+<li><a href="https://getcomposer.org/doc/06-config.md#platform" target="_blank" rel="noopener noreferrer"><code>platform</code></a>: Specifies the
+PHP version of the platform environment where the current project runs. This
+should be specified as an exact version number (e.g. <code>8.2.0</code>). Should be kept
+in sync with the <code>php</code> version in the <a href="/tools/docker">Docker containers</a>.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="autoload"><code>autoload</code><a href="#autoload" class="hash-link" aria-label="Direct link to autoload" title="Direct link to autoload">​</a></h3>
+<p>The <a href="https://getcomposer.org/doc/04-schema.md#autoload" target="_blank" rel="noopener noreferrer"><code>autoload</code></a> section is
+essential for defining how Composer automatically loads PHP classes within the
+project, without needing to manually include or require each class file.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="autoload-dev"><code>autoload-dev</code><a href="#autoload-dev" class="hash-link" aria-label="Direct link to autoload-dev" title="Direct link to autoload-dev">​</a></h3>
+<p>The <a href="https://getcomposer.org/doc/04-schema.md#autoload-dev" target="_blank" rel="noopener noreferrer"><code>autoload-dev</code></a>
+section is essential for defining how Composer automatically loads PHP
+development-specific classes within the project, without needing to manually
+include or require each class file.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scripts"><code>scripts</code><a href="#scripts" class="hash-link" aria-label="Direct link to scripts" title="Direct link to scripts">​</a></h3>
+<p>The <a href="https://getcomposer.org/doc/04-schema.md#scripts" target="_blank" rel="noopener noreferrer"><code>scripts</code></a> section
+defines custom scripts to be executed at specific points in Composer&#x27;s workflow,
+enhancing the automation and maintenance of your Drupal project.</p>
+<ul>
+<li><a href="https://getcomposer.org/doc/articles/scripts.md#pre-install-cmd" target="_blank" rel="noopener noreferrer"><code>pre-install-cmd</code></a>:
+Executes scripts before the <code>composer install</code> command is run. In your
+configuration, <code>DrupalProject\composer\ScriptHandler::checkComposerVersion</code> is
+specified, which ensures that the Composer version being used is compatible
+with your project setup. This is vital for maintaining consistency and
+avoiding issues due to version mismatches.</li>
+<li><a href="https://getcomposer.org/doc/articles/scripts.md#pre-update-cmd" target="_blank" rel="noopener noreferrer"><code>pre-update-cmd</code></a>:
+Runs scripts before the <code>composer update</code> command is executed. It uses the
+same script as <code>pre-install-cmd</code> to check the Composer version, ensuring that
+updates to your project’s dependencies are compatible with your current
+Composer setup.</li>
+<li><a href="https://getcomposer.org/doc/articles/scripts.md#post-install-cmd" target="_blank" rel="noopener noreferrer"><code>post-install-cmd</code></a>:
+Invoked after the <code>composer install</code> command completes. The
+script <code>DrupalProject\composer\ScriptHandler::createRequiredFiles</code> is
+executed, which typically handles tasks like setting up default files and
+configurations necessary for the Drupal installation.</li>
+<li><a href="https://getcomposer.org/doc/articles/scripts.md#post-update-cmd" target="_blank" rel="noopener noreferrer"><code>post-update-cmd</code></a>:
+Executes scripts after the <code>composer update</code> command. It calls the
+same <code>createRequiredFiles</code> method as in <code>post-install-cmd</code>, ensuring that
+necessary files and configurations are updated or re-established following an
+update of dependencies.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="extra"><code>extra</code><a href="#extra" class="hash-link" aria-label="Direct link to extra" title="Direct link to extra">​</a></h3>
+<p>The <a href="https://getcomposer.org/doc/04-schema.md#extra" target="_blank" rel="noopener noreferrer"><code>extra</code></a> section serves as
+a source of custom configuration for various packages. These packages read
+settings from this section to tailor their behavior according to the specific
+needs and structure of your Drupal project.</p>
+<ul>
+<li><a href="https://www.drupal.org/docs/develop/using-composer/using-drupals-composer-scaffold" target="_blank" rel="noopener noreferrer"><code>drupal-scaffold</code></a>:
+This setting controls which files should be scaffolded:<!-- -->
+<ul>
+<li><code>locations</code>: Specifies the location of the web root (the directory
+containing the <code>index.php</code> file).</li>
+<li><code>file-mapping</code>: Determines which files are managed by the scaffold process.
+Scaffold comes with sensible defaults, but you can customize this section to
+suit your needs.</li>
+</ul>
+</li>
+<li><a href="https://getcomposer.org/doc/faqs/how-do-i-install-a-package-to-a-custom-path-for-my-framework.md" target="_blank" rel="noopener noreferrer"><code>installer-paths</code></a>:
+Defines custom installation paths for various types of packages like Drupal
+modules, themes, and libraries.</li>
+<li><code>installer-types</code>: Specifies additional installer types, such as <code>bower-asset</code>
+and <code>npm-asset</code>, that are handled by
+the <code>oomphinc/composer-installers-extender</code> plugin.</li>
+<li><a href="https://github.com/cweagans/composer-patches" target="_blank" rel="noopener noreferrer"><code>composer-exit-on-patch-failure</code></a>:
+This setting, when enabled, causes Composer to exit if a patch from
+the <code>cweagans/composer-patches</code> plugin fails to apply.</li>
+<li><code>patchLevel</code>: Defines the patch level for specific packages, in this
+case, <code>drupal/core</code>. The <code>-p</code> option followed by a number (e.g., <code>-p1</code>, <code>-p2</code>)
+in patch commands specifies the number of leading directories to strip from
+the file paths found in the patch file. This determines how the paths in the
+patch file are interpreted relative to the current directory where the patch
+is being applied.</li>
+<li><code>patches</code>: Specifies the patches to be applied to specific packages.
+See <a href="/workflows/packages#patching">Working with packages</a> for more
+information on how to work with patches.</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/drevops/scaffold/tree/develop/.scaffold/docs/content/drupal/composer.mdx" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/drupal/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Overview</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/drupal/settings"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Settings</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#drupal-composer-project" class="table-of-contents__link toc-highlight">Drupal Composer project</a></li><li><a href="#composerjson" class="table-of-contents__link toc-highlight"><code>composer.json</code></a><ul><li><a href="#name" class="table-of-contents__link toc-highlight"><code>name</code></a></li><li><a href="#description" class="table-of-contents__link toc-highlight"><code>description</code></a></li><li><a href="#type" class="table-of-contents__link toc-highlight"><code>type</code></a></li><li><a href="#license" class="table-of-contents__link toc-highlight"><code>license</code></a></li><li><a href="#repositories" class="table-of-contents__link toc-highlight"><code>repositories</code></a></li><li><a href="#require" class="table-of-contents__link toc-highlight"><code>require</code></a></li><li><a href="#require-dev" class="table-of-contents__link toc-highlight"><code>require-dev</code></a></li><li><a href="#conflict" class="table-of-contents__link toc-highlight"><code>conflict</code></a></li><li><a href="#minimum-stability" class="table-of-contents__link toc-highlight"><code>minimum-stability</code></a></li><li><a href="#prefer-stable" class="table-of-contents__link toc-highlight"><code>prefer-stable</code></a></li><li><a href="#config" class="table-of-contents__link toc-highlight"><code>config</code></a></li><li><a href="#autoload" class="table-of-contents__link toc-highlight"><code>autoload</code></a></li><li><a href="#autoload-dev" class="table-of-contents__link toc-highlight"><code>autoload-dev</code></a></li><li><a href="#scripts" class="table-of-contents__link toc-highlight"><code>scripts</code></a></li><li><a href="#extra" class="table-of-contents__link toc-highlight"><code>extra</code></a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__links text--center"><div class="footer__links"><a href="https://github.com/drevops/scaffold" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright ©2024 DrevOps. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
