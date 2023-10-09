@@ -24,7 +24,7 @@
     
     
       
-        <title>PHPStan 🚧 - DrevOps<sup>&reg;</sup> - Drupal project template</title>
+        <title>PHPStan - DrevOps<sup>&reg;</sup> - Drupal project template</title>
       
     
     
@@ -142,7 +142,7 @@ You're not viewing the latest version.
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              PHPStan 🚧
+              PHPStan
             
           </span>
         </div>
@@ -442,8 +442,6 @@ You're not viewing the latest version.
       
         
       
-        
-      
     
     
     
@@ -498,26 +496,6 @@ You're not viewing the latest version.
   
   <span class="md-ellipsis">
     Features
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../introduction/rationale/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Rationale 🚧
   </span>
   
 
@@ -997,7 +975,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    PHPCS 🚧
+    PHPCS
   </span>
   
 
@@ -1042,15 +1020,66 @@ You're not viewing the latest version.
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    PHPStan
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    PHPStan 🚧
+    PHPStan
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Ignoring" class="md-nav__link">
+    Ignoring
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1844,7 +1873,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Code of conduct 🚧
+    Code of conduct
   </span>
   
 
@@ -2010,6 +2039,35 @@ You're not viewing the latest version.
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Ignoring" class="md-nav__link">
+    Ignoring
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2040,10 +2098,68 @@ You're not viewing the latest version.
 
 
 <h1 id="PHPStan---PHP-Static-Analysis-Tool">PHPStan - PHP Static Analysis Tool<a class="headerlink" href="#PHPStan---PHP-Static-Analysis-Tool" title="Permanent link">&para;</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Work in progress</p>
-<p>The documentation section is still a work in progress.</p>
-</div>
+<p><a href="https://phpstan.org/user-guide/getting-started">https://phpstan.org/user-guide/getting-started</a></p>
+<p>PHPStan focuses on finding errors in your code without actually running it. It
+catches whole classes of bugs even before you write tests for the code. It moves
+PHP closer to compiled languages in the sense that the correctness of each line
+of the code can be checked before you run the actual line.</p>
+<p>DrevOps comes with <a href="https://github.com/drevops/drevops/tree/main/phpstan.neon">pre-configured PHPStan ruleset</a> for
+Drupal projects.</p>
+<h2 id="Usage">Usage<a class="headerlink" href="#Usage" title="Permanent link">&para;</a></h2>
+<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>vendor/bin/phpstan
+</span></code></pre></div></td></tr></table></div>
+<p>or</p>
+<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>ahoy<span class="w"> </span>lint-be
+</span></code></pre></div></td></tr></table></div>
+<h2 id="Configuration">Configuration<a class="headerlink" href="#Configuration" title="Permanent link">&para;</a></h2>
+<p>See <a href="https://phpstan.org/config-reference">configuration reference</a>.</p>
+<p>All global configuration takes place in the <a href="https://github.com/drevops/drevops/tree/main/phpstan.neon"><code>phpstan.neon</code></a>
+file.</p>
+<p>By default, PHPStan will check with the Drupal context in mind thanks to
+<a href="https://github.com/mglaman/phpstan-drupal">mglaman/phpstan-drupal</a>.</p>
+<p>Targets include custom modules and themes, settings and tests.</p>
+<p>Adding or removing targets:</p>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nt">parameters</span><span class="p">:</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="nt">paths</span><span class="p">:</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">path/to/dir_or_file</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">  </span><span class="nt">excludePaths</span><span class="p">:</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">path/to/exclude/all_dir_files/*</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">path/to/exclude/a_file.php</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="Ignoring">Ignoring<a class="headerlink" href="#Ignoring" title="Permanent link">&para;</a></h2>
+<p>Ignoring rules <strong>globally</strong> takes place in
+the <a href="https://github.com/drevops/drevops/tree/main/phpstan.neon"><code>phpstan.neon</code></a> file:</p>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span>
+<span class="normal"><a href="#__codelineno-3-8">8</a></span>
+<span class="normal"><a href="#__codelineno-3-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">parameters</span><span class="p">:</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">  </span><span class="nt">ignoreErrors</span><span class="p">:</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="p p-Indicator">-</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">      </span><span class="c1"># Comment about why this rules is excluded.</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">      </span><span class="c1"># &#39;message&#39; is a regular expression with `#` as begin and end delimiters.</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;#.*no</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">specified</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">iterable</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">array.#&#39;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">      </span><span class="nt">paths</span><span class="p">:</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">path/to/exclude/all_dir_files/*</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">path/to/exclude/a_file.php</span>
+</span></code></pre></div></td></tr></table></div>
+<p>PHPStan does not support ignoring of <strong>all PHPStan rules</strong> within a file.</p>
+<p>PHPStan does not support ignoring of <strong>a specific rule</strong> within a file.</p>
+<p>PHPStan <a href="https://github.com/phpstan/phpstan/issues/4452">does not support</a> ignoring of the <strong>code blocks</strong>.</p>
+<p>To ignore only the current and the <strong>next line</strong>:</p>
+<div class="language-php highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="x">// @phpstan-ignore-next-line</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="x">$a = 1;</span>
+</span></code></pre></div></td></tr></table></div>
 
 
   

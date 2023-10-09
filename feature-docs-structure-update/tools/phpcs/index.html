@@ -24,7 +24,7 @@
     
     
       
-        <title>PHPCS 🚧 - DrevOps<sup>&reg;</sup> - Drupal project template</title>
+        <title>PHPCS - DrevOps<sup>&reg;</sup> - Drupal project template</title>
       
     
     
@@ -142,7 +142,7 @@ You're not viewing the latest version.
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              PHPCS 🚧
+              PHPCS
             
           </span>
         </div>
@@ -442,8 +442,6 @@ You're not viewing the latest version.
       
         
       
-        
-      
     
     
     
@@ -498,26 +496,6 @@ You're not viewing the latest version.
   
   <span class="md-ellipsis">
     Features
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../introduction/rationale/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Rationale 🚧
   </span>
   
 
@@ -1002,15 +980,66 @@ You're not viewing the latest version.
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    PHPCS
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    PHPCS 🚧
+    PHPCS
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Ignoring" class="md-nav__link">
+    Ignoring
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1047,7 +1076,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    PHPStan 🚧
+    PHPStan
   </span>
   
 
@@ -1844,7 +1873,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Code of conduct 🚧
+    Code of conduct
   </span>
   
 
@@ -2010,6 +2039,35 @@ You're not viewing the latest version.
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Ignoring" class="md-nav__link">
+    Ignoring
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2040,10 +2098,66 @@ You're not viewing the latest version.
 
 
 <h1 id="PHPCS---PHP-Code-Sniffer">PHPCS - PHP Code Sniffer<a class="headerlink" href="#PHPCS---PHP-Code-Sniffer" title="Permanent link">&para;</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Work in progress</p>
-<p>The documentation section is still a work in progress.</p>
-</div>
+<p><a href="https://github.com/squizlabs/PHP_CodeSniffer">https://github.com/squizlabs/PHP_CodeSniffer</a></p>
+<p>PHP_CodeSniffer is a set of two PHP scripts; the main <code>phpcs</code> script that
+tokenizes PHP, JavaScript and CSS files to detect violations of a defined coding
+standard, and a second <code>phpcbf</code> script to automatically correct coding standard
+violations. PHP_CodeSniffer is an essential development tool that ensures your
+code remains clean and consistent.</p>
+<p>DrevOps comes with <a href="https://github.com/drevops/drevops/tree/main/phpcs.xml">pre-configured PHPCS ruleset</a> for Drupal projects.</p>
+<h2 id="Usage">Usage<a class="headerlink" href="#Usage" title="Permanent link">&para;</a></h2>
+<p><div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>vendor/bin/phpcs
+</span></code></pre></div></td></tr></table></div>
+or
+<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>ahoy<span class="w"> </span>lint-be
+</span></code></pre></div></td></tr></table></div></p>
+<h2 id="Configuration">Configuration<a class="headerlink" href="#Configuration" title="Permanent link">&para;</a></h2>
+<p>See <a href="https://github.com/squizlabs/PHP_CodeSniffer/wiki/Configuration-Options">configuration reference</a>.</p>
+<p>All global configuration takes place in the <a href="https://github.com/drevops/drevops/tree/main/phpcs.xml"><code>phpcs.xml</code></a> file.</p>
+<p>By default, PHPCS will check against the following rules:</p>
+<ul>
+<li><code>Drupal</code></li>
+<li><code>DrupalPractice</code></li>
+<li><code>Generic.Debug.ESLint</code></li>
+<li><code>PHPCompatibility</code></li>
+</ul>
+<p>Targets include custom modules and themes, settings and tests.</p>
+<p>Adding or removing targets:
+<div class="language-xml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nt">&lt;file&gt;</span>path/to/dir_or_file<span class="nt">&lt;/file&gt;</span>
+</span></code></pre></div></td></tr></table></div></p>
+<p>Run checks against platform version specified in <code>composer.json</code> key <code>config.platform.php</code>:
+<div class="language-xml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">&lt;config</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;testVersion&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;8.1&quot;</span><span class="nt">/&gt;</span>
+</span></code></pre></div></td></tr></table></div></p>
+<h2 id="Ignoring">Ignoring<a class="headerlink" href="#Ignoring" title="Permanent link">&para;</a></h2>
+<p>Ignoring rules <strong>globally</strong> takes place in the <a href="https://github.com/drevops/drevops/tree/main/phpcs.xml"><code>phpcs.xml</code></a> file:
+<div class="language-xml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="cm">&lt;!-- Comment about why this rules is excluded. --&gt;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="nt">&lt;rule</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;DrupalPractice.General.ClassName.ClassPrefix&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="nt">&lt;exclude-pattern&gt;</span>*\/dir\/another\/*\.php<span class="nt">&lt;/exclude-pattern&gt;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="nt">&lt;exclude-pattern&gt;</span>*\/dir\/another\/*\.inc<span class="nt">&lt;/exclude-pattern&gt;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="nt">&lt;/rule&gt;</span>
+</span></code></pre></div></td></tr></table></div></p>
+<p>To ignore <strong>all PHPCS rules</strong> within a file, place in the file header:
+<div class="language-php highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="x">// phpcs:ignoreFile</span>
+</span></code></pre></div></td></tr></table></div></p>
+<p>To ignore <strong>a specific rule</strong> within a file, place in the file header:
+<div class="language-php highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="x">// phpcs:disable &lt;rule_name&gt;</span>
+</span></code></pre></div></td></tr></table></div></p>
+<p>To ignore rule for the <strong>code block</strong>:
+<div class="language-php highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="x">// phpcs:disable &lt;rule_name&gt;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="x">$a = 1;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="x">// phpcs:enable &lt;rule_name&gt;</span>
+</span></code></pre></div></td></tr></table></div></p>
+<p>To ignore only the current and the <strong>next line</strong>:
+<div class="language-php highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="x">// phpcs:ignore</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="x">$a = 1;</span>
+</span></code></pre></div></td></tr></table></div></p>
 
 
   
