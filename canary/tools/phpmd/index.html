@@ -24,7 +24,7 @@
     
     
       
-        <title>PHPMD 🚧 - DrevOps<sup>&reg;</sup> - Drupal project template</title>
+        <title>PHPMD - DrevOps<sup>&reg;</sup> - Drupal project template</title>
       
     
     
@@ -142,7 +142,7 @@ You're not viewing the latest version.
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              PHPMD 🚧
+              PHPMD
             
           </span>
         </div>
@@ -782,6 +782,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -1000,15 +1002,66 @@ You're not viewing the latest version.
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    PHPMD
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    PHPMD 🚧
+    PHPMD
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Ignoring" class="md-nav__link">
+    Ignoring
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1046,6 +1099,26 @@ You're not viewing the latest version.
   
   <span class="md-ellipsis">
     PHPUnit 🚧
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../twigcs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Twigcs 🚧
   </span>
   
 
@@ -1988,6 +2061,35 @@ You're not viewing the latest version.
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Ignoring" class="md-nav__link">
+    Ignoring
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2018,10 +2120,108 @@ You're not viewing the latest version.
 
 
 <h1 id="PHPMD---PHP-Mess-Detector">PHPMD - PHP Mess Detector<a class="headerlink" href="#PHPMD---PHP-Mess-Detector" title="Permanent link">&para;</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Work in progress</p>
-<p>The documentation section is still a work in progress.</p>
-</div>
+<p><a href="https://github.com/phpmd/phpmd">https://github.com/phpmd/phpmd</a></p>
+<p>What PHPMD does is: It takes a given PHP source code base and look for several
+potential problems within that source. These problems can be things like:</p>
+<ul>
+<li>Possible bugs</li>
+<li>Suboptimal code</li>
+<li>Overcomplicated expressions</li>
+<li>Unused parameters, methods, properties</li>
+</ul>
+<p>DrevOps comes with <a href="https://github.com/drevops/drevops/tree/main/phpmd.xml">pre-configured PHPMD ruleset</a>
+for Drupal projects.</p>
+<h2 id="Usage">Usage<a class="headerlink" href="#Usage" title="Permanent link">&para;</a></h2>
+<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>vendor/bin/phpmd<span class="w"> </span>.<span class="w"> </span>text<span class="w"> </span>phpmd.xml
+</span></code></pre></div></td></tr></table></div>
+<p>or</p>
+<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>ahoy<span class="w"> </span>lint-be
+</span></code></pre></div></td></tr></table></div>
+<h2 id="Configuration">Configuration<a class="headerlink" href="#Configuration" title="Permanent link">&para;</a></h2>
+<p>See <a href="https://phpmd.org/documentation/index.html">configuration reference</a>.</p>
+<p>All global configuration takes place in the <a href="https://github.com/drevops/drevops/tree/main/phpmd.xml"><code>phpmd.xml</code></a>
+file.</p>
+<p>Targets include custom modules and themes, settings and tests.</p>
+<p>Adding targets is not supported via configuration file. Instead, use the
+exclusion patterns to exclude files and directories.</p>
+<div class="language-xml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nt">&lt;exclude-pattern&gt;</span>*\/dir\/another\/*\.php<span class="nt">&lt;/exclude-pattern&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="Ignoring">Ignoring<a class="headerlink" href="#Ignoring" title="Permanent link">&para;</a></h2>
+<p>Ignoring rules <strong>globally</strong> takes place in
+the <a href="https://github.com/drevops/drevops/tree/main/phpstan.neon"><code>phpstan.neon</code></a> file:</p>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span>
+<span class="normal"><a href="#__codelineno-3-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">parameters</span><span class="p">:</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">  </span><span class="nt">ignoreErrors</span><span class="p">:</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="c1"># Comment about why this rules is excluded.</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">      </span><span class="c1"># &#39;message&#39; is a regular expression with `#` as begin and end delimiters.</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;#.*no</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">specified</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">iterable</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">array.#&#39;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">      </span><span class="nt">paths</span><span class="p">:</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">path/to/exclude/all_dir_files/*</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">path/to/exclude/a_file.php</span>
+</span></code></pre></div></td></tr></table></div>
+<p>PHPMD does not support ignoring of <strong>all PHPMD rules</strong> within a file.</p>
+<p>PHPMD does not support ignoring of <strong>a specific rule</strong> within a file.</p>
+<p>PHPMD does not support ignoring of the <strong>code blocks</strong>.</p>
+<p>PHPMD does not support ignoring the current and the <strong>next line</strong>.</p>
+<p>PHPMD supports ignoring rules for <strong>methods or classes</strong>.</p>
+<div class="language-php highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span>
+<span class="normal"><a href="#__codelineno-4-24">24</a></span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span>
+<span class="normal"><a href="#__codelineno-4-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="x">/**</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="x"> * This will suppress all the PMD warnings in</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="x"> * this class.</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="x"> *</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="x"> * @SuppressWarnings(PHPMD)</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="x"> */</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="x">class Bar {</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="x">    function  foo() {</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="x">        $baz = 23;</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="x">    }</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="x">}</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="x">/**</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="x"> *</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="x"> */</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="x">class Bar {</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="x">  /**</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="x">   * This will suppress UnusedLocalVariable</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="x">   * warnings in this method</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="x">   *</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="x">   * @SuppressWarnings(PHPMD.UnusedLocalVariable)</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="x">   */</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="x">  public function foo() {</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="x">      $baz = 42;</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="x">  }</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="x">}</span>
+</span></code></pre></div></td></tr></table></div>
 
 
   

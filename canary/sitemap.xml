@@ -211,6 +211,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.drevops.com/canary/tools/twigcs/</loc>
+         <lastmod>2023-10-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.drevops.com/canary/tools/xdebug/</loc>
          <lastmod>2023-10-09</lastmod>
          <changefreq>daily</changefreq>
