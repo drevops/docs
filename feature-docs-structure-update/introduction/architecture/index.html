@@ -579,6 +579,13 @@ You're not viewing the latest version.
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#Core-principles" class="md-nav__link">
+    Core principles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#Repository-structure" class="md-nav__link">
     Repository structure
   </a>
@@ -2066,6 +2073,13 @@ You're not viewing the latest version.
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#Core-principles" class="md-nav__link">
+    Core principles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#Repository-structure" class="md-nav__link">
     Repository structure
   </a>
@@ -2141,6 +2155,17 @@ You're not viewing the latest version.
 <p>DrevOps offers a pre-configured project template that is reliable, tested and
 ready-to-use. Its main goal is to streamline onboarding, making it as quick and
 efficient as possible.</p>
+<h2 id="Core-principles">Core principles<a class="headerlink" href="#Core-principles" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Rely on the upstream dependencies as much as possible.</li>
+<li>Keep your project repository structure as close to the
+   <a href="https://github.com/drupal-composer/drupal-project">drupal-composer/drupal-project</a> as possible.</li>
+<li>Keep tooling configuration as minimal as possible and aligned with the
+   community standards. But provide a way to override it if needed (e.g.,
+   configuration files).</li>
+<li>Use scripts to orchestrate workflows and control them via environment variables.</li>
+<li>Automatically test (with coverage reporting) and document everything.</li>
+</ol>
 <h2 id="Repository-structure">Repository structure<a class="headerlink" href="#Repository-structure" title="Permanent link">&para;</a></h2>
 <p>The repository file structure follows the structure defined in
 <a href="https://github.com/drupal-composer/drupal-project">drupal-composer/drupal-project</a>
@@ -2169,7 +2194,12 @@ in the codebase.</p>
 <tr>
 <td><code>.data</code></td>
 <td>Directory</td>
-<td>Downloaded database dump files. Excluded from the repository.</td>
+<td>Directory for downloaded database dump files. Excluded from the repository.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/drevops/drevops/tree/main/.docker"><code>.docker</code></a></td>
+<td>Directory</td>
+<td>Docker configuration files.</td>
 </tr>
 <tr>
 <td><a href="https://github.com/drevops/drevops/tree/main/.github"><code>.github</code></a></td>
@@ -2177,9 +2207,14 @@ in the codebase.</p>
 <td>GitHub configuration files.</td>
 </tr>
 <tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/.docker"><code>.docker</code></a></td>
+<td><code>.logs</code></td>
 <td>Directory</td>
-<td>Docker configuration files.</td>
+<td>Test logs and screenshots. Excluded from the repository.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/drevops/drevops/tree/main/config"><code>config</code></a></td>
+<td>Directory</td>
+<td>Directory for drupal exported configuration.</td>
 </tr>
 <tr>
 <td><a href="https://github.com/drevops/drevops/tree/main/docs"><code>docs</code></a></td>
@@ -2262,6 +2297,11 @@ in the codebase.</p>
 <td>Lagoon configuration file. Removed if Lagoon hosting is not in use.</td>
 </tr>
 <tr>
+<td><a href="https://github.com/drevops/drevops/tree/main/.twig_cs.php"><code>.twig_cs.php</code></a></td>
+<td>File</td>
+<td>Twigcs <a href="https://github.com/friendsoftwig/twigcs#file-based-configuration">configuration</a> file.</td>
+</tr>
+<tr>
 <td><a href="https://github.com/drevops/drevops/tree/main/behat.yml"><code>behat.yml</code></a></td>
 <td>File</td>
 <td>Behat <a href="https://docs.behat.org/en/latest/user_guide/configuration.html">configuration</a> file.</td>
@@ -2285,6 +2325,11 @@ in the codebase.</p>
 <td><a href="https://github.com/drevops/drevops/tree/main/phpcs.xml"><code>phpcs.xml</code></a></td>
 <td>File</td>
 <td>PHP CodeSniffer <a href="https://github.com/squizlabs/PHP_CodeSniffer/wiki/Advanced-Usage#using-a-default-configuration-file">configuration</a> file.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/drevops/drevops/tree/main/phpmd.xml"><code>phpmd.xml</code></a></td>
+<td>File</td>
+<td>PHP Mess Detector <a href="https://github.com/phpmd/phpmd">configuration</a> file.</td>
 </tr>
 <tr>
 <td><a href="https://github.com/drevops/drevops/tree/main/phpstan.neon"><code>phpstan.neon</code></a></td>
@@ -2311,16 +2356,16 @@ in the codebase.</p>
 <h2 id="Scripts">Scripts<a class="headerlink" href="#Scripts" title="Permanent link">&para;</a></h2>
 <p>DrevOps provides a set of <a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a>-compliant
 scripts designed to orchestrate workflows.</p>
-<p>During installation, the scripts are added to a project repository into
+<p>During installation, the scripts are added to your project repository into
 <code>scripts/drevops</code> directory.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Using scripts instead of compiled binaries allows for <strong>in-place per-project
 overrides</strong> without needing to learn an additional programming language, compile
 sources, or rely on upstream dependencies.</p>
-<p>This means that you can modify any DrevOps script to suit your needs within
-your project repository instead of waiting for upstream to make changes to
-support a feature required in your project.</p>
+<p>In the future, we will be providing <code>pre-</code> and <code>post-</code> hooks for scripts so
+that you can extend the functionality without modifying the original source
+code.</p>
 </div>
 <h3 id="Centralised-workflows">Centralised workflows<a class="headerlink" href="#Centralised-workflows" title="Permanent link">&para;</a></h3>
 <p>The scripts aim to centralize workflows instead of adjusting them for every
@@ -2346,34 +2391,27 @@ so on.</p>
     B --&gt; Scripts
     C --&gt; Scripts
     C --&gt; Scripts</code></pre>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>The scripts are self-contained, making it possible to copy them
-individually to projects that do not utilize DrevOps.</p>
-</div>
-<p>Environment variables control the flow, with the same operations and order, but
-certain operations can be enabled or disabled depending on the environment.</p>
-<p>In practice, this means that, for example, a script used for downloading a
-database is called from Ahoy for local development, from CI configuration, and
-from the hosting configuration file is the same script <code>download-db.sh</code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The tooling (linters, test runners etc.) is configured to be used as-is,
-without any additional wrappers.</p>
+<p><a href="../../workflows/variables/">Environment variables</a> control the flow, with the same
+operations and order, but certain operations can be enabled or disabled
+depending on the environment.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>A script used for downloading a database is called from Ahoy for
+local development, from CI configuration, and from the hosting configuration
+file is the same <code>scripts/drevops/download-db.sh</code> script.</p>
 </div>
 <h3 id="Router-scripts">Router scripts<a class="headerlink" href="#Router-scripts" title="Permanent link">&para;</a></h3>
 <p>The script from the example above is a <em>router</em> script that invokes other,
-more specific scripts (by sourcing them) based on the project configuration. This
-design <strong>keeps the entry point consistent</strong> while allowing implementation updates
-as needed without modifying the entry point everywhere.</p>
-<p>For example, changing the database download source from <code>lagoon</code> to <code>s3</code> would
-not require changes to any local, CI, or hosting scripts. Moreover, a developer
-would not need to learn how to use <code>s3</code> to download a database or even know
-how that download process is setup.</p>
-<p>If a new database download method is introduced, the router
-script <code>download-db.sh</code> can be easily extended to accommodate it,
-without altering configuration files for services.</p>
-<pre class="mermaid"><code>flowchart LR
+more specific scripts (by sourcing them) based on the project configuration.
+This
+design <strong>keeps the entry point consistent</strong> while allowing implementation
+updates as needed without modifying the entry point everywhere.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<pre class="mermaid"><code>---
+title: Example of a router script
+---
+flowchart LR
     subgraph download-db.sh
         F{DB source type}
     end
@@ -2383,11 +2421,20 @@ without altering configuration files for services.</p>
     F -- Lagoon --&gt; J[download-db-lagoon.sh]
     F -- Docker registry --&gt; K[download-db-docker-registry.sh]
     F -- Your custom source --&gt; L[download-db-your-source.sh]</code></pre>
+<p>Changing the database download source from <code>lagoon</code> to <code>s3</code> would
+not require changes to any local, CI, or hosting scripts.</p>
+<p>In addition, a developer would not need to learn how to use <code>s3</code> to
+download a database or even know how that download process is setup.</p>
+<p>If a new database download method is introduced, the router
+script <code>download-db.sh</code> can be easily extended to accommodate it,
+without altering configuration files for services.</p>
+</div>
 <h3 id="Environment-variables">Environment variables<a class="headerlink" href="#Environment-variables" title="Permanent link">&para;</a></h3>
 <p>The workflow within scripts is controlled via environment variables.</p>
 <p>To alter the workflow for a specific environment, the variables would need to be
 set within that environment via the configuration file or other means supported
-by the environment (e.g. CircleCI and Acquia support injecting variables via UI).</p>
+by the environment (e.g. CircleCI and Acquia support injecting variables via
+UI).</p>
 <p>See <a href="../../workflows/variables/">Variables</a> section for more details.</p>
 
 
