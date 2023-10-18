@@ -23,10 +23,8 @@
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
-      
-        <title>Deployment - DrevOps<sup>&reg;</sup> - Drupal project template</title>
-      
-    
+<title>DrevOps - Drupal project template</title>
+
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
       
@@ -835,27 +833,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Ahoy 🚧
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tools/automated-updates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Automated updates
+    Ahoy
   </span>
   
 
@@ -875,7 +853,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Behat 🚧
+    Behat
   </span>
   
 
@@ -955,7 +933,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Git artifact 🚧
+    Git artifact
   </span>
   
 
@@ -1035,7 +1013,27 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    PHPUnit 🚧
+    PHPUnit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/renovate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Renovate
   </span>
   
 
@@ -1055,7 +1053,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Twigcs 🚧
+    Twigcs
   </span>
   
 
@@ -2147,46 +2145,46 @@ You're not viewing the latest version.
 
 <h1 id="Deployment">Deployment<a class="headerlink" href="#Deployment" title="Permanent link">&para;</a></h1>
 <p>The deployment to a remote location is performed by the
-<a href="https://github.com/drevops/drevops/tree/main/scripts/drevops/deploy.sh"><code>scripts/drevops/deploy.sh</code></a> <em>router</em>
+<a href="https://github.com/drevops/drevops/tree/main/scripts/drevops/deploy.sh"><code class="language-text highlight">scripts/drevops/deploy.sh</code></a> <em>router</em>
 script.</p>
 <p>The script runs in CI only after all tests pass.</p>
 <p>The script deploys the  code to a remote location by calling the
-relevant scripts based on the type of deployment defined in <code>$DREVOPS_DEPLOY_TYPES</code>
+relevant scripts based on the type of deployment defined in <code class="language-text highlight">$DREVOPS_DEPLOY_TYPES</code>
 variable as a comma-separated list of one or multiple supported deployment types:</p>
 <ul>
-<li><code>webhook</code> - a webhook URL is called via CURL.</li>
-<li><code>artifact</code> - a code artifact created and sent to a remote repository.</li>
-<li><code>lagoon</code> - a special webhook URL is called via CURL to trigger a deployment in
+<li><code class="language-text highlight">webhook</code> - a webhook URL is called via CURL.</li>
+<li><code class="language-text highlight">artifact</code> - a code artifact created and sent to a remote repository.</li>
+<li><code class="language-text highlight">lagoon</code> - a special webhook URL is called via CURL to trigger a deployment in
   Lagoon.</li>
-<li><code>docker</code>- a Docker image is built and pushed to a remote registry.</li>
+<li><code class="language-text highlight">docker</code>- a Docker image is built and pushed to a remote registry.</li>
 </ul>
 <h2 id="Setting-up-deployments">Setting up deployments<a class="headerlink" href="#Setting-up-deployments" title="Permanent link">&para;</a></h2>
 <p>After setting up the deployment integration, you can begin using it by adding
-the <code>$DREVOPS_DEPLOY_PROCEED</code> variable with a value of <code>1</code> in the CircleCI user
+the <code class="language-text highlight">$DREVOPS_DEPLOY_PROCEED</code> variable with a value of <code class="language-text highlight">1</code> in the CircleCI user
 interface. This variable is used as a failsafe to prevent accidental
 deployments while setting up DrevOps.</p>
 <h2 id="Using-deployments">Using deployments<a class="headerlink" href="#Using-deployments" title="Permanent link">&para;</a></h2>
 <h3 id="Deployment-action">Deployment action<a class="headerlink" href="#Deployment-action" title="Permanent link">&para;</a></h3>
 <p>By default, an existing database will be retained during a deployment. To change
-this behavior and overwrite the database, set the <code>$DREVOPS_DEPLOY_ACTION</code>
-variable to <code>deploy_override_db</code>.</p>
+this behavior and overwrite the database, set the <code class="language-text highlight">$DREVOPS_DEPLOY_ACTION</code>
+variable to <code class="language-text highlight">deploy_override_db</code>.</p>
 <h3 id="Skipping-deployments-for-specific-Pull-Requests-or-branches">Skipping deployments for specific Pull Requests or branches<a class="headerlink" href="#Skipping-deployments-for-specific-Pull-Requests-or-branches" title="Permanent link">&para;</a></h3>
-<p>To skip a specific Pull Request or branch using the <code>$DREVOPS_DEPLOY_SKIP</code>
+<p>To skip a specific Pull Request or branch using the <code class="language-text highlight">$DREVOPS_DEPLOY_SKIP</code>
 variable, you would define additional environment variables with a specific
 naming convention in your CI configuration.</p>
 <p>Here's an example of how this can be done:</p>
 <h4 id="Skipping-a-specific-Pull-Request">Skipping a specific Pull Request:<a class="headerlink" href="#Skipping-a-specific-Pull-Request" title="Permanent link">&para;</a></h4>
 <p>Suppose you want to skip the deployment for Pull Request number 42. You would
    set the following environment variable:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nv">DREVOPS_DEPLOY_SKIP_PR_42</span><span class="o">=</span><span class="m">1</span>
-</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code><span class="nv">DREVOPS_DEPLOY_SKIP_PR_42</span><span class="o">=</span><span class="m">1</span>
+</code></pre></div>
 <h4 id="Skipping-a-specific-branch">Skipping a specific branch:<a class="headerlink" href="#Skipping-a-specific-branch" title="Permanent link">&para;</a></h4>
-<p>Suppose you want to skip the deployment for a branch named <code>feature-x</code>. You
+<p>Suppose you want to skip the deployment for a branch named <code class="language-text highlight">feature-x</code>. You
    would first create a "safe" version of the branch name by replacing any
    special characters with underscores.</p>
 <p>Set the following environment variable:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nv">DREVOPS_DEPLOY_SKIP_BRANCH_FEATURE_X</span><span class="o">=</span><span class="m">1</span>
-</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code><span class="nv">DREVOPS_DEPLOY_SKIP_BRANCH_FEATURE_X</span><span class="o">=</span><span class="m">1</span>
+</code></pre></div>
 
 
   

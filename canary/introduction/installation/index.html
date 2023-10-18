@@ -23,10 +23,8 @@
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
-      
-        <title>Installation - DrevOps<sup>&reg;</sup> - Drupal project template</title>
-      
-    
+<title>DrevOps - Drupal project template</title>
+
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
       
@@ -891,27 +889,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Ahoy 🚧
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tools/automated-updates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Automated updates
+    Ahoy
   </span>
   
 
@@ -931,7 +909,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Behat 🚧
+    Behat
   </span>
   
 
@@ -1011,7 +989,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Git artifact 🚧
+    Git artifact
   </span>
   
 
@@ -1091,7 +1069,27 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    PHPUnit 🚧
+    PHPUnit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/renovate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Renovate
   </span>
   
 
@@ -1111,7 +1109,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Twigcs 🚧
+    Twigcs
   </span>
   
 
@@ -2107,22 +2105,22 @@ You're not viewing the latest version.
 
 <h1 id="Installation">Installation<a class="headerlink" href="#Installation" title="Permanent link">&para;</a></h1>
 <h2 id="Installation_1">Installation<a class="headerlink" href="#Installation_1" title="Permanent link">&para;</a></h2>
-<div class="language-shell highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Install using interactive prompt</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>curl<span class="w"> </span>-SsL<span class="w"> </span>https://install.drevops.com<span class="w"> </span><span class="p">|</span><span class="w"> </span>php
-</span></code></pre></div></td></tr></table></div>
-<div class="language-shell highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Quiet installation</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>curl<span class="w"> </span>-SsL<span class="w"> </span>https://install.drevops.com<span class="w"> </span><span class="p">|</span><span class="w"> </span>php<span class="w"> </span>--<span class="w"> </span>--quiet
-</span></code></pre></div></td></tr></table></div>
-<div class="language-shell highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Installation into a specific directory</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>curl<span class="w"> </span>-SsL<span class="w"> </span>https://install.drevops.com<span class="w"> </span><span class="p">|</span><span class="w"> </span>php<span class="w"> </span>--<span class="w"> </span>/destination/directory
-</span></code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><span class="filename">Install using interactive prompt</span><pre><span></span><code>curl<span class="w"> </span>-SsL<span class="w"> </span>https://install.drevops.com<span class="w"> </span><span class="p">|</span><span class="w"> </span>php
+</code></pre></div>
+<div class="language-shell highlight"><span class="filename">Quiet installation</span><pre><span></span><code>curl<span class="w"> </span>-SsL<span class="w"> </span>https://install.drevops.com<span class="w"> </span><span class="p">|</span><span class="w"> </span>php<span class="w"> </span>--<span class="w"> </span>--quiet
+</code></pre></div>
+<div class="language-shell highlight"><span class="filename">Installation into a specific directory</span><pre><span></span><code>curl<span class="w"> </span>-SsL<span class="w"> </span>https://install.drevops.com<span class="w"> </span><span class="p">|</span><span class="w"> </span>php<span class="w"> </span>--<span class="w"> </span>/destination/directory
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Work in progress</p>
 <p>We are looking for a way to make the installation process more user-friendly
-and support <code>composer create-project</code> command.</p>
+and support <code class="language-text highlight">composer create-project</code> command.</p>
 </div>
 <h2 id="Updating">Updating<a class="headerlink" href="#Updating" title="Permanent link">&para;</a></h2>
-<div class="language-shell highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Update to the latest version</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>ahoy<span class="w"> </span>update-drevops
-</span></code></pre></div></td></tr></table></div>
-<div class="language-shell highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Update to the specific commit</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>ahoy<span class="w"> </span>update-drevops<span class="w"> </span>cb9979b2c10c59d52874be4661e9331b01d9b7c5
-</span></code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><span class="filename">Update to the latest version</span><pre><span></span><code>ahoy<span class="w"> </span>update-drevops
+</code></pre></div>
+<div class="language-shell highlight"><span class="filename">Update to the specific commit</span><pre><span></span><code>ahoy<span class="w"> </span>update-drevops<span class="w"> </span>cb9979b2c10c59d52874be4661e9331b01d9b7c5
+</code></pre></div>
 <p>If you have modified any of the files that are managed by DrevOps, the update
 will override them. You would need to re-apply your changes. This is because
 DrevOps is not aware of the changes you have made (and this is a good thing

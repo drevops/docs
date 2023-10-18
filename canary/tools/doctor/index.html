@@ -23,10 +23,8 @@
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
-      
-        <title>Doctor - DrevOps<sup>&reg;</sup> - Drupal project template</title>
-      
-    
+<title>DrevOps - Drupal project template</title>
+
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
       
@@ -837,27 +835,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Ahoy 🚧
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../automated-updates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Automated updates
+    Ahoy
   </span>
   
 
@@ -877,7 +855,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Behat 🚧
+    Behat
   </span>
   
 
@@ -1018,7 +996,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Git artifact 🚧
+    Git artifact
   </span>
   
 
@@ -1098,7 +1076,27 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    PHPUnit 🚧
+    PHPUnit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../renovate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Renovate
   </span>
   
 
@@ -1118,7 +1116,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Twigcs 🚧
+    Twigcs
   </span>
   
 
@@ -2123,7 +2121,7 @@ You're not viewing the latest version.
 <p>The DrevOps Doctor is a standalone, self-contained script designed to
 inspect the current state of your DrevOps project. Its primary functions include
 checking project requirements and displaying system information.</p>
-<p>Also, it runs before and after you build the project with <code>ahoy build</code> to make
+<p>Also, it runs before and after you build the project with <code class="language-text highlight">ahoy build</code> to make
 sure that all the requirements are met.</p>
 <h2 id="Features">Features<a class="headerlink" href="#Features" title="Permanent link">&para;</a></h2>
 <p>The DrevOps Doctor script performs a series of checks to ensure the project
@@ -2138,251 +2136,131 @@ environment is correctly set up:</p>
 <li>Application bootstrap status</li>
 </ul>
 <h2 id="Checking-project-status">Checking project status<a class="headerlink" href="#Checking-project-status" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>$<span class="w"> </span>ahoy<span class="w"> </span>doctor
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Checking<span class="w"> </span>project<span class="w"> </span>requirements
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="o">[</span><span class="w"> </span>OK<span class="w"> </span><span class="o">]</span><span class="w"> </span>All<span class="w"> </span>required<span class="w"> </span>tools<span class="w"> </span>are<span class="w"> </span>present.
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="o">[</span><span class="w"> </span>OK<span class="w"> </span><span class="o">]</span><span class="w"> </span>Port<span class="w"> </span><span class="m">80</span><span class="w"> </span>is<span class="w"> </span>available.
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="o">[</span><span class="w"> </span>OK<span class="w"> </span><span class="o">]</span><span class="w"> </span>Pygmy<span class="w"> </span>is<span class="w"> </span>running.
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="o">[</span><span class="w"> </span>OK<span class="w"> </span><span class="o">]</span><span class="w"> </span>All<span class="w"> </span>containers<span class="w"> </span>are<span class="w"> </span>running
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="o">[</span><span class="w"> </span>OK<span class="w"> </span><span class="o">]</span><span class="w"> </span>SSH<span class="w"> </span>key<span class="w"> </span>is<span class="w"> </span>available<span class="w"> </span>within<span class="w"> </span>CLI<span class="w"> </span>container.
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="o">[</span><span class="w"> </span>OK<span class="w"> </span><span class="o">]</span><span class="w"> </span>Web<span class="w"> </span>server<span class="w"> </span>is<span class="w"> </span>running<span class="w"> </span>and<span class="w"> </span>accessible<span class="w"> </span>at<span class="w"> </span>http://drevops.docker.amazee.io.
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="o">[</span><span class="w"> </span>OK<span class="w"> </span><span class="o">]</span><span class="w"> </span>Bootstrapped<span class="w"> </span>website<span class="w"> </span>at<span class="w"> </span>http://drevops.docker.amazee.io.
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="o">[</span><span class="w"> </span>OK<span class="w"> </span><span class="o">]</span><span class="w"> </span>All<span class="w"> </span>required<span class="w"> </span>checks<span class="w"> </span>have<span class="w"> </span>passed.
-</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>ahoy<span class="w"> </span>doctor
+
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Checking<span class="w"> </span>project<span class="w"> </span>requirements
+<span class="o">[</span><span class="w"> </span>OK<span class="w"> </span><span class="o">]</span><span class="w"> </span>All<span class="w"> </span>required<span class="w"> </span>tools<span class="w"> </span>are<span class="w"> </span>present.
+<span class="o">[</span><span class="w"> </span>OK<span class="w"> </span><span class="o">]</span><span class="w"> </span>Port<span class="w"> </span><span class="m">80</span><span class="w"> </span>is<span class="w"> </span>available.
+<span class="o">[</span><span class="w"> </span>OK<span class="w"> </span><span class="o">]</span><span class="w"> </span>Pygmy<span class="w"> </span>is<span class="w"> </span>running.
+<span class="o">[</span><span class="w"> </span>OK<span class="w"> </span><span class="o">]</span><span class="w"> </span>All<span class="w"> </span>containers<span class="w"> </span>are<span class="w"> </span>running
+<span class="o">[</span><span class="w"> </span>OK<span class="w"> </span><span class="o">]</span><span class="w"> </span>SSH<span class="w"> </span>key<span class="w"> </span>is<span class="w"> </span>available<span class="w"> </span>within<span class="w"> </span>CLI<span class="w"> </span>container.
+<span class="o">[</span><span class="w"> </span>OK<span class="w"> </span><span class="o">]</span><span class="w"> </span>Web<span class="w"> </span>server<span class="w"> </span>is<span class="w"> </span>running<span class="w"> </span>and<span class="w"> </span>accessible<span class="w"> </span>at<span class="w"> </span>http://drevops.docker.amazee.io.
+<span class="o">[</span><span class="w"> </span>OK<span class="w"> </span><span class="o">]</span><span class="w"> </span>Bootstrapped<span class="w"> </span>website<span class="w"> </span>at<span class="w"> </span>http://drevops.docker.amazee.io.
+<span class="o">[</span><span class="w"> </span>OK<span class="w"> </span><span class="o">]</span><span class="w"> </span>All<span class="w"> </span>required<span class="w"> </span>checks<span class="w"> </span>have<span class="w"> </span>passed.
+</code></pre></div>
 <h2 id="Getting-system-information">Getting system information<a class="headerlink" href="#Getting-system-information" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">  1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">  2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">  3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">  4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">  5</a></span>
-<span class="normal"><a href="#__codelineno-1-6">  6</a></span>
-<span class="normal"><a href="#__codelineno-1-7">  7</a></span>
-<span class="normal"><a href="#__codelineno-1-8">  8</a></span>
-<span class="normal"><a href="#__codelineno-1-9">  9</a></span>
-<span class="normal"><a href="#__codelineno-1-10"> 10</a></span>
-<span class="normal"><a href="#__codelineno-1-11"> 11</a></span>
-<span class="normal"><a href="#__codelineno-1-12"> 12</a></span>
-<span class="normal"><a href="#__codelineno-1-13"> 13</a></span>
-<span class="normal"><a href="#__codelineno-1-14"> 14</a></span>
-<span class="normal"><a href="#__codelineno-1-15"> 15</a></span>
-<span class="normal"><a href="#__codelineno-1-16"> 16</a></span>
-<span class="normal"><a href="#__codelineno-1-17"> 17</a></span>
-<span class="normal"><a href="#__codelineno-1-18"> 18</a></span>
-<span class="normal"><a href="#__codelineno-1-19"> 19</a></span>
-<span class="normal"><a href="#__codelineno-1-20"> 20</a></span>
-<span class="normal"><a href="#__codelineno-1-21"> 21</a></span>
-<span class="normal"><a href="#__codelineno-1-22"> 22</a></span>
-<span class="normal"><a href="#__codelineno-1-23"> 23</a></span>
-<span class="normal"><a href="#__codelineno-1-24"> 24</a></span>
-<span class="normal"><a href="#__codelineno-1-25"> 25</a></span>
-<span class="normal"><a href="#__codelineno-1-26"> 26</a></span>
-<span class="normal"><a href="#__codelineno-1-27"> 27</a></span>
-<span class="normal"><a href="#__codelineno-1-28"> 28</a></span>
-<span class="normal"><a href="#__codelineno-1-29"> 29</a></span>
-<span class="normal"><a href="#__codelineno-1-30"> 30</a></span>
-<span class="normal"><a href="#__codelineno-1-31"> 31</a></span>
-<span class="normal"><a href="#__codelineno-1-32"> 32</a></span>
-<span class="normal"><a href="#__codelineno-1-33"> 33</a></span>
-<span class="normal"><a href="#__codelineno-1-34"> 34</a></span>
-<span class="normal"><a href="#__codelineno-1-35"> 35</a></span>
-<span class="normal"><a href="#__codelineno-1-36"> 36</a></span>
-<span class="normal"><a href="#__codelineno-1-37"> 37</a></span>
-<span class="normal"><a href="#__codelineno-1-38"> 38</a></span>
-<span class="normal"><a href="#__codelineno-1-39"> 39</a></span>
-<span class="normal"><a href="#__codelineno-1-40"> 40</a></span>
-<span class="normal"><a href="#__codelineno-1-41"> 41</a></span>
-<span class="normal"><a href="#__codelineno-1-42"> 42</a></span>
-<span class="normal"><a href="#__codelineno-1-43"> 43</a></span>
-<span class="normal"><a href="#__codelineno-1-44"> 44</a></span>
-<span class="normal"><a href="#__codelineno-1-45"> 45</a></span>
-<span class="normal"><a href="#__codelineno-1-46"> 46</a></span>
-<span class="normal"><a href="#__codelineno-1-47"> 47</a></span>
-<span class="normal"><a href="#__codelineno-1-48"> 48</a></span>
-<span class="normal"><a href="#__codelineno-1-49"> 49</a></span>
-<span class="normal"><a href="#__codelineno-1-50"> 50</a></span>
-<span class="normal"><a href="#__codelineno-1-51"> 51</a></span>
-<span class="normal"><a href="#__codelineno-1-52"> 52</a></span>
-<span class="normal"><a href="#__codelineno-1-53"> 53</a></span>
-<span class="normal"><a href="#__codelineno-1-54"> 54</a></span>
-<span class="normal"><a href="#__codelineno-1-55"> 55</a></span>
-<span class="normal"><a href="#__codelineno-1-56"> 56</a></span>
-<span class="normal"><a href="#__codelineno-1-57"> 57</a></span>
-<span class="normal"><a href="#__codelineno-1-58"> 58</a></span>
-<span class="normal"><a href="#__codelineno-1-59"> 59</a></span>
-<span class="normal"><a href="#__codelineno-1-60"> 60</a></span>
-<span class="normal"><a href="#__codelineno-1-61"> 61</a></span>
-<span class="normal"><a href="#__codelineno-1-62"> 62</a></span>
-<span class="normal"><a href="#__codelineno-1-63"> 63</a></span>
-<span class="normal"><a href="#__codelineno-1-64"> 64</a></span>
-<span class="normal"><a href="#__codelineno-1-65"> 65</a></span>
-<span class="normal"><a href="#__codelineno-1-66"> 66</a></span>
-<span class="normal"><a href="#__codelineno-1-67"> 67</a></span>
-<span class="normal"><a href="#__codelineno-1-68"> 68</a></span>
-<span class="normal"><a href="#__codelineno-1-69"> 69</a></span>
-<span class="normal"><a href="#__codelineno-1-70"> 70</a></span>
-<span class="normal"><a href="#__codelineno-1-71"> 71</a></span>
-<span class="normal"><a href="#__codelineno-1-72"> 72</a></span>
-<span class="normal"><a href="#__codelineno-1-73"> 73</a></span>
-<span class="normal"><a href="#__codelineno-1-74"> 74</a></span>
-<span class="normal"><a href="#__codelineno-1-75"> 75</a></span>
-<span class="normal"><a href="#__codelineno-1-76"> 76</a></span>
-<span class="normal"><a href="#__codelineno-1-77"> 77</a></span>
-<span class="normal"><a href="#__codelineno-1-78"> 78</a></span>
-<span class="normal"><a href="#__codelineno-1-79"> 79</a></span>
-<span class="normal"><a href="#__codelineno-1-80"> 80</a></span>
-<span class="normal"><a href="#__codelineno-1-81"> 81</a></span>
-<span class="normal"><a href="#__codelineno-1-82"> 82</a></span>
-<span class="normal"><a href="#__codelineno-1-83"> 83</a></span>
-<span class="normal"><a href="#__codelineno-1-84"> 84</a></span>
-<span class="normal"><a href="#__codelineno-1-85"> 85</a></span>
-<span class="normal"><a href="#__codelineno-1-86"> 86</a></span>
-<span class="normal"><a href="#__codelineno-1-87"> 87</a></span>
-<span class="normal"><a href="#__codelineno-1-88"> 88</a></span>
-<span class="normal"><a href="#__codelineno-1-89"> 89</a></span>
-<span class="normal"><a href="#__codelineno-1-90"> 90</a></span>
-<span class="normal"><a href="#__codelineno-1-91"> 91</a></span>
-<span class="normal"><a href="#__codelineno-1-92"> 92</a></span>
-<span class="normal"><a href="#__codelineno-1-93"> 93</a></span>
-<span class="normal"><a href="#__codelineno-1-94"> 94</a></span>
-<span class="normal"><a href="#__codelineno-1-95"> 95</a></span>
-<span class="normal"><a href="#__codelineno-1-96"> 96</a></span>
-<span class="normal"><a href="#__codelineno-1-97"> 97</a></span>
-<span class="normal"><a href="#__codelineno-1-98"> 98</a></span>
-<span class="normal"><a href="#__codelineno-1-99"> 99</a></span>
-<span class="normal"><a href="#__codelineno-1-100">100</a></span>
-<span class="normal"><a href="#__codelineno-1-101">101</a></span>
-<span class="normal"><a href="#__codelineno-1-102">102</a></span>
-<span class="normal"><a href="#__codelineno-1-103">103</a></span>
-<span class="normal"><a href="#__codelineno-1-104">104</a></span>
-<span class="normal"><a href="#__codelineno-1-105">105</a></span>
-<span class="normal"><a href="#__codelineno-1-106">106</a></span>
-<span class="normal"><a href="#__codelineno-1-107">107</a></span>
-<span class="normal"><a href="#__codelineno-1-108">108</a></span>
-<span class="normal"><a href="#__codelineno-1-109">109</a></span>
-<span class="normal"><a href="#__codelineno-1-110">110</a></span>
-<span class="normal"><a href="#__codelineno-1-111">111</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>$<span class="w"> </span>ahoy<span class="w"> </span>doctor<span class="w"> </span>info
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>System<span class="w"> </span>information<span class="w"> </span>report
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>OPERATING<span class="w"> </span>SYSTEM
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>ProductName:<span class="w">            </span>macOS
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>ProductVersion:<span class="w">         </span><span class="m">13</span>.1
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>BuildVersion:<span class="w">           </span>22C65
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a>DOCKER
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>Path<span class="w"> </span>to<span class="w"> </span>binary:<span class="w"> </span>/usr/local/bin/docker
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a>Docker<span class="w"> </span>version<span class="w"> </span><span class="m">23</span>.0.5,<span class="w"> </span>build<span class="w"> </span>bc4487a
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a>Client:
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w"> </span>Context:<span class="w">    </span>default
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w"> </span>Debug<span class="w"> </span>Mode:<span class="w"> </span><span class="nb">false</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w"> </span>Plugins:
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">  </span>buildx:<span class="w"> </span>Docker<span class="w"> </span>Buildx<span class="w"> </span><span class="o">(</span>Docker<span class="w"> </span>Inc.<span class="o">)</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">    </span>Version:<span class="w">  </span>v0.10.4
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">    </span>Path:<span class="w">     </span>/Users/johndoe/.docker/cli-plugins/docker-buildx
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">  </span>compose:<span class="w"> </span>Docker<span class="w"> </span>Compose<span class="w"> </span><span class="o">(</span>Docker<span class="w"> </span>Inc.<span class="o">)</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">    </span>Version:<span class="w">  </span>v2.17.3
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">    </span>Path:<span class="w">     </span>/Users/johndoe/.docker/cli-plugins/docker-compose
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">  </span>dev:<span class="w"> </span>Docker<span class="w"> </span>Dev<span class="w"> </span>Environments<span class="w"> </span><span class="o">(</span>Docker<span class="w"> </span>Inc.<span class="o">)</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">    </span>Version:<span class="w">  </span>v0.1.0
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">    </span>Path:<span class="w">     </span>/Users/johndoe/.docker/cli-plugins/docker-dev
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="w">  </span>extension:<span class="w"> </span>Manages<span class="w"> </span>Docker<span class="w"> </span>extensions<span class="w"> </span><span class="o">(</span>Docker<span class="w"> </span>Inc.<span class="o">)</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">    </span>Version:<span class="w">  </span>v0.2.19
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="w">    </span>Path:<span class="w">     </span>/Users/johndoe/.docker/cli-plugins/docker-extension
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">  </span>init:<span class="w"> </span>Creates<span class="w"> </span>Docker-related<span class="w"> </span>starter<span class="w"> </span>files<span class="w"> </span><span class="k">for</span><span class="w"> </span>your<span class="w"> </span>project<span class="w"> </span><span class="o">(</span>Docker<span class="w"> </span>Inc.<span class="o">)</span>
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="w">    </span>Version:<span class="w">  </span>v0.1.0-beta.4
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="w">    </span>Path:<span class="w">     </span>/Users/johndoe/.docker/cli-plugins/docker-init
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="w">  </span>sbom:<span class="w"> </span>View<span class="w"> </span>the<span class="w"> </span>packaged-based<span class="w"> </span>Software<span class="w"> </span>Bill<span class="w"> </span>Of<span class="w"> </span>Materials<span class="w"> </span><span class="o">(</span>SBOM<span class="o">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>an<span class="w"> </span>image<span class="w"> </span><span class="o">(</span>Anchore<span class="w"> </span>Inc.<span class="o">)</span>
-</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="w">    </span>Version:<span class="w">  </span><span class="m">0</span>.6.0
-</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="w">    </span>Path:<span class="w">     </span>/Users/johndoe/.docker/cli-plugins/docker-sbom
-</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="w">  </span>scan:<span class="w"> </span>Docker<span class="w"> </span>Scan<span class="w"> </span><span class="o">(</span>Docker<span class="w"> </span>Inc.<span class="o">)</span>
-</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="w">    </span>Version:<span class="w">  </span>v0.26.0
-</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37"></a><span class="w">    </span>Path:<span class="w">     </span>/Users/johndoe/.docker/cli-plugins/docker-scan
-</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38"></a><span class="w">  </span>scout:<span class="w"> </span>Command<span class="w"> </span>line<span class="w"> </span>tool<span class="w"> </span><span class="k">for</span><span class="w"> </span>Docker<span class="w"> </span>Scout<span class="w"> </span><span class="o">(</span>Docker<span class="w"> </span>Inc.<span class="o">)</span>
-</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39"></a><span class="w">    </span>Version:<span class="w">  </span>v0.10.0
-</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40"></a><span class="w">    </span>Path:<span class="w">     </span>/Users/johndoe/.docker/cli-plugins/docker-scout
-</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41"></a>
-</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42"></a>Server:
-</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43"></a><span class="w"> </span>Containers:<span class="w"> </span><span class="m">69</span>
-</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44"></a><span class="w">  </span>Running:<span class="w"> </span><span class="m">51</span>
-</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45"></a><span class="w">  </span>Paused:<span class="w"> </span><span class="m">0</span>
-</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46"></a><span class="w">  </span>Stopped:<span class="w"> </span><span class="m">18</span>
-</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47"></a><span class="w"> </span>Images:<span class="w"> </span><span class="m">460</span>
-</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48"></a><span class="w"> </span>Server<span class="w"> </span>Version:<span class="w"> </span><span class="m">23</span>.0.5
-</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49"></a><span class="w"> </span>Storage<span class="w"> </span>Driver:<span class="w"> </span>overlay2
-</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50"></a><span class="w">  </span>Backing<span class="w"> </span>Filesystem:<span class="w"> </span>extfs
-</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51"></a><span class="w">  </span>Supports<span class="w"> </span>d_type:<span class="w"> </span><span class="nb">true</span>
-</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52"></a><span class="w">  </span>Using<span class="w"> </span>metacopy:<span class="w"> </span><span class="nb">false</span>
-</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53"></a><span class="w">  </span>Native<span class="w"> </span>Overlay<span class="w"> </span>Diff:<span class="w"> </span><span class="nb">true</span>
-</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54"></a><span class="w">  </span>userxattr:<span class="w"> </span><span class="nb">false</span>
-</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55"></a><span class="w"> </span>Logging<span class="w"> </span>Driver:<span class="w"> </span>json-file
-</span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56"></a><span class="w"> </span>Cgroup<span class="w"> </span>Driver:<span class="w"> </span>cgroupfs
-</span><span id="__span-1-57"><a id="__codelineno-1-57" name="__codelineno-1-57"></a><span class="w"> </span>Cgroup<span class="w"> </span>Version:<span class="w"> </span><span class="m">2</span>
-</span><span id="__span-1-58"><a id="__codelineno-1-58" name="__codelineno-1-58"></a><span class="w"> </span>Plugins:
-</span><span id="__span-1-59"><a id="__codelineno-1-59" name="__codelineno-1-59"></a><span class="w">  </span>Volume:<span class="w"> </span><span class="nb">local</span>
-</span><span id="__span-1-60"><a id="__codelineno-1-60" name="__codelineno-1-60"></a><span class="w">  </span>Network:<span class="w"> </span>bridge<span class="w"> </span>host<span class="w"> </span>ipvlan<span class="w"> </span>macvlan<span class="w"> </span>null<span class="w"> </span>overlay
-</span><span id="__span-1-61"><a id="__codelineno-1-61" name="__codelineno-1-61"></a><span class="w">  </span>Log:<span class="w"> </span>awslogs<span class="w"> </span>fluentd<span class="w"> </span>gcplogs<span class="w"> </span>gelf<span class="w"> </span>journald<span class="w"> </span>json-file<span class="w"> </span><span class="nb">local</span><span class="w"> </span>logentries<span class="w"> </span>splunk<span class="w"> </span>syslog
-</span><span id="__span-1-62"><a id="__codelineno-1-62" name="__codelineno-1-62"></a><span class="w"> </span>Swarm:<span class="w"> </span>inactive
-</span><span id="__span-1-63"><a id="__codelineno-1-63" name="__codelineno-1-63"></a><span class="w"> </span>Runtimes:<span class="w"> </span>io.containerd.runc.v2<span class="w"> </span>runc
-</span><span id="__span-1-64"><a id="__codelineno-1-64" name="__codelineno-1-64"></a><span class="w"> </span>Default<span class="w"> </span>Runtime:<span class="w"> </span>runc
-</span><span id="__span-1-65"><a id="__codelineno-1-65" name="__codelineno-1-65"></a><span class="w"> </span>Init<span class="w"> </span>Binary:<span class="w"> </span>docker-init
-</span><span id="__span-1-66"><a id="__codelineno-1-66" name="__codelineno-1-66"></a><span class="w"> </span>containerd<span class="w"> </span>version:<span class="w"> </span>2806fc1057397dbaeefbea0e4e17bddfbd388f38
-</span><span id="__span-1-67"><a id="__codelineno-1-67" name="__codelineno-1-67"></a><span class="w"> </span>runc<span class="w"> </span>version:<span class="w"> </span>v1.1.5-0-gf19387a
-</span><span id="__span-1-68"><a id="__codelineno-1-68" name="__codelineno-1-68"></a><span class="w"> </span>init<span class="w"> </span>version:<span class="w"> </span>de40ad0
-</span><span id="__span-1-69"><a id="__codelineno-1-69" name="__codelineno-1-69"></a><span class="w"> </span>Security<span class="w"> </span>Options:
-</span><span id="__span-1-70"><a id="__codelineno-1-70" name="__codelineno-1-70"></a><span class="w">  </span>seccomp
-</span><span id="__span-1-71"><a id="__codelineno-1-71" name="__codelineno-1-71"></a><span class="w">   </span>Profile:<span class="w"> </span><span class="nb">builtin</span>
-</span><span id="__span-1-72"><a id="__codelineno-1-72" name="__codelineno-1-72"></a><span class="w">  </span>cgroupns
-</span><span id="__span-1-73"><a id="__codelineno-1-73" name="__codelineno-1-73"></a><span class="w"> </span>Kernel<span class="w"> </span>Version:<span class="w"> </span><span class="m">5</span>.15.49-linuxkit
-</span><span id="__span-1-74"><a id="__codelineno-1-74" name="__codelineno-1-74"></a><span class="w"> </span>Operating<span class="w"> </span>System:<span class="w"> </span>Docker<span class="w"> </span>Desktop
-</span><span id="__span-1-75"><a id="__codelineno-1-75" name="__codelineno-1-75"></a><span class="w"> </span>OSType:<span class="w"> </span>linux
-</span><span id="__span-1-76"><a id="__codelineno-1-76" name="__codelineno-1-76"></a><span class="w"> </span>Architecture:<span class="w"> </span>aarch64
-</span><span id="__span-1-77"><a id="__codelineno-1-77" name="__codelineno-1-77"></a><span class="w"> </span>CPUs:<span class="w"> </span><span class="m">5</span>
-</span><span id="__span-1-78"><a id="__codelineno-1-78" name="__codelineno-1-78"></a><span class="w"> </span>Total<span class="w"> </span>Memory:<span class="w"> </span><span class="m">31</span>.31GiB
-</span><span id="__span-1-79"><a id="__codelineno-1-79" name="__codelineno-1-79"></a><span class="w"> </span>Name:<span class="w"> </span>docker-desktop
-</span><span id="__span-1-80"><a id="__codelineno-1-80" name="__codelineno-1-80"></a><span class="w"> </span>ID:<span class="w"> </span>05da5eb2-2904-49ae-965d-bb10b896e7ac
-</span><span id="__span-1-81"><a id="__codelineno-1-81" name="__codelineno-1-81"></a><span class="w"> </span>Docker<span class="w"> </span>Root<span class="w"> </span>Dir:<span class="w"> </span>/var/lib/docker
-</span><span id="__span-1-82"><a id="__codelineno-1-82" name="__codelineno-1-82"></a><span class="w"> </span>Debug<span class="w"> </span>Mode:<span class="w"> </span><span class="nb">false</span>
-</span><span id="__span-1-83"><a id="__codelineno-1-83" name="__codelineno-1-83"></a><span class="w"> </span>HTTP<span class="w"> </span>Proxy:<span class="w"> </span>http.docker.internal:3128
-</span><span id="__span-1-84"><a id="__codelineno-1-84" name="__codelineno-1-84"></a><span class="w"> </span>HTTPS<span class="w"> </span>Proxy:<span class="w"> </span>http.docker.internal:3128
-</span><span id="__span-1-85"><a id="__codelineno-1-85" name="__codelineno-1-85"></a><span class="w"> </span>No<span class="w"> </span>Proxy:<span class="w"> </span>hubproxy.docker.internal
-</span><span id="__span-1-86"><a id="__codelineno-1-86" name="__codelineno-1-86"></a><span class="w"> </span>Registry:<span class="w"> </span>https://index.docker.io/v1/
-</span><span id="__span-1-87"><a id="__codelineno-1-87" name="__codelineno-1-87"></a><span class="w"> </span>Experimental:<span class="w"> </span><span class="nb">false</span>
-</span><span id="__span-1-88"><a id="__codelineno-1-88" name="__codelineno-1-88"></a><span class="w"> </span>Insecure<span class="w"> </span>Registries:
-</span><span id="__span-1-89"><a id="__codelineno-1-89" name="__codelineno-1-89"></a><span class="w">  </span>hubproxy.docker.internal:5555
-</span><span id="__span-1-90"><a id="__codelineno-1-90" name="__codelineno-1-90"></a><span class="w">  </span><span class="m">127</span>.0.0.0/8
-</span><span id="__span-1-91"><a id="__codelineno-1-91" name="__codelineno-1-91"></a><span class="w"> </span>Live<span class="w"> </span>Restore<span class="w"> </span>Enabled:<span class="w"> </span><span class="nb">false</span>
-</span><span id="__span-1-92"><a id="__codelineno-1-92" name="__codelineno-1-92"></a>
-</span><span id="__span-1-93"><a id="__codelineno-1-93" name="__codelineno-1-93"></a>
-</span><span id="__span-1-94"><a id="__codelineno-1-94" name="__codelineno-1-94"></a>DOCKER<span class="w"> </span>COMPOSE<span class="w"> </span>V2
-</span><span id="__span-1-95"><a id="__codelineno-1-95" name="__codelineno-1-95"></a>Docker<span class="w"> </span>Compose<span class="w"> </span>version<span class="w"> </span>v2.17.3
-</span><span id="__span-1-96"><a id="__codelineno-1-96" name="__codelineno-1-96"></a>
-</span><span id="__span-1-97"><a id="__codelineno-1-97" name="__codelineno-1-97"></a>DOCKER-COMPOSE<span class="w"> </span>V1
-</span><span id="__span-1-98"><a id="__codelineno-1-98" name="__codelineno-1-98"></a>Path<span class="w"> </span>to<span class="w"> </span>binary:<span class="w"> </span>/usr/local/bin/docker-compose
-</span><span id="__span-1-99"><a id="__codelineno-1-99" name="__codelineno-1-99"></a>WARNING:<span class="w"> </span>Compose<span class="w"> </span>V1<span class="w"> </span>is<span class="w"> </span>no<span class="w"> </span>longer<span class="w"> </span>supported<span class="w"> </span>and<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>removed<span class="w"> </span>from<span class="w"> </span>Docker<span class="w"> </span>Desktop<span class="w"> </span><span class="k">in</span><span class="w"> </span>an<span class="w"> </span>upcoming<span class="w"> </span>release.<span class="w"> </span>See<span class="w"> </span>https://docs.docker.com/go/compose-v1-eol/
-</span><span id="__span-1-100"><a id="__codelineno-1-100" name="__codelineno-1-100"></a>docker-compose<span class="w"> </span>version<span class="w"> </span><span class="m">1</span>.29.2,<span class="w"> </span>build<span class="w"> </span>5becea4c
-</span><span id="__span-1-101"><a id="__codelineno-1-101" name="__codelineno-1-101"></a>docker-py<span class="w"> </span>version:<span class="w"> </span><span class="m">5</span>.0.0
-</span><span id="__span-1-102"><a id="__codelineno-1-102" name="__codelineno-1-102"></a>CPython<span class="w"> </span>version:<span class="w"> </span><span class="m">3</span>.9.0
-</span><span id="__span-1-103"><a id="__codelineno-1-103" name="__codelineno-1-103"></a>OpenSSL<span class="w"> </span>version:<span class="w"> </span>OpenSSL<span class="w"> </span><span class="m">1</span>.1.1h<span class="w">  </span><span class="m">22</span><span class="w"> </span>Sep<span class="w"> </span><span class="m">2020</span>
-</span><span id="__span-1-104"><a id="__codelineno-1-104" name="__codelineno-1-104"></a>
-</span><span id="__span-1-105"><a id="__codelineno-1-105" name="__codelineno-1-105"></a>PYGMY
-</span><span id="__span-1-106"><a id="__codelineno-1-106" name="__codelineno-1-106"></a>Path<span class="w"> </span>to<span class="w"> </span>binary:<span class="w"> </span>/Users/johndoe/gems/bin/pygmy
-</span><span id="__span-1-107"><a id="__codelineno-1-107" name="__codelineno-1-107"></a>Pygmy<span class="w"> </span>version<span class="w"> </span>unidentifiable.
-</span><span id="__span-1-108"><a id="__codelineno-1-108" name="__codelineno-1-108"></a>
-</span><span id="__span-1-109"><a id="__codelineno-1-109" name="__codelineno-1-109"></a>AHOY
-</span><span id="__span-1-110"><a id="__codelineno-1-110" name="__codelineno-1-110"></a>Path<span class="w"> </span>to<span class="w"> </span>binary:<span class="w"> </span>/usr/local/bin/ahoy
-</span><span id="__span-1-111"><a id="__codelineno-1-111" name="__codelineno-1-111"></a><span class="m">2</span>.0.2
-</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>ahoy<span class="w"> </span>doctor<span class="w"> </span>info
+
+System<span class="w"> </span>information<span class="w"> </span>report
+
+OPERATING<span class="w"> </span>SYSTEM
+ProductName:<span class="w">            </span>macOS
+ProductVersion:<span class="w">         </span><span class="m">13</span>.1
+BuildVersion:<span class="w">           </span>22C65
+
+DOCKER
+Path<span class="w"> </span>to<span class="w"> </span>binary:<span class="w"> </span>/usr/local/bin/docker
+Docker<span class="w"> </span>version<span class="w"> </span><span class="m">23</span>.0.5,<span class="w"> </span>build<span class="w"> </span>bc4487a
+Client:
+<span class="w"> </span>Context:<span class="w">    </span>default
+<span class="w"> </span>Debug<span class="w"> </span>Mode:<span class="w"> </span><span class="nb">false</span>
+<span class="w"> </span>Plugins:
+<span class="w">  </span>buildx:<span class="w"> </span>Docker<span class="w"> </span>Buildx<span class="w"> </span><span class="o">(</span>Docker<span class="w"> </span>Inc.<span class="o">)</span>
+<span class="w">    </span>Version:<span class="w">  </span>v0.10.4
+<span class="w">    </span>Path:<span class="w">     </span>/Users/johndoe/.docker/cli-plugins/docker-buildx
+<span class="w">  </span>compose:<span class="w"> </span>Docker<span class="w"> </span>Compose<span class="w"> </span><span class="o">(</span>Docker<span class="w"> </span>Inc.<span class="o">)</span>
+<span class="w">    </span>Version:<span class="w">  </span>v2.17.3
+<span class="w">    </span>Path:<span class="w">     </span>/Users/johndoe/.docker/cli-plugins/docker-compose
+<span class="w">  </span>dev:<span class="w"> </span>Docker<span class="w"> </span>Dev<span class="w"> </span>Environments<span class="w"> </span><span class="o">(</span>Docker<span class="w"> </span>Inc.<span class="o">)</span>
+<span class="w">    </span>Version:<span class="w">  </span>v0.1.0
+<span class="w">    </span>Path:<span class="w">     </span>/Users/johndoe/.docker/cli-plugins/docker-dev
+<span class="w">  </span>extension:<span class="w"> </span>Manages<span class="w"> </span>Docker<span class="w"> </span>extensions<span class="w"> </span><span class="o">(</span>Docker<span class="w"> </span>Inc.<span class="o">)</span>
+<span class="w">    </span>Version:<span class="w">  </span>v0.2.19
+<span class="w">    </span>Path:<span class="w">     </span>/Users/johndoe/.docker/cli-plugins/docker-extension
+<span class="w">  </span>init:<span class="w"> </span>Creates<span class="w"> </span>Docker-related<span class="w"> </span>starter<span class="w"> </span>files<span class="w"> </span><span class="k">for</span><span class="w"> </span>your<span class="w"> </span>project<span class="w"> </span><span class="o">(</span>Docker<span class="w"> </span>Inc.<span class="o">)</span>
+<span class="w">    </span>Version:<span class="w">  </span>v0.1.0-beta.4
+<span class="w">    </span>Path:<span class="w">     </span>/Users/johndoe/.docker/cli-plugins/docker-init
+<span class="w">  </span>sbom:<span class="w"> </span>View<span class="w"> </span>the<span class="w"> </span>packaged-based<span class="w"> </span>Software<span class="w"> </span>Bill<span class="w"> </span>Of<span class="w"> </span>Materials<span class="w"> </span><span class="o">(</span>SBOM<span class="o">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>an<span class="w"> </span>image<span class="w"> </span><span class="o">(</span>Anchore<span class="w"> </span>Inc.<span class="o">)</span>
+<span class="w">    </span>Version:<span class="w">  </span><span class="m">0</span>.6.0
+<span class="w">    </span>Path:<span class="w">     </span>/Users/johndoe/.docker/cli-plugins/docker-sbom
+<span class="w">  </span>scan:<span class="w"> </span>Docker<span class="w"> </span>Scan<span class="w"> </span><span class="o">(</span>Docker<span class="w"> </span>Inc.<span class="o">)</span>
+<span class="w">    </span>Version:<span class="w">  </span>v0.26.0
+<span class="w">    </span>Path:<span class="w">     </span>/Users/johndoe/.docker/cli-plugins/docker-scan
+<span class="w">  </span>scout:<span class="w"> </span>Command<span class="w"> </span>line<span class="w"> </span>tool<span class="w"> </span><span class="k">for</span><span class="w"> </span>Docker<span class="w"> </span>Scout<span class="w"> </span><span class="o">(</span>Docker<span class="w"> </span>Inc.<span class="o">)</span>
+<span class="w">    </span>Version:<span class="w">  </span>v0.10.0
+<span class="w">    </span>Path:<span class="w">     </span>/Users/johndoe/.docker/cli-plugins/docker-scout
+
+Server:
+<span class="w"> </span>Containers:<span class="w"> </span><span class="m">69</span>
+<span class="w">  </span>Running:<span class="w"> </span><span class="m">51</span>
+<span class="w">  </span>Paused:<span class="w"> </span><span class="m">0</span>
+<span class="w">  </span>Stopped:<span class="w"> </span><span class="m">18</span>
+<span class="w"> </span>Images:<span class="w"> </span><span class="m">460</span>
+<span class="w"> </span>Server<span class="w"> </span>Version:<span class="w"> </span><span class="m">23</span>.0.5
+<span class="w"> </span>Storage<span class="w"> </span>Driver:<span class="w"> </span>overlay2
+<span class="w">  </span>Backing<span class="w"> </span>Filesystem:<span class="w"> </span>extfs
+<span class="w">  </span>Supports<span class="w"> </span>d_type:<span class="w"> </span><span class="nb">true</span>
+<span class="w">  </span>Using<span class="w"> </span>metacopy:<span class="w"> </span><span class="nb">false</span>
+<span class="w">  </span>Native<span class="w"> </span>Overlay<span class="w"> </span>Diff:<span class="w"> </span><span class="nb">true</span>
+<span class="w">  </span>userxattr:<span class="w"> </span><span class="nb">false</span>
+<span class="w"> </span>Logging<span class="w"> </span>Driver:<span class="w"> </span>json-file
+<span class="w"> </span>Cgroup<span class="w"> </span>Driver:<span class="w"> </span>cgroupfs
+<span class="w"> </span>Cgroup<span class="w"> </span>Version:<span class="w"> </span><span class="m">2</span>
+<span class="w"> </span>Plugins:
+<span class="w">  </span>Volume:<span class="w"> </span><span class="nb">local</span>
+<span class="w">  </span>Network:<span class="w"> </span>bridge<span class="w"> </span>host<span class="w"> </span>ipvlan<span class="w"> </span>macvlan<span class="w"> </span>null<span class="w"> </span>overlay
+<span class="w">  </span>Log:<span class="w"> </span>awslogs<span class="w"> </span>fluentd<span class="w"> </span>gcplogs<span class="w"> </span>gelf<span class="w"> </span>journald<span class="w"> </span>json-file<span class="w"> </span><span class="nb">local</span><span class="w"> </span>logentries<span class="w"> </span>splunk<span class="w"> </span>syslog
+<span class="w"> </span>Swarm:<span class="w"> </span>inactive
+<span class="w"> </span>Runtimes:<span class="w"> </span>io.containerd.runc.v2<span class="w"> </span>runc
+<span class="w"> </span>Default<span class="w"> </span>Runtime:<span class="w"> </span>runc
+<span class="w"> </span>Init<span class="w"> </span>Binary:<span class="w"> </span>docker-init
+<span class="w"> </span>containerd<span class="w"> </span>version:<span class="w"> </span>2806fc1057397dbaeefbea0e4e17bddfbd388f38
+<span class="w"> </span>runc<span class="w"> </span>version:<span class="w"> </span>v1.1.5-0-gf19387a
+<span class="w"> </span>init<span class="w"> </span>version:<span class="w"> </span>de40ad0
+<span class="w"> </span>Security<span class="w"> </span>Options:
+<span class="w">  </span>seccomp
+<span class="w">   </span>Profile:<span class="w"> </span><span class="nb">builtin</span>
+<span class="w">  </span>cgroupns
+<span class="w"> </span>Kernel<span class="w"> </span>Version:<span class="w"> </span><span class="m">5</span>.15.49-linuxkit
+<span class="w"> </span>Operating<span class="w"> </span>System:<span class="w"> </span>Docker<span class="w"> </span>Desktop
+<span class="w"> </span>OSType:<span class="w"> </span>linux
+<span class="w"> </span>Architecture:<span class="w"> </span>aarch64
+<span class="w"> </span>CPUs:<span class="w"> </span><span class="m">5</span>
+<span class="w"> </span>Total<span class="w"> </span>Memory:<span class="w"> </span><span class="m">31</span>.31GiB
+<span class="w"> </span>Name:<span class="w"> </span>docker-desktop
+<span class="w"> </span>ID:<span class="w"> </span>05da5eb2-2904-49ae-965d-bb10b896e7ac
+<span class="w"> </span>Docker<span class="w"> </span>Root<span class="w"> </span>Dir:<span class="w"> </span>/var/lib/docker
+<span class="w"> </span>Debug<span class="w"> </span>Mode:<span class="w"> </span><span class="nb">false</span>
+<span class="w"> </span>HTTP<span class="w"> </span>Proxy:<span class="w"> </span>http.docker.internal:3128
+<span class="w"> </span>HTTPS<span class="w"> </span>Proxy:<span class="w"> </span>http.docker.internal:3128
+<span class="w"> </span>No<span class="w"> </span>Proxy:<span class="w"> </span>hubproxy.docker.internal
+<span class="w"> </span>Registry:<span class="w"> </span>https://index.docker.io/v1/
+<span class="w"> </span>Experimental:<span class="w"> </span><span class="nb">false</span>
+<span class="w"> </span>Insecure<span class="w"> </span>Registries:
+<span class="w">  </span>hubproxy.docker.internal:5555
+<span class="w">  </span><span class="m">127</span>.0.0.0/8
+<span class="w"> </span>Live<span class="w"> </span>Restore<span class="w"> </span>Enabled:<span class="w"> </span><span class="nb">false</span>
+
+
+DOCKER<span class="w"> </span>COMPOSE<span class="w"> </span>V2
+Docker<span class="w"> </span>Compose<span class="w"> </span>version<span class="w"> </span>v2.17.3
+
+DOCKER-COMPOSE<span class="w"> </span>V1
+Path<span class="w"> </span>to<span class="w"> </span>binary:<span class="w"> </span>/usr/local/bin/docker-compose
+WARNING:<span class="w"> </span>Compose<span class="w"> </span>V1<span class="w"> </span>is<span class="w"> </span>no<span class="w"> </span>longer<span class="w"> </span>supported<span class="w"> </span>and<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>removed<span class="w"> </span>from<span class="w"> </span>Docker<span class="w"> </span>Desktop<span class="w"> </span><span class="k">in</span><span class="w"> </span>an<span class="w"> </span>upcoming<span class="w"> </span>release.<span class="w"> </span>See<span class="w"> </span>https://docs.docker.com/go/compose-v1-eol/
+docker-compose<span class="w"> </span>version<span class="w"> </span><span class="m">1</span>.29.2,<span class="w"> </span>build<span class="w"> </span>5becea4c
+docker-py<span class="w"> </span>version:<span class="w"> </span><span class="m">5</span>.0.0
+CPython<span class="w"> </span>version:<span class="w"> </span><span class="m">3</span>.9.0
+OpenSSL<span class="w"> </span>version:<span class="w"> </span>OpenSSL<span class="w"> </span><span class="m">1</span>.1.1h<span class="w">  </span><span class="m">22</span><span class="w"> </span>Sep<span class="w"> </span><span class="m">2020</span>
+
+PYGMY
+Path<span class="w"> </span>to<span class="w"> </span>binary:<span class="w"> </span>/Users/johndoe/gems/bin/pygmy
+Pygmy<span class="w"> </span>version<span class="w"> </span>unidentifiable.
+
+AHOY
+Path<span class="w"> </span>to<span class="w"> </span>binary:<span class="w"> </span>/usr/local/bin/ahoy
+<span class="m">2</span>.0.2
+</code></pre></div>
 
 
   

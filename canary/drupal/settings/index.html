@@ -23,10 +23,8 @@
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
-      
-        <title>Settings - DrevOps<sup>&reg;</sup> - Drupal project template</title>
-      
-    
+<title>DrevOps - Drupal project template</title>
+
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
       
@@ -926,27 +924,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Ahoy 🚧
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tools/automated-updates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Automated updates
+    Ahoy
   </span>
   
 
@@ -966,7 +944,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Behat 🚧
+    Behat
   </span>
   
 
@@ -1046,7 +1024,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Git artifact 🚧
+    Git artifact
   </span>
   
 
@@ -1126,7 +1104,27 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    PHPUnit 🚧
+    PHPUnit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/renovate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Renovate
   </span>
   
 
@@ -1146,7 +1144,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Twigcs 🚧
+    Twigcs
   </span>
   
 
@@ -2176,17 +2174,17 @@ You're not viewing the latest version.
 
 
 <h1 id="Settings">Settings<a class="headerlink" href="#Settings" title="Permanent link">&para;</a></h1>
-<p>The <code>settings.php</code> file provides the primary configuration for a Drupal site,
+<p>The <code class="language-text highlight">settings.php</code> file provides the primary configuration for a Drupal site,
 including its database connection, file paths, and various other settings.</p>
 <p>DrevOps ships with own streamlined version of
-the <a href="https://github.com/drevops/drevops/tree/main/web/sites/default/settings.php"><code>settings.php</code></a> and
-<a href="https://github.com/drevops/drevops/tree/main/web/sites/default/services.yml"><code>services.yml</code></a> files. There are
+the <a href="https://github.com/drevops/drevops/tree/main/web/sites/default/settings.php"><code class="language-text highlight">settings.php</code></a> and
+<a href="https://github.com/drevops/drevops/tree/main/web/sites/default/services.yml"><code class="language-text highlight">services.yml</code></a> files. There are
 also <a href="#Testing-settings-with-unit-tests">Settings unit tests</a> that ensure that
 the settings apply correctly per environment.</p>
-<p>The default Drupal scaffold's <a href="https://github.com/drevops/drevops/tree/main/web/sites/default/default.settings.php"><code>default.settings.php</code></a>
-and <a href="https://github.com/drevops/drevops/tree/main/web/sites/default/default.services.yml"><code>default.services.yml</code></a>
+<p>The default Drupal scaffold's <a href="https://github.com/drevops/drevops/tree/main/web/sites/default/default.settings.php"><code class="language-text highlight">default.settings.php</code></a>
+and <a href="https://github.com/drevops/drevops/tree/main/web/sites/default/default.services.yml"><code class="language-text highlight">default.services.yml</code></a>
 files are also provided if you choose to use them instead.</p>
-<p>The <a href="https://github.com/drevops/drevops/tree/main/web/sites/default/settings.php"><code>settings.php</code></a> file is divided
+<p>The <a href="https://github.com/drevops/drevops/tree/main/web/sites/default/settings.php"><code class="language-text highlight">settings.php</code></a> file is divided
 into several sections:</p>
 <ol>
 <li><a href="#1-Environment-constants-definitions">Environment constants definitions</a></li>
@@ -2201,29 +2199,26 @@ into several sections:</p>
 site behavior based on the active environment.</p>
 <p>Available constants include:</p>
 <ul>
-<li><code>ENVIRONMENT_LOCAL</code></li>
-<li><code>ENVIRONMENT_CI</code></li>
-<li><code>ENVIRONMENT_PROD</code></li>
-<li><code>ENVIRONMENT_TEST</code></li>
-<li><code>ENVIRONMENT_DEV</code></li>
+<li><code class="language-text highlight">ENVIRONMENT_LOCAL</code></li>
+<li><code class="language-text highlight">ENVIRONMENT_CI</code></li>
+<li><code class="language-text highlight">ENVIRONMENT_PROD</code></li>
+<li><code class="language-text highlight">ENVIRONMENT_TEST</code></li>
+<li><code class="language-text highlight">ENVIRONMENT_DEV</code></li>
 </ul>
-<p>These are later used to set <code>$settings['environment']</code> variable, which can be
+<p>These are later used to set <code class="language-text highlight">$settings[&#39;environment&#39;]</code> variable, which can be
 used in the modules and outside scripts to target code execution to specific
 environments.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nv">environment</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>drush<span class="w"> </span>php:eval<span class="w"> </span><span class="s2">&quot;print \Drupal\core\Site\Settings::get(&#39;environment&#39;);&quot;</span><span class="k">)</span><span class="s2">&quot;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">if</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">environment</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-q<span class="w"> </span>-e<span class="w"> </span>ci<span class="w"> </span>-e<span class="w"> </span>local<span class="p">;</span><span class="w"> </span><span class="k">then</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">  </span><span class="c1"># Do something only in ci, or local environments.</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="k">fi</span>
-</span></code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code><span class="nv">environment</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>drush<span class="w"> </span>php:eval<span class="w"> </span><span class="s2">&quot;print \Drupal\core\Site\Settings::get(&#39;environment&#39;);&quot;</span><span class="k">)</span><span class="s2">&quot;</span>
+<span class="k">if</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">environment</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-q<span class="w"> </span>-e<span class="w"> </span>ci<span class="w"> </span>-e<span class="w"> </span>local<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="c1"># Do something only in ci, or local environments.</span>
+<span class="k">fi</span>
+</code></pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The <code>DREVOPS_PROVISION_ENVIRONMENT</code> shell variable can be utilized within
+<p>The <code class="language-text highlight">DREVOPS_PROVISION_ENVIRONMENT</code> shell variable can be utilized within
 post-provision custom scripts, allowing targeted code execution based on
 specific environments. Refer to <a href="../provision/">Provision</a> for additional
 information.</p>
@@ -2234,26 +2229,26 @@ ensuring security with trusted host patterns, setting performance optimizations
 like aggregating CSS and JS files, and specifying essential directories for
 Drupal's functionality.</p>
 <p>These settings are identical for all environments.</p>
-<p>Use per-module settings files in the <code>/includes</code> directory to override
+<p>Use per-module settings files in the <code class="language-text highlight">/includes</code> directory to override
 per-module settings, including per-environment overrides.</p>
 <h3 id="3-Environment-detection">3. Environment detection<a class="headerlink" href="#3-Environment-detection" title="Permanent link">&para;</a></h3>
 <p>This section uses known per-platform mechanisms to determine in which
 environment the site currently runs. The result is stored in the
-<code>$settings['environment']</code> variable.</p>
-<p>By default, <code>$settings['environment']</code> is set to <code>ENVIRONMENT_LOCAL</code>.
+<code class="language-text highlight">$settings[&#39;environment&#39;]</code> variable.</p>
+<p>By default, <code class="language-text highlight">$settings[&#39;environment&#39;]</code> is set to <code class="language-text highlight">ENVIRONMENT_LOCAL</code>.
 This value is then overridden by the environment detection logic.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In any hosting environment, the default value of <code>$settings['environment']</code>
-changes to <code>ENVIRONMENT_DEV</code>, while further refinements designate more
+<p>In any hosting environment, the default value of <code class="language-text highlight">$settings[&#39;environment&#39;]</code>
+changes to <code class="language-text highlight">ENVIRONMENT_DEV</code>, while further refinements designate more
 advanced environments.</p>
 </div>
 <h4 id="Environment-detection-override">Environment detection override<a class="headerlink" href="#Environment-detection-override" title="Permanent link">&para;</a></h4>
 <p>It is also possible to force specific environment by setting
-<code>DREVOPS_ENVIRONMENT</code> environment variable. In this case, the environment
+<code class="language-text highlight">DREVOPS_ENVIRONMENT</code> environment variable. In this case, the environment
 detection will take place and will load any additional per-platform settings,
-but the final value of <code>$settings['environment']</code> will be set to the value of
-<code>DREVOPS_ENVIRONMENT</code> variable.</p>
+but the final value of <code class="language-text highlight">$settings[&#39;environment&#39;]</code> will be set to the value of
+<code class="language-text highlight">DREVOPS_ENVIRONMENT</code> variable.</p>
 <p>This is useful in cases where a certain behaviour is required for a specific
 environment, but the environment detection logic does not provide it. Or as a
 temporary override during testing.</p>
@@ -2264,24 +2259,24 @@ environments.</p>
 <p>You can add additional overrides for other environments as needed.</p>
 <h3 id="5-Inclusion-of-per-module-settings">5. Inclusion of per-module settings<a class="headerlink" href="#5-Inclusion-of-per-module-settings" title="Permanent link">&para;</a></h3>
 <p>This section includes any additional module-specific settings from the
-<code>/includes</code> directory.</p>
+<code class="language-text highlight">/includes</code> directory.</p>
 <p>DrevOps ships with settings overrides for several popular contributed modules
 used in almost every project.</p>
 <p>The per environment overrides for modules should be also placed into files
-in the <code>/includes</code> directory.</p>
+in the <code class="language-text highlight">/includes</code> directory.</p>
 <h3 id="6-Inclusion-of-local-settings">6. Inclusion of local settings<a class="headerlink" href="#6-Inclusion-of-local-settings" title="Permanent link">&para;</a></h3>
-<p>At the end of the <code>settings.php</code>, there is an option to include additional local
+<p>At the end of the <code class="language-text highlight">settings.php</code>, there is an option to include additional local
 settings. This allows developers to override some settings for their local
 environment without affecting the main configuration. Developers can
-copy <code>default.settings.local.php</code> and <code>default.services.local.yml</code>
-to <code>settings.local.php</code> and <code>services.local.yml</code>, respectively, to utilize this
+copy <code class="language-text highlight">default.settings.local.php</code> and <code class="language-text highlight">default.services.local.yml</code>
+to <code class="language-text highlight">settings.local.php</code> and <code class="language-text highlight">services.local.yml</code>, respectively, to utilize this
 functionality.</p>
 <h2 id="Testing-settings-with-unit-tests">Testing settings with unit tests<a class="headerlink" href="#Testing-settings-with-unit-tests" title="Permanent link">&para;</a></h2>
 <p>DrevOps provides a <a href="https://github.com/drevops/drevops/tree/main/tests/phpunit/Drupal">set of unit tests</a> that
 ensure that the settings apply correctly per environment. These tests are
 supposed to be maintained within your project, ensuring that settings activated
 by specific environments and environment variables are applied accurately.</p>
-<p>After installing DrevOps, run <code>vendor/bin/phpunit --group=drupal_settings</code> to
+<p>After installing DrevOps, run <code class="language-text highlight">vendor/bin/phpunit --group=drupal_settings</code> to
 run the tests for the settings provided by DrevOps.</p>
 <p>You may simply remove these tests if you do not want to maintain them.</p>
 

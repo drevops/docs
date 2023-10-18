@@ -21,10 +21,8 @@
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
-      
-        <title>Documentation - DrevOps<sup>&reg;</sup> - Drupal project template</title>
-      
-    
+<title>DrevOps - Drupal project template</title>
+
     
       <link rel="stylesheet" href="../../../assets/stylesheets/main.35e1ed30.min.css">
       
@@ -833,27 +831,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Ahoy 🚧
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tools/automated-updates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Automated updates
+    Ahoy
   </span>
   
 
@@ -873,7 +851,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Behat 🚧
+    Behat
   </span>
   
 
@@ -953,7 +931,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Git artifact 🚧
+    Git artifact
   </span>
   
 
@@ -1033,7 +1011,27 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    PHPUnit 🚧
+    PHPUnit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/renovate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Renovate
   </span>
   
 
@@ -1053,7 +1051,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Twigcs 🚧
+    Twigcs
   </span>
   
 
@@ -2168,38 +2166,35 @@ You're not viewing the latest version.
 </ol>
 <h2 id="docsdrevopscom">docs.drevops.com<a class="headerlink" href="#docsdrevopscom" title="Permanent link">&para;</a></h2>
 <p>The Documentation (this site) is written in Markdown and located in
-<a href="https://github.com/drevops/drevops/tree/main/.drevops/docs"><code>.drevops/docs</code></a> directory. This is
+<a href="https://github.com/drevops/drevops/tree/main/.drevops/docs"><code class="language-text highlight">.drevops/docs</code></a> directory. This is
 removed when you install DrevOps for a
 consumer site.</p>
 <h3 id="Local-build">Local build<a class="headerlink" href="#Local-build" title="Permanent link">&para;</a></h3>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>.drevops/docs
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>ahoy<span class="w"> </span>build
-</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>.drevops/docs
+ahoy<span class="w"> </span>build
+</code></pre></div>
 <p>Parts of the documentation is generated automatically from the codebase.
 To update it, run:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>composer<span class="w"> </span>-d<span class="w"> </span>.drevops/docs/.utils<span class="w"> </span>install
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span>.drevops/docs
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>ahoy<span class="w"> </span>update
-</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>composer<span class="w"> </span>-d<span class="w"> </span>.drevops/docs/.utils<span class="w"> </span>install
+<span class="nb">cd</span><span class="w"> </span>.drevops/docs
+ahoy<span class="w"> </span>update
+</code></pre></div>
 <p>If you have the documentation site running locally, the updates will be seen
 immediately.</p>
 <h3 id="Check-spelling-and-links">Check spelling and links<a class="headerlink" href="#Check-spelling-and-links" title="Permanent link">&para;</a></h3>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>.drevops/docs
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>ahoy<span class="w"> </span><span class="nb">test</span>
-</span></code></pre></div></td></tr></table></div>
-<p>If required, add spelling exclusions to <code>.drevops/tests/.aspell.en.pws</code>
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>.drevops/docs
+ahoy<span class="w"> </span><span class="nb">test</span>
+</code></pre></div>
+<p>If required, add spelling exclusions to <code class="language-text highlight">.drevops/tests/.aspell.en.pws</code>
 file.</p>
 <h3 id="Publishing">Publishing<a class="headerlink" href="#Publishing" title="Permanent link">&para;</a></h3>
-<p>An automated CI build publishes this documentation on DrevOps release
-(as a <code>latest</code> version) and on every commit to a branch that has <code>docs</code> string
-in its name. This allowa publishing documentation for feature branches.</p>
+<p>An automated CI build publishes this documentation to <a href="https://docs.drevops.com/">https://docs.drevops.com/</a>:
+- on DrevOps release as a tag number
+- on every push to <code class="language-text highlight">main</code> branch as <code class="language-text highlight">canary</code>
+- on every commit to a branch that has <code class="language-text highlight">docs</code> string as a safe branch name</p>
 <h2 id="Consumer-site-documentation">Consumer site documentation<a class="headerlink" href="#Consumer-site-documentation" title="Permanent link">&para;</a></h2>
 <p>DrevOps provides a scaffold of the consumer site documentation in the
-<a href="https://github.com/drevops/drevops/tree/main/docs"><code>docs</code></a> directory.</p>
+<a href="https://github.com/drevops/drevops/tree/main/docs"><code class="language-text highlight">docs</code></a> directory.</p>
 <p>After DrevOps is installed into the consumer site, these docs are intended to
 be used by the site maintainers and stay up-to-date with the project changes.</p>
 <p>See <a href="../../../workflows/documentation/">Documentation</a> section.</p>

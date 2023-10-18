@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://docs.drevops.com/canary/tools/twigcs/">
       
       
-        <link rel="prev" href="../phpunit/">
+        <link rel="prev" href="../renovate/">
       
       
         <link rel="next" href="../xdebug/">
@@ -23,10 +23,8 @@
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
-      
-        <title>Twigcs 🚧 - DrevOps<sup>&reg;</sup> - Drupal project template</title>
-      
-    
+<title>DrevOps - Drupal project template</title>
+
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
       
@@ -142,7 +140,7 @@ You're not viewing the latest version.
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Twigcs 🚧
+              Twigcs
             
           </span>
         </div>
@@ -837,27 +835,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Ahoy 🚧
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../automated-updates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Automated updates
+    Ahoy
   </span>
   
 
@@ -877,7 +855,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Behat 🚧
+    Behat
   </span>
   
 
@@ -957,7 +935,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Git artifact 🚧
+    Git artifact
   </span>
   
 
@@ -1037,7 +1015,27 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    PHPUnit 🚧
+    PHPUnit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../renovate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Renovate
   </span>
   
 
@@ -1062,15 +1060,73 @@ You're not viewing the latest version.
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Twigcs
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Twigcs 🚧
+    Twigcs
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Ignoring" class="md-nav__link">
+    Ignoring
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Ignoring-fail-in-CI" class="md-nav__link">
+    Ignoring fail in CI
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2010,6 +2066,42 @@ You're not viewing the latest version.
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Ignoring" class="md-nav__link">
+    Ignoring
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Ignoring-fail-in-CI" class="md-nav__link">
+    Ignoring fail in CI
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2040,10 +2132,42 @@ You're not viewing the latest version.
 
 
 <h1 id="Twigcs">Twigcs<a class="headerlink" href="#Twigcs" title="Permanent link">&para;</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Work in progress</p>
-<p>The documentation section is still a work in progress.</p>
-</div>
+<p><a href="https://github.com/friendsoftwig/twigcs">https://github.com/friendsoftwig/twigcs</a></p>
+<blockquote>
+<p>The missing checkstyle for twig!</p>
+<p>Twigcs aims to be what phpcs is to php. It checks your codebase for violations on coding standards.</p>
+</blockquote>
+<p>DrevOps comes with <a href="https://github.com/drevops/drevops/tree/main/.twig_cs.php">pre-configured Twigcs ruleset</a> for Drupal projects.</p>
+<h2 id="Usage">Usage<a class="headerlink" href="#Usage" title="Permanent link">&para;</a></h2>
+<p><div class="language-shell highlight"><pre><span></span><code>vendor/bin/twigcs
+</code></pre></div>
+or
+<div class="language-shell highlight"><pre><span></span><code>ahoy<span class="w"> </span>lint-be
+</code></pre></div></p>
+<h2 id="Configuration">Configuration<a class="headerlink" href="#Configuration" title="Permanent link">&para;</a></h2>
+<p>See <a href="https://github.com/friendsoftwig/twigcs#file-based-configuration">configuration reference</a>.</p>
+<p>All global configuration takes place in the <a href="https://github.com/drevops/drevops/tree/main/.twig_cs.php"><code class="language-text highlight">.twig_cs.php</code></a> file.</p>
+<p>Targets include custom modules and themes.</p>
+<p>Adding or removing targets:
+<div class="language-php highlight"><pre><span></span><code><span class="k">return</span> <span class="nx">Twigcs\Config\Config</span><span class="o">::</span><span class="na">create</span><span class="p">()</span>
+  <span class="o">-&gt;</span><span class="na">setName</span><span class="p">(</span><span class="s1">&#39;custom-config&#39;</span><span class="p">)</span>
+  <span class="o">-&gt;</span><span class="na">setSeverity</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">)</span>
+  <span class="o">-&gt;</span><span class="na">setReporter</span><span class="p">(</span><span class="s1">&#39;console&#39;</span><span class="p">)</span>
+  <span class="o">-&gt;</span><span class="na">setRuleSet</span><span class="p">(</span><span class="nx">Twigcs\Ruleset\Official</span><span class="o">::</span><span class="na">class</span><span class="p">)</span>
+<span class="hll">  <span class="o">-&gt;</span><span class="na">addFinder</span><span class="p">(</span><span class="nx">Twigcs\Finder\TemplateFinder</span><span class="o">::</span><span class="na">create</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">in</span><span class="p">(</span><span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/web/themes/custom/mytheme&#39;</span><span class="p">));</span>
+</span></code></pre></div></p>
+<h2 id="Ignoring">Ignoring<a class="headerlink" href="#Ignoring" title="Permanent link">&para;</a></h2>
+<p>Twigcs does not support ignoring a file inline.</p>
+<p>Twigcs does not support ignoring of the <strong>code blocks</strong>.</p>
+<p>Twigcs does not support ignoring the current and the <strong>next line</strong>.</p>
+<p>Twigcs supports ignoring violations for unused variables:</p>
+<div class="language-twig highlight"><pre><span></span><code><span class="c">{# twigcs use-var bar #}</span>
+<span class="cp">{%</span> <span class="k">set</span> <span class="nv">bar</span> <span class="o">=</span> <span class="m">1</span> <span class="cp">%}</span>
+</code></pre></div>
+<h2 id="Ignoring-fail-in-CI">Ignoring fail in CI<a class="headerlink" href="#Ignoring-fail-in-CI" title="Permanent link">&para;</a></h2>
+<p>This tool runs in CI by default and fails the build if there are any violations.</p>
+<p>Set <code class="language-text highlight">DREVOPS_CI_TWIGCS_IGNORE_FAILURE</code> environment variable to <code class="language-text highlight">1</code> to ignore
+failures. The tool will still run and report violations, if any.</p>
 
 
   

@@ -23,10 +23,8 @@
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
-      
-        <title>Git artifact 🚧 - DrevOps<sup>&reg;</sup> - Drupal project template</title>
-      
-    
+<title>DrevOps - Drupal project template</title>
+
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
       
@@ -142,7 +140,7 @@ You're not viewing the latest version.
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Git artifact 🚧
+              Git artifact
             
           </span>
         </div>
@@ -837,27 +835,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Ahoy 🚧
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../automated-updates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Automated updates
+    Ahoy
   </span>
   
 
@@ -877,7 +855,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Behat 🚧
+    Behat
   </span>
   
 
@@ -962,15 +940,59 @@ You're not viewing the latest version.
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Git artifact
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Git artifact 🚧
+    Git artifact
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1047,7 +1069,27 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    PHPUnit 🚧
+    PHPUnit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../renovate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Renovate
   </span>
   
 
@@ -1067,7 +1109,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Twigcs 🚧
+    Twigcs
   </span>
   
 
@@ -2010,6 +2052,28 @@ You're not viewing the latest version.
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2040,10 +2104,36 @@ You're not viewing the latest version.
 
 
 <h1 id="Git-artifact">Git artifact<a class="headerlink" href="#Git-artifact" title="Permanent link">&para;</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Work in progress</p>
-<p>The documentation section is still a work in progress.</p>
-</div>
+<p><a href="https://github.com/drevops/git-artifact">https://github.com/drevops/git-artifact</a></p>
+<blockquote>
+<p>Package and push files to remote repositories</p>
+</blockquote>
+<p>Some hosting providers, like Acquia, restrict certain build operations, making
+it necessary to develop and build your site elsewhere before deploying it. This
+tool streamlines that process: it uses a <code class="language-text highlight">.gitignore.deployment</code> file to control
+which files get transferred, and overwrites the destination repository's history
+with each push, while preserving the source history.</p>
+<p>DrevOps comes
+with <a href="https://github.com/drevops/drevops/tree/main/.gitignore.deployment">pre-configured <code class="language-text highlight">.gitignore.deployment</code></a>
+file and <a href="https://github.com/drevops/drevops/tree/main/scripts/drevops/deploy-artifact.sh">deployment script</a>
+to build the artifact in CI and push it to the remote repository in Acquia.</p>
+<h2 id="Usage">Usage<a class="headerlink" href="#Usage" title="Permanent link">&para;</a></h2>
+<p>This tool is used in CI and does not require any manual actions.</p>
+<h2 id="Configuration">Configuration<a class="headerlink" href="#Configuration" title="Permanent link">&para;</a></h2>
+<p>The deployment targets can be added to the <code class="language-text highlight">.gitignore.deployment</code> file: it will
+replace the standard <code class="language-text highlight">.gitignore</code> file in the artifact repository.</p>
+<p>The file already contains all required targets to get the full site build with
+production-only dependencies (dev-dependencies are excluded from the code
+artifact during the CI build).</p>
+<p>Modifying targets in the <code class="language-text highlight">.gitignore.deployment</code> file works just like updating
+a regular <code class="language-text highlight">.gitignore</code> file.</p>
+<p>It is required to set the following environment variables in CI:</p>
+<ul>
+<li><code class="language-text highlight">DREVOPS_DEPLOY_ARTIFACT_GIT_USER_NAME</code>: Email address of the user who will be
+  committing to a remote repository.</li>
+<li><code class="language-text highlight">DREVOPS_DEPLOY_ARTIFACT_GIT_USER_EMAIL</code>: Name of the user who will be
+  committing to a remote repository.</li>
+</ul>
 
 
   

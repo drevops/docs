@@ -23,10 +23,8 @@
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
-      
-        <title>Variables - DrevOps<sup>&reg;</sup> - Drupal project template</title>
-      
-    
+<title>DrevOps - Drupal project template</title>
+
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
       
@@ -835,27 +833,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Ahoy 🚧
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tools/automated-updates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Automated updates
+    Ahoy
   </span>
   
 
@@ -875,7 +853,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Behat 🚧
+    Behat
   </span>
   
 
@@ -955,7 +933,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Git artifact 🚧
+    Git artifact
   </span>
   
 
@@ -1035,7 +1013,27 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    PHPUnit 🚧
+    PHPUnit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/renovate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Renovate
   </span>
   
 
@@ -1055,7 +1053,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Twigcs 🚧
+    Twigcs
   </span>
   
 
@@ -3144,324 +3142,324 @@ You're not viewing the latest version.
 <h2 id="Override-order-bottom-values-win">Override order (bottom values win):<a class="headerlink" href="#Override-order-bottom-values-win" title="Permanent link">&para;</a></h2>
 <ul>
 <li>default value in container taken from image</li>
-<li>default value in <code>docker-compose.yml</code></li>
-<li>value in <code>.env</code> (last value wins)</li>
-<li>value in <code>.env.local</code> (last value wins)</li>
+<li>default value in <code class="language-text highlight">docker-compose.yml</code></li>
+<li>value in <code class="language-text highlight">.env</code> (last value wins)</li>
+<li>value in <code class="language-text highlight">.env.local</code> (last value wins)</li>
 <li>value from environment</li>
 </ul>
 <h2 id="Variables-list">Variables list<a class="headerlink" href="#Variables-list" title="Permanent link">&para;</a></h2>
-<h3 id="AHOY_CONFIRM_RESPONSE"><code>AHOY_CONFIRM_RESPONSE</code><a class="headerlink" href="#AHOY_CONFIRM_RESPONSE" title="Permanent link">&para;</a></h3>
-<p>Set to <code>y</code> to suppress Ahoy prompts.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>.drevops/docs/.utils/variables/extra/.env.local.example.variables.sh</code></p>
-<h3 id="CLAMAV_MODE"><code>CLAMAV_MODE</code><a class="headerlink" href="#CLAMAV_MODE" title="Permanent link">&para;</a></h3>
+<h3 id="AHOY_CONFIRM_RESPONSE"><code class="language-text highlight">AHOY_CONFIRM_RESPONSE</code><a class="headerlink" href="#AHOY_CONFIRM_RESPONSE" title="Permanent link">&para;</a></h3>
+<p>Set to <code class="language-text highlight">y</code> to suppress Ahoy prompts.</p>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">.drevops/docs/.utils/variables/extra/.env.local.example.variables.sh</code></p>
+<h3 id="CLAMAV_MODE"><code class="language-text highlight">CLAMAV_MODE</code><a class="headerlink" href="#CLAMAV_MODE" title="Permanent link">&para;</a></h3>
 <p>ClamAV mode.</p>
-<p>Run ClamAV in either daemon mode by setting it to <code>0</code> (or 'daemon') or in<br />executable mode by setting it to <code>1</code>.</p>
-<p>Default value: <code>daemon</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="COMPOSE_PROJECT_NAME"><code>COMPOSE_PROJECT_NAME</code><a class="headerlink" href="#COMPOSE_PROJECT_NAME" title="Permanent link">&para;</a></h3>
+<p>Run ClamAV in either daemon mode by setting it to <code class="language-text highlight">0</code> (or 'daemon') or in<br />executable mode by setting it to <code class="language-text highlight">1</code>.</p>
+<p>Default value: <code class="language-text highlight">daemon</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="COMPOSE_PROJECT_NAME"><code class="language-text highlight">COMPOSE_PROJECT_NAME</code><a class="headerlink" href="#COMPOSE_PROJECT_NAME" title="Permanent link">&para;</a></h3>
 <p>Docker Compose project name (all containers will have this name). Defaults<br />to the name of the project directory.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>ENVIRONMENT</code></p>
-<h3 id="DOCKER_PASS"><code>DOCKER_PASS</code><a class="headerlink" href="#DOCKER_PASS" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">ENVIRONMENT</code></p>
+<h3 id="DOCKER_PASS"><code class="language-text highlight">DOCKER_PASS</code><a class="headerlink" href="#DOCKER_PASS" title="Permanent link">&para;</a></h3>
 <p>The password (token) to log into the Docker registry.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>.env.local.default</code></p>
-<h3 id="DOCKER_REGISTRY"><code>DOCKER_REGISTRY</code><a class="headerlink" href="#DOCKER_REGISTRY" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">.env.local.default</code></p>
+<h3 id="DOCKER_REGISTRY"><code class="language-text highlight">DOCKER_REGISTRY</code><a class="headerlink" href="#DOCKER_REGISTRY" title="Permanent link">&para;</a></h3>
 <p>Docker registry name.</p>
-<p>Provide port, if required as <code>&lt;server_name&gt;:&lt;port&gt;</code>.</p>
-<p>Default value: <code>docker.io</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DOCKER_USER"><code>DOCKER_USER</code><a class="headerlink" href="#DOCKER_USER" title="Permanent link">&para;</a></h3>
+<p>Provide port, if required as <code class="language-text highlight">&lt;server_name&gt;:&lt;port&gt;</code>.</p>
+<p>Default value: <code class="language-text highlight">docker.io</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DOCKER_USER"><code class="language-text highlight">DOCKER_USER</code><a class="headerlink" href="#DOCKER_USER" title="Permanent link">&para;</a></h3>
 <p>The username to log into the Docker registry.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>.env.local.default</code></p>
-<h3 id="DREVOPS_ACQUIA_APP_NAME"><code>DREVOPS_ACQUIA_APP_NAME</code><a class="headerlink" href="#DREVOPS_ACQUIA_APP_NAME" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">.env.local.default</code></p>
+<h3 id="DREVOPS_ACQUIA_APP_NAME"><code class="language-text highlight">DREVOPS_ACQUIA_APP_NAME</code><a class="headerlink" href="#DREVOPS_ACQUIA_APP_NAME" title="Permanent link">&para;</a></h3>
 <p>Acquia application name to download the database from.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_ACQUIA_KEY"><code>DREVOPS_ACQUIA_KEY</code><a class="headerlink" href="#DREVOPS_ACQUIA_KEY" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_ACQUIA_KEY"><code class="language-text highlight">DREVOPS_ACQUIA_KEY</code><a class="headerlink" href="#DREVOPS_ACQUIA_KEY" title="Permanent link">&para;</a></h3>
 <p>Acquia Cloud API key.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>.env.local.default</code></p>
-<h3 id="DREVOPS_ACQUIA_SECRET"><code>DREVOPS_ACQUIA_SECRET</code><a class="headerlink" href="#DREVOPS_ACQUIA_SECRET" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">.env.local.default</code></p>
+<h3 id="DREVOPS_ACQUIA_SECRET"><code class="language-text highlight">DREVOPS_ACQUIA_SECRET</code><a class="headerlink" href="#DREVOPS_ACQUIA_SECRET" title="Permanent link">&para;</a></h3>
 <p>Acquia Cloud API secret.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>.env.local.default</code></p>
-<h3 id="DREVOPS_CI_ARTIFACTS"><code>DREVOPS_CI_ARTIFACTS</code><a class="headerlink" href="#DREVOPS_CI_ARTIFACTS" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">.env.local.default</code></p>
+<h3 id="DREVOPS_CI_ARTIFACTS"><code class="language-text highlight">DREVOPS_CI_ARTIFACTS</code><a class="headerlink" href="#DREVOPS_CI_ARTIFACTS" title="Permanent link">&para;</a></h3>
 <p>Directory to store test artifacts in CI.</p>
-<p>Default value: <code>/tmp/artifacts</code></p>
-<p>Defined in: <code>CI config</code></p>
-<h3 id="DREVOPS_CI_BEHAT_IGNORE_FAILURE"><code>DREVOPS_CI_BEHAT_IGNORE_FAILURE</code><a class="headerlink" href="#DREVOPS_CI_BEHAT_IGNORE_FAILURE" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">/tmp/artifacts</code></p>
+<p>Defined in: <code class="language-text highlight">CI config</code></p>
+<h3 id="DREVOPS_CI_BEHAT_IGNORE_FAILURE"><code class="language-text highlight">DREVOPS_CI_BEHAT_IGNORE_FAILURE</code><a class="headerlink" href="#DREVOPS_CI_BEHAT_IGNORE_FAILURE" title="Permanent link">&para;</a></h3>
 <p>Ignore Behat test failures.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>CI config</code></p>
-<h3 id="DREVOPS_CI_BEHAT_PROFILE"><code>DREVOPS_CI_BEHAT_PROFILE</code><a class="headerlink" href="#DREVOPS_CI_BEHAT_PROFILE" title="Permanent link">&para;</a></h3>
-<p>Test Behat profile to use in CI. If not set, the <code>default</code> profile will be used.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>CI config</code></p>
-<h3 id="DREVOPS_CI_NPM_LINT_IGNORE_FAILURE"><code>DREVOPS_CI_NPM_LINT_IGNORE_FAILURE</code><a class="headerlink" href="#DREVOPS_CI_NPM_LINT_IGNORE_FAILURE" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">CI config</code></p>
+<h3 id="DREVOPS_CI_BEHAT_PROFILE"><code class="language-text highlight">DREVOPS_CI_BEHAT_PROFILE</code><a class="headerlink" href="#DREVOPS_CI_BEHAT_PROFILE" title="Permanent link">&para;</a></h3>
+<p>Test Behat profile to use in CI. If not set, the <code class="language-text highlight">default</code> profile will be used.</p>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">CI config</code></p>
+<h3 id="DREVOPS_CI_NPM_LINT_IGNORE_FAILURE"><code class="language-text highlight">DREVOPS_CI_NPM_LINT_IGNORE_FAILURE</code><a class="headerlink" href="#DREVOPS_CI_NPM_LINT_IGNORE_FAILURE" title="Permanent link">&para;</a></h3>
 <p>Ignore NPM linters failures.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>CI config</code></p>
-<h3 id="DREVOPS_CI_PHPCS_IGNORE_FAILURE"><code>DREVOPS_CI_PHPCS_IGNORE_FAILURE</code><a class="headerlink" href="#DREVOPS_CI_PHPCS_IGNORE_FAILURE" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">CI config</code></p>
+<h3 id="DREVOPS_CI_PHPCS_IGNORE_FAILURE"><code class="language-text highlight">DREVOPS_CI_PHPCS_IGNORE_FAILURE</code><a class="headerlink" href="#DREVOPS_CI_PHPCS_IGNORE_FAILURE" title="Permanent link">&para;</a></h3>
 <p>Ignore PHPCS failures.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>CI config</code></p>
-<h3 id="DREVOPS_CI_PHPMD_IGNORE_FAILURE"><code>DREVOPS_CI_PHPMD_IGNORE_FAILURE</code><a class="headerlink" href="#DREVOPS_CI_PHPMD_IGNORE_FAILURE" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">CI config</code></p>
+<h3 id="DREVOPS_CI_PHPMD_IGNORE_FAILURE"><code class="language-text highlight">DREVOPS_CI_PHPMD_IGNORE_FAILURE</code><a class="headerlink" href="#DREVOPS_CI_PHPMD_IGNORE_FAILURE" title="Permanent link">&para;</a></h3>
 <p>Ignore PHPMD failures.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>CI config</code></p>
-<h3 id="DREVOPS_CI_PHPSTAN_IGNORE_FAILURE"><code>DREVOPS_CI_PHPSTAN_IGNORE_FAILURE</code><a class="headerlink" href="#DREVOPS_CI_PHPSTAN_IGNORE_FAILURE" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">CI config</code></p>
+<h3 id="DREVOPS_CI_PHPSTAN_IGNORE_FAILURE"><code class="language-text highlight">DREVOPS_CI_PHPSTAN_IGNORE_FAILURE</code><a class="headerlink" href="#DREVOPS_CI_PHPSTAN_IGNORE_FAILURE" title="Permanent link">&para;</a></h3>
 <p>Ignore PHPStan failures.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>CI config</code></p>
-<h3 id="DREVOPS_CI_PHPUNIT_IGNORE_FAILURE"><code>DREVOPS_CI_PHPUNIT_IGNORE_FAILURE</code><a class="headerlink" href="#DREVOPS_CI_PHPUNIT_IGNORE_FAILURE" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">CI config</code></p>
+<h3 id="DREVOPS_CI_PHPUNIT_IGNORE_FAILURE"><code class="language-text highlight">DREVOPS_CI_PHPUNIT_IGNORE_FAILURE</code><a class="headerlink" href="#DREVOPS_CI_PHPUNIT_IGNORE_FAILURE" title="Permanent link">&para;</a></h3>
 <p>Ignore PHPUnit test failures.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>CI config</code></p>
-<h3 id="DREVOPS_CI_TEST_RESULTS"><code>DREVOPS_CI_TEST_RESULTS</code><a class="headerlink" href="#DREVOPS_CI_TEST_RESULTS" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">CI config</code></p>
+<h3 id="DREVOPS_CI_TEST_RESULTS"><code class="language-text highlight">DREVOPS_CI_TEST_RESULTS</code><a class="headerlink" href="#DREVOPS_CI_TEST_RESULTS" title="Permanent link">&para;</a></h3>
 <p>Directory to store test results in CI.</p>
-<p>Default value: <code>/tmp/tests</code></p>
-<p>Defined in: <code>CI config</code></p>
-<h3 id="DREVOPS_CI_TWIGCS_IGNORE_FAILURE"><code>DREVOPS_CI_TWIGCS_IGNORE_FAILURE</code><a class="headerlink" href="#DREVOPS_CI_TWIGCS_IGNORE_FAILURE" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">/tmp/tests</code></p>
+<p>Defined in: <code class="language-text highlight">CI config</code></p>
+<h3 id="DREVOPS_CI_TWIGCS_IGNORE_FAILURE"><code class="language-text highlight">DREVOPS_CI_TWIGCS_IGNORE_FAILURE</code><a class="headerlink" href="#DREVOPS_CI_TWIGCS_IGNORE_FAILURE" title="Permanent link">&para;</a></h3>
 <p>Ignore Twigcs failures.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>CI config</code></p>
-<h3 id="DREVOPS_CLAMAV_ENABLED"><code>DREVOPS_CLAMAV_ENABLED</code><a class="headerlink" href="#DREVOPS_CLAMAV_ENABLED" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">CI config</code></p>
+<h3 id="DREVOPS_CLAMAV_ENABLED"><code class="language-text highlight">DREVOPS_CLAMAV_ENABLED</code><a class="headerlink" href="#DREVOPS_CLAMAV_ENABLED" title="Permanent link">&para;</a></h3>
 <p>Enable ClamAV integration.</p>
-<p>Default value: <code>1</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_COMPOSER_VERBOSE"><code>DREVOPS_COMPOSER_VERBOSE</code><a class="headerlink" href="#DREVOPS_COMPOSER_VERBOSE" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">1</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_COMPOSER_VERBOSE"><code class="language-text highlight">DREVOPS_COMPOSER_VERBOSE</code><a class="headerlink" href="#DREVOPS_COMPOSER_VERBOSE" title="Permanent link">&para;</a></h3>
 <p>Print debug information from Composer install.</p>
-<p>Default value: <code>1</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_DB_DIR"><code>DREVOPS_DB_DIR</code><a class="headerlink" href="#DREVOPS_DB_DIR" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">1</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_DB_DIR"><code class="language-text highlight">DREVOPS_DB_DIR</code><a class="headerlink" href="#DREVOPS_DB_DIR" title="Permanent link">&para;</a></h3>
 <p>Database dump data directory (file or Docker image archive).</p>
-<p>Default value: <code>./.data</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_DB_DOCKER_IMAGE"><code>DREVOPS_DB_DOCKER_IMAGE</code><a class="headerlink" href="#DREVOPS_DB_DOCKER_IMAGE" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">./.data</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_DB_DOCKER_IMAGE"><code class="language-text highlight">DREVOPS_DB_DOCKER_IMAGE</code><a class="headerlink" href="#DREVOPS_DB_DOCKER_IMAGE" title="Permanent link">&para;</a></h3>
 <p>Name of the database docker image to use.</p>
 <p>See <a href="https://github.com/drevops/mariadb-drupal-data">https://github.com/drevops/mariadb-drupal-data</a> to seed your DB image.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_DB_DOCKER_IMAGE_BASE"><code>DREVOPS_DB_DOCKER_IMAGE_BASE</code><a class="headerlink" href="#DREVOPS_DB_DOCKER_IMAGE_BASE" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_DB_DOCKER_IMAGE_BASE"><code class="language-text highlight">DREVOPS_DB_DOCKER_IMAGE_BASE</code><a class="headerlink" href="#DREVOPS_DB_DOCKER_IMAGE_BASE" title="Permanent link">&para;</a></h3>
 <p>Name of the database fall-back docker image to use.</p>
-<p>If the image specified in <a href="#DREVOPS_DB_DOCKER_IMAGE"><code>$DREVOPS_DB_DOCKER_IMAGE</code></a> does not exist and base<br />image was provided - it will be used as a "clean slate" for the database.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_DB_DOWNLOAD_ACQUIA_DB_NAME"><code>DREVOPS_DB_DOWNLOAD_ACQUIA_DB_NAME</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_ACQUIA_DB_NAME" title="Permanent link">&para;</a></h3>
+<p>If the image specified in <a href="#DREVOPS_DB_DOCKER_IMAGE"><code class="language-text highlight">$DREVOPS_DB_DOCKER_IMAGE</code></a> does not exist and base<br />image was provided - it will be used as a "clean slate" for the database.</p>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_DB_DOWNLOAD_ACQUIA_DB_NAME"><code class="language-text highlight">DREVOPS_DB_DOWNLOAD_ACQUIA_DB_NAME</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_ACQUIA_DB_NAME" title="Permanent link">&para;</a></h3>
 <p>Acquia database name to download the database from.</p>
-<p>Default value: <code>your_site</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_DB_DOWNLOAD_ACQUIA_ENV"><code>DREVOPS_DB_DOWNLOAD_ACQUIA_ENV</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_ACQUIA_ENV" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">your_site</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_DB_DOWNLOAD_ACQUIA_ENV"><code class="language-text highlight">DREVOPS_DB_DOWNLOAD_ACQUIA_ENV</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_ACQUIA_ENV" title="Permanent link">&para;</a></h3>
 <p>Acquia environment to download the database from.</p>
-<p>Default value: <code>prod</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_DB_DOWNLOAD_CURL_URL"><code>DREVOPS_DB_DOWNLOAD_CURL_URL</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_CURL_URL" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">prod</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_DB_DOWNLOAD_CURL_URL"><code class="language-text highlight">DREVOPS_DB_DOWNLOAD_CURL_URL</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_CURL_URL" title="Permanent link">&para;</a></h3>
 <p>Database dump file source from CURL, with optional HTTP Basic Authentication<br />credentials embedded into the value.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_DB_DOWNLOAD_FORCE"><code>DREVOPS_DB_DOWNLOAD_FORCE</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_FORCE" title="Permanent link">&para;</a></h3>
-<p>Set to <code>1</code> to override existing downloaded DB dump without asking.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>.drevops/docs/.utils/variables/extra/.env.local.example.variables.sh</code></p>
-<h3 id="DREVOPS_DB_DOWNLOAD_FTP_FILE"><code>DREVOPS_DB_DOWNLOAD_FTP_FILE</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_FTP_FILE" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_DB_DOWNLOAD_FORCE"><code class="language-text highlight">DREVOPS_DB_DOWNLOAD_FORCE</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_FORCE" title="Permanent link">&para;</a></h3>
+<p>Set to <code class="language-text highlight">1</code> to override existing downloaded DB dump without asking.</p>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">.drevops/docs/.utils/variables/extra/.env.local.example.variables.sh</code></p>
+<h3 id="DREVOPS_DB_DOWNLOAD_FTP_FILE"><code class="language-text highlight">DREVOPS_DB_DOWNLOAD_FTP_FILE</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_FTP_FILE" title="Permanent link">&para;</a></h3>
 <p>Database dump FTP file name.</p>
-<p>Default value: <code>db.sql</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_DB_DOWNLOAD_FTP_HOST"><code>DREVOPS_DB_DOWNLOAD_FTP_HOST</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_FTP_HOST" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">db.sql</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_DB_DOWNLOAD_FTP_HOST"><code class="language-text highlight">DREVOPS_DB_DOWNLOAD_FTP_HOST</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_FTP_HOST" title="Permanent link">&para;</a></h3>
 <p>Database dump FTP host.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_DB_DOWNLOAD_FTP_PASS"><code>DREVOPS_DB_DOWNLOAD_FTP_PASS</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_FTP_PASS" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_DB_DOWNLOAD_FTP_PASS"><code class="language-text highlight">DREVOPS_DB_DOWNLOAD_FTP_PASS</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_FTP_PASS" title="Permanent link">&para;</a></h3>
 <p>Database dump FTP password.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>.env.local.default</code></p>
-<h3 id="DREVOPS_DB_DOWNLOAD_FTP_PORT"><code>DREVOPS_DB_DOWNLOAD_FTP_PORT</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_FTP_PORT" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">.env.local.default</code></p>
+<h3 id="DREVOPS_DB_DOWNLOAD_FTP_PORT"><code class="language-text highlight">DREVOPS_DB_DOWNLOAD_FTP_PORT</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_FTP_PORT" title="Permanent link">&para;</a></h3>
 <p>Database dump FTP port.</p>
-<p>Default value: <code>21</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_DB_DOWNLOAD_FTP_USER"><code>DREVOPS_DB_DOWNLOAD_FTP_USER</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_FTP_USER" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">21</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_DB_DOWNLOAD_FTP_USER"><code class="language-text highlight">DREVOPS_DB_DOWNLOAD_FTP_USER</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_FTP_USER" title="Permanent link">&para;</a></h3>
 <p>Database dump FTP user.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>.env.local.default</code></p>
-<h3 id="DREVOPS_DB_DOWNLOAD_LAGOON_BRANCH"><code>DREVOPS_DB_DOWNLOAD_LAGOON_BRANCH</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_LAGOON_BRANCH" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">.env.local.default</code></p>
+<h3 id="DREVOPS_DB_DOWNLOAD_LAGOON_BRANCH"><code class="language-text highlight">DREVOPS_DB_DOWNLOAD_LAGOON_BRANCH</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_LAGOON_BRANCH" title="Permanent link">&para;</a></h3>
 <p>Lagoon environment to download the database from.</p>
-<p>Default value: <code>main</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_DB_DOWNLOAD_SOURCE"><code>DREVOPS_DB_DOWNLOAD_SOURCE</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_SOURCE" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">main</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_DB_DOWNLOAD_SOURCE"><code class="language-text highlight">DREVOPS_DB_DOWNLOAD_SOURCE</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_SOURCE" title="Permanent link">&para;</a></h3>
 <p>Database can be sourced from one of the following locations:</p>
 <ul>
-<li><code>url</code> - directly from URL as a file using CURL.</li>
-<li><code>ftp</code> - directly from FTP as a file using CURL.</li>
-<li><code>acquia</code> - from the latest Acquia backup via Cloud API as a file.</li>
-<li><code>lagoon</code> - from Lagoon main environment as a file.</li>
-<li><code>docker_registry</code> - from the docker registry as a docker image.</li>
-<li><code>none</code> - not downloaded, site is freshly installed for every build.</li>
+<li><code class="language-text highlight">url</code> - directly from URL as a file using CURL.</li>
+<li><code class="language-text highlight">ftp</code> - directly from FTP as a file using CURL.</li>
+<li><code class="language-text highlight">acquia</code> - from the latest Acquia backup via Cloud API as a file.</li>
+<li><code class="language-text highlight">lagoon</code> - from Lagoon main environment as a file.</li>
+<li><code class="language-text highlight">docker_registry</code> - from the docker registry as a docker image.</li>
+<li><code class="language-text highlight">none</code> - not downloaded, site is freshly installed for every build.</li>
 </ul>
-<p>Note that "docker_registry" works only for database-in-Docker-image<br />database storage (when <a href="#DREVOPS_DB_DOCKER_IMAGE"><code>$DREVOPS_DB_DOCKER_IMAGE</code></a> variable has a value).</p>
-<p>Default value: <code>curl</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_DB_DOWNLOAD_SSH_KEY_FILE"><code>DREVOPS_DB_DOWNLOAD_SSH_KEY_FILE</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_SSH_KEY_FILE" title="Permanent link">&para;</a></h3>
+<p>Note that "docker_registry" works only for database-in-Docker-image<br />database storage (when <a href="#DREVOPS_DB_DOCKER_IMAGE"><code class="language-text highlight">$DREVOPS_DB_DOCKER_IMAGE</code></a> variable has a value).</p>
+<p>Default value: <code class="language-text highlight">curl</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_DB_DOWNLOAD_SSH_KEY_FILE"><code class="language-text highlight">DREVOPS_DB_DOWNLOAD_SSH_KEY_FILE</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_SSH_KEY_FILE" title="Permanent link">&para;</a></h3>
 <p>SSH key file used to access Lagoon environment to download the database.<br />Create an SSH key and add it to your account in the Lagoon Dashboard.</p>
-<p>Default value: <code>HOME/.ssh/id_rsa</code></p>
-<p>Defined in: <code>.env.local.default</code></p>
-<h3 id="DREVOPS_DB_FILE"><code>DREVOPS_DB_FILE</code><a class="headerlink" href="#DREVOPS_DB_FILE" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">HOME/.ssh/id_rsa</code></p>
+<p>Defined in: <code class="language-text highlight">.env.local.default</code></p>
+<h3 id="DREVOPS_DB_FILE"><code class="language-text highlight">DREVOPS_DB_FILE</code><a class="headerlink" href="#DREVOPS_DB_FILE" title="Permanent link">&para;</a></h3>
 <p>Database dump file name (Docker image archive will use '.tar' extension).</p>
-<p>Default value: <code>db.sql</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_DEBUG"><code>DREVOPS_DEBUG</code><a class="headerlink" href="#DREVOPS_DEBUG" title="Permanent link">&para;</a></h3>
-<p>Set to <code>1</code> to print debug information in DrevOps scripts.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>.drevops/docs/.utils/variables/extra/.env.local.example.variables.sh</code></p>
-<h3 id="DREVOPS_DEPLOY_TYPES"><code>DREVOPS_DEPLOY_TYPES</code><a class="headerlink" href="#DREVOPS_DEPLOY_TYPES" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">db.sql</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_DEBUG"><code class="language-text highlight">DREVOPS_DEBUG</code><a class="headerlink" href="#DREVOPS_DEBUG" title="Permanent link">&para;</a></h3>
+<p>Set to <code class="language-text highlight">1</code> to print debug information in DrevOps scripts.</p>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">.drevops/docs/.utils/variables/extra/.env.local.example.variables.sh</code></p>
+<h3 id="DREVOPS_DEPLOY_TYPES"><code class="language-text highlight">DREVOPS_DEPLOY_TYPES</code><a class="headerlink" href="#DREVOPS_DEPLOY_TYPES" title="Permanent link">&para;</a></h3>
 <p>The type of deployment.</p>
-<p>Combination of comma-separated values to support multiple deployments:<br /><code>artifact</code>,<code>docker</code>, <code>webhook</code>, <code>lagoon</code>.</p>
+<p>Combination of comma-separated values to support multiple deployments:<br /><code class="language-text highlight">artifact</code>,<code class="language-text highlight">docker</code>, <code class="language-text highlight">webhook</code>, <code class="language-text highlight">lagoon</code>.</p>
 <p>See <a href="https://docs.drevops.com/deploy">https://docs.drevops.com/deploy</a></p>
-<p>Default value: <code>artifact</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_DOCKER_VERBOSE"><code>DREVOPS_DOCKER_VERBOSE</code><a class="headerlink" href="#DREVOPS_DOCKER_VERBOSE" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">artifact</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_DOCKER_VERBOSE"><code class="language-text highlight">DREVOPS_DOCKER_VERBOSE</code><a class="headerlink" href="#DREVOPS_DOCKER_VERBOSE" title="Permanent link">&para;</a></h3>
 <p>Print debug information from Docker build.</p>
-<p>Default value: <code>1</code></p>
-<p>Defined in: <code>.env</code>, <code>.drevops/docs/.utils/variables/extra/.env.local.example.variables.sh</code></p>
-<h3 id="DREVOPS_DRUPAL_ADMIN_EMAIL"><code>DREVOPS_DRUPAL_ADMIN_EMAIL</code><a class="headerlink" href="#DREVOPS_DRUPAL_ADMIN_EMAIL" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">1</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code>, <code class="language-text highlight">.drevops/docs/.utils/variables/extra/.env.local.example.variables.sh</code></p>
+<h3 id="DREVOPS_DRUPAL_ADMIN_EMAIL"><code class="language-text highlight">DREVOPS_DRUPAL_ADMIN_EMAIL</code><a class="headerlink" href="#DREVOPS_DRUPAL_ADMIN_EMAIL" title="Permanent link">&para;</a></h3>
 <p>Drupal admin email. May need to be reset if database was sanitized.</p>
-<p>Default value: <code>webmaster@your-site-url.example</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_DRUPAL_DB_SANITIZE_EMAIL"><code>DREVOPS_DRUPAL_DB_SANITIZE_EMAIL</code><a class="headerlink" href="#DREVOPS_DRUPAL_DB_SANITIZE_EMAIL" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">webmaster@your-site-url.example</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_DRUPAL_DB_SANITIZE_EMAIL"><code class="language-text highlight">DREVOPS_DRUPAL_DB_SANITIZE_EMAIL</code><a class="headerlink" href="#DREVOPS_DRUPAL_DB_SANITIZE_EMAIL" title="Permanent link">&para;</a></h3>
 <p>Sanitization email pattern. Sanitization is enabled by default in all<br />non-production environments.<br /><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/see" title="GitHub User: see">@see</a> <a href="https://docs.drevops.com/build#sanitization">https://docs.drevops.com/build#sanitization</a></p>
-<p>Default value: <code>user_%uid@your-site-url.example</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_DRUPAL_DB_SANITIZE_PASSWORD"><code>DREVOPS_DRUPAL_DB_SANITIZE_PASSWORD</code><a class="headerlink" href="#DREVOPS_DRUPAL_DB_SANITIZE_PASSWORD" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">user_%uid@your-site-url.example</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_DRUPAL_DB_SANITIZE_PASSWORD"><code class="language-text highlight">DREVOPS_DRUPAL_DB_SANITIZE_PASSWORD</code><a class="headerlink" href="#DREVOPS_DRUPAL_DB_SANITIZE_PASSWORD" title="Permanent link">&para;</a></h3>
 <p>Password replacement used for sanitised database.</p>
-<p>Default value: <code>&lt;RANDOM STRING&gt;</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_DRUPAL_PROFILE"><code>DREVOPS_DRUPAL_PROFILE</code><a class="headerlink" href="#DREVOPS_DRUPAL_PROFILE" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">&lt;RANDOM STRING&gt;</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_DRUPAL_PROFILE"><code class="language-text highlight">DREVOPS_DRUPAL_PROFILE</code><a class="headerlink" href="#DREVOPS_DRUPAL_PROFILE" title="Permanent link">&para;</a></h3>
 <p>Drupal profile name (used only when installing from profile).</p>
-<p>Default value: <code>your_site_profile</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_DRUPAL_SITE_EMAIL"><code>DREVOPS_DRUPAL_SITE_EMAIL</code><a class="headerlink" href="#DREVOPS_DRUPAL_SITE_EMAIL" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">your_site_profile</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_DRUPAL_SITE_EMAIL"><code class="language-text highlight">DREVOPS_DRUPAL_SITE_EMAIL</code><a class="headerlink" href="#DREVOPS_DRUPAL_SITE_EMAIL" title="Permanent link">&para;</a></h3>
 <p>Drupal site email (used only when installing from profile).</p>
-<p>Default value: <code>webmaster@your-site-url.example</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_DRUPAL_SITE_NAME"><code>DREVOPS_DRUPAL_SITE_NAME</code><a class="headerlink" href="#DREVOPS_DRUPAL_SITE_NAME" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">webmaster@your-site-url.example</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_DRUPAL_SITE_NAME"><code class="language-text highlight">DREVOPS_DRUPAL_SITE_NAME</code><a class="headerlink" href="#DREVOPS_DRUPAL_SITE_NAME" title="Permanent link">&para;</a></h3>
 <p>Drupal site name (used only when installing from profile).</p>
-<p>Default value: <code>YOURSITE</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_DRUPAL_THEME"><code>DREVOPS_DRUPAL_THEME</code><a class="headerlink" href="#DREVOPS_DRUPAL_THEME" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">YOURSITE</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_DRUPAL_THEME"><code class="language-text highlight">DREVOPS_DRUPAL_THEME</code><a class="headerlink" href="#DREVOPS_DRUPAL_THEME" title="Permanent link">&para;</a></h3>
 <p>Drupal theme name.</p>
-<p>Default value: <code>your_site_theme</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_DRUPAL_UNBLOCK_ADMIN"><code>DREVOPS_DRUPAL_UNBLOCK_ADMIN</code><a class="headerlink" href="#DREVOPS_DRUPAL_UNBLOCK_ADMIN" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">your_site_theme</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_DRUPAL_UNBLOCK_ADMIN"><code class="language-text highlight">DREVOPS_DRUPAL_UNBLOCK_ADMIN</code><a class="headerlink" href="#DREVOPS_DRUPAL_UNBLOCK_ADMIN" title="Permanent link">&para;</a></h3>
 <p>Unblock admin account when logging in.</p>
-<p>Default value: <code>1</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_DRUPAL_VERSION"><code>DREVOPS_DRUPAL_VERSION</code><a class="headerlink" href="#DREVOPS_DRUPAL_VERSION" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">1</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_DRUPAL_VERSION"><code class="language-text highlight">DREVOPS_DRUPAL_VERSION</code><a class="headerlink" href="#DREVOPS_DRUPAL_VERSION" title="Permanent link">&para;</a></h3>
 <p>Drupal version.</p>
-<p>Default value: <code>10</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_ENVIRONMENT"><code>DREVOPS_ENVIRONMENT</code><a class="headerlink" href="#DREVOPS_ENVIRONMENT" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">10</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_ENVIRONMENT"><code class="language-text highlight">DREVOPS_ENVIRONMENT</code><a class="headerlink" href="#DREVOPS_ENVIRONMENT" title="Permanent link">&para;</a></h3>
 <p>Override detected environment type.</p>
 <p>Used in the application to override the automatically detected environment type.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>ENVIRONMENT</code></p>
-<h3 id="DREVOPS_EXPORT_CODE_DIR"><code>DREVOPS_EXPORT_CODE_DIR</code><a class="headerlink" href="#DREVOPS_EXPORT_CODE_DIR" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">ENVIRONMENT</code></p>
+<h3 id="DREVOPS_EXPORT_CODE_DIR"><code class="language-text highlight">DREVOPS_EXPORT_CODE_DIR</code><a class="headerlink" href="#DREVOPS_EXPORT_CODE_DIR" title="Permanent link">&para;</a></h3>
 <p>Directory to store exported code.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>CI config</code></p>
-<h3 id="DREVOPS_EXPORT_DB_DOCKER_DEPLOY_PROCEED"><code>DREVOPS_EXPORT_DB_DOCKER_DEPLOY_PROCEED</code><a class="headerlink" href="#DREVOPS_EXPORT_DB_DOCKER_DEPLOY_PROCEED" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">CI config</code></p>
+<h3 id="DREVOPS_EXPORT_DB_DOCKER_DEPLOY_PROCEED"><code class="language-text highlight">DREVOPS_EXPORT_DB_DOCKER_DEPLOY_PROCEED</code><a class="headerlink" href="#DREVOPS_EXPORT_DB_DOCKER_DEPLOY_PROCEED" title="Permanent link">&para;</a></h3>
 <p>Proceed with Docker image deployment after it was exported.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>CI config</code></p>
-<h3 id="DREVOPS_NOTIFY_CHANNELS"><code>DREVOPS_NOTIFY_CHANNELS</code><a class="headerlink" href="#DREVOPS_NOTIFY_CHANNELS" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">CI config</code></p>
+<h3 id="DREVOPS_NOTIFY_CHANNELS"><code class="language-text highlight">DREVOPS_NOTIFY_CHANNELS</code><a class="headerlink" href="#DREVOPS_NOTIFY_CHANNELS" title="Permanent link">&para;</a></h3>
 <p>The channels of the notifications.</p>
 <p>Can be a combination of comma-separated values: email,newrelic,github,jira</p>
-<p>Default value: <code>email</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_NOTIFY_EMAIL_FROM"><code>DREVOPS_NOTIFY_EMAIL_FROM</code><a class="headerlink" href="#DREVOPS_NOTIFY_EMAIL_FROM" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">email</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_NOTIFY_EMAIL_FROM"><code class="language-text highlight">DREVOPS_NOTIFY_EMAIL_FROM</code><a class="headerlink" href="#DREVOPS_NOTIFY_EMAIL_FROM" title="Permanent link">&para;</a></h3>
 <p>Email to send notifications from.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_NOTIFY_EMAIL_RECIPIENTS"><code>DREVOPS_NOTIFY_EMAIL_RECIPIENTS</code><a class="headerlink" href="#DREVOPS_NOTIFY_EMAIL_RECIPIENTS" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_NOTIFY_EMAIL_RECIPIENTS"><code class="language-text highlight">DREVOPS_NOTIFY_EMAIL_RECIPIENTS</code><a class="headerlink" href="#DREVOPS_NOTIFY_EMAIL_RECIPIENTS" title="Permanent link">&para;</a></h3>
 <p>Email address(es) to send notifications to.</p>
 <p>Multiple names can be specified as a comma-separated list of email addresses<br />with optional names in the format "email|name".<br />Example: "<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#116;&#111;&#49;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;">&#116;&#111;&#49;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;</a>|Jane Doe, <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#116;&#111;&#50;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;">&#116;&#111;&#50;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;</a>|John Doe"</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_NPM_VERBOSE"><code>DREVOPS_NPM_VERBOSE</code><a class="headerlink" href="#DREVOPS_NPM_VERBOSE" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_NPM_VERBOSE"><code class="language-text highlight">DREVOPS_NPM_VERBOSE</code><a class="headerlink" href="#DREVOPS_NPM_VERBOSE" title="Permanent link">&para;</a></h3>
 <p>Print debug information from NPM install.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_PRODUCTION_BRANCH"><code>DREVOPS_PRODUCTION_BRANCH</code><a class="headerlink" href="#DREVOPS_PRODUCTION_BRANCH" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_PRODUCTION_BRANCH"><code class="language-text highlight">DREVOPS_PRODUCTION_BRANCH</code><a class="headerlink" href="#DREVOPS_PRODUCTION_BRANCH" title="Permanent link">&para;</a></h3>
 <p>Dedicated branch to identify production environment.</p>
-<p>Default value: <code>main</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_PROJECT"><code>DREVOPS_PROJECT</code><a class="headerlink" href="#DREVOPS_PROJECT" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">main</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_PROJECT"><code class="language-text highlight">DREVOPS_PROJECT</code><a class="headerlink" href="#DREVOPS_PROJECT" title="Permanent link">&para;</a></h3>
 <p>Project name.<br />Drives internal naming within the codebase.<br />Does not affect the names of containers and development URL - those depend on<br />the project directory and can be overridden with COMPOSE_PROJECT_NAME.</p>
-<p>Default value: <code>your_site</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_PROVISION_ACQUIA_SKIP"><code>DREVOPS_PROVISION_ACQUIA_SKIP</code><a class="headerlink" href="#DREVOPS_PROVISION_ACQUIA_SKIP" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">your_site</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_PROVISION_ACQUIA_SKIP"><code class="language-text highlight">DREVOPS_PROVISION_ACQUIA_SKIP</code><a class="headerlink" href="#DREVOPS_PROVISION_ACQUIA_SKIP" title="Permanent link">&para;</a></h3>
 <p>Skip Drupal site provisioning in Acquia environment.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>ACQUIA ENVIRONMENT</code></p>
-<h3 id="DREVOPS_PROVISION_OVERRIDE_DB"><code>DREVOPS_PROVISION_OVERRIDE_DB</code><a class="headerlink" href="#DREVOPS_PROVISION_OVERRIDE_DB" title="Permanent link">&para;</a></h3>
-<p>Flag to always overwrite existing database. Usually set to <code>0</code> in deployed<br />environments and can be temporary set to <code>1</code> for a specific deployment.<br />Set this to <code>1</code> in .env.local to override when developing localy.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>.env</code>, <code>.env.local.default</code></p>
-<h3 id="DREVOPS_PROVISION_USE_MAINTENANCE_MODE"><code>DREVOPS_PROVISION_USE_MAINTENANCE_MODE</code><a class="headerlink" href="#DREVOPS_PROVISION_USE_MAINTENANCE_MODE" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">ACQUIA ENVIRONMENT</code></p>
+<h3 id="DREVOPS_PROVISION_OVERRIDE_DB"><code class="language-text highlight">DREVOPS_PROVISION_OVERRIDE_DB</code><a class="headerlink" href="#DREVOPS_PROVISION_OVERRIDE_DB" title="Permanent link">&para;</a></h3>
+<p>Flag to always overwrite existing database. Usually set to <code class="language-text highlight">0</code> in deployed<br />environments and can be temporary set to <code class="language-text highlight">1</code> for a specific deployment.<br />Set this to <code class="language-text highlight">1</code> in .env.local to override when developing localy.</p>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code>, <code class="language-text highlight">.env.local.default</code></p>
+<h3 id="DREVOPS_PROVISION_USE_MAINTENANCE_MODE"><code class="language-text highlight">DREVOPS_PROVISION_USE_MAINTENANCE_MODE</code><a class="headerlink" href="#DREVOPS_PROVISION_USE_MAINTENANCE_MODE" title="Permanent link">&para;</a></h3>
 <p>Put the site into a maintenance mode during site provisioning phase.</p>
-<p>Default value: <code>1</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_PROVISION_USE_PROFILE"><code>DREVOPS_PROVISION_USE_PROFILE</code><a class="headerlink" href="#DREVOPS_PROVISION_USE_PROFILE" title="Permanent link">&para;</a></h3>
-<p>Set to <code>1</code> to install a site from profile instead of database file dump.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_PURGE_CACHE_ACQUIA_SKIP"><code>DREVOPS_PURGE_CACHE_ACQUIA_SKIP</code><a class="headerlink" href="#DREVOPS_PURGE_CACHE_ACQUIA_SKIP" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">1</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_PROVISION_USE_PROFILE"><code class="language-text highlight">DREVOPS_PROVISION_USE_PROFILE</code><a class="headerlink" href="#DREVOPS_PROVISION_USE_PROFILE" title="Permanent link">&para;</a></h3>
+<p>Set to <code class="language-text highlight">1</code> to install a site from profile instead of database file dump.</p>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_PURGE_CACHE_ACQUIA_SKIP"><code class="language-text highlight">DREVOPS_PURGE_CACHE_ACQUIA_SKIP</code><a class="headerlink" href="#DREVOPS_PURGE_CACHE_ACQUIA_SKIP" title="Permanent link">&para;</a></h3>
 <p>Skip purging of edge cache in Acquia environment.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>ACQUIA ENVIRONMENT</code></p>
-<h3 id="DREVOPS_REDIS_ENABLED"><code>DREVOPS_REDIS_ENABLED</code><a class="headerlink" href="#DREVOPS_REDIS_ENABLED" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">ACQUIA ENVIRONMENT</code></p>
+<h3 id="DREVOPS_REDIS_ENABLED"><code class="language-text highlight">DREVOPS_REDIS_ENABLED</code><a class="headerlink" href="#DREVOPS_REDIS_ENABLED" title="Permanent link">&para;</a></h3>
 <p>Enable Redis integration.<br />See settings.redis.php for details.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_TASK_COPY_DB_ACQUIA_SKIP"><code>DREVOPS_TASK_COPY_DB_ACQUIA_SKIP</code><a class="headerlink" href="#DREVOPS_TASK_COPY_DB_ACQUIA_SKIP" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_TASK_COPY_DB_ACQUIA_SKIP"><code class="language-text highlight">DREVOPS_TASK_COPY_DB_ACQUIA_SKIP</code><a class="headerlink" href="#DREVOPS_TASK_COPY_DB_ACQUIA_SKIP" title="Permanent link">&para;</a></h3>
 <p>Skip copying of database between Acquia environment.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>ACQUIA ENVIRONMENT</code></p>
-<h3 id="DREVOPS_TASK_COPY_FILES_ACQUIA_SKIP"><code>DREVOPS_TASK_COPY_FILES_ACQUIA_SKIP</code><a class="headerlink" href="#DREVOPS_TASK_COPY_FILES_ACQUIA_SKIP" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">ACQUIA ENVIRONMENT</code></p>
+<h3 id="DREVOPS_TASK_COPY_FILES_ACQUIA_SKIP"><code class="language-text highlight">DREVOPS_TASK_COPY_FILES_ACQUIA_SKIP</code><a class="headerlink" href="#DREVOPS_TASK_COPY_FILES_ACQUIA_SKIP" title="Permanent link">&para;</a></h3>
 <p>Skip copying of files between Acquia environment.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>ACQUIA ENVIRONMENT</code></p>
-<h3 id="DREVOPS_TZ"><code>DREVOPS_TZ</code><a class="headerlink" href="#DREVOPS_TZ" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">ACQUIA ENVIRONMENT</code></p>
+<h3 id="DREVOPS_TZ"><code class="language-text highlight">DREVOPS_TZ</code><a class="headerlink" href="#DREVOPS_TZ" title="Permanent link">&para;</a></h3>
 <p>The timezone for the containers.</p>
-<p>Default value: <code>Australia/Melbourne</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DREVOPS_WEBROOT"><code>DREVOPS_WEBROOT</code><a class="headerlink" href="#DREVOPS_WEBROOT" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">Australia/Melbourne</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_WEBROOT"><code class="language-text highlight">DREVOPS_WEBROOT</code><a class="headerlink" href="#DREVOPS_WEBROOT" title="Permanent link">&para;</a></h3>
 <p>Name of the webroot directory with Drupal codebase.</p>
-<p>Default value: <code>web</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DRUPAL_SHIELD_PRINT"><code>DRUPAL_SHIELD_PRINT</code><a class="headerlink" href="#DRUPAL_SHIELD_PRINT" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">web</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DRUPAL_SHIELD_PRINT"><code class="language-text highlight">DRUPAL_SHIELD_PRINT</code><a class="headerlink" href="#DRUPAL_SHIELD_PRINT" title="Permanent link">&para;</a></h3>
 <p>Shield print message.</p>
-<p>Default value: <code>Restricted access.</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="DRUPAL_STAGE_FILE_PROXY_ORIGIN"><code>DRUPAL_STAGE_FILE_PROXY_ORIGIN</code><a class="headerlink" href="#DRUPAL_STAGE_FILE_PROXY_ORIGIN" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">Restricted access.</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DRUPAL_STAGE_FILE_PROXY_ORIGIN"><code class="language-text highlight">DRUPAL_STAGE_FILE_PROXY_ORIGIN</code><a class="headerlink" href="#DRUPAL_STAGE_FILE_PROXY_ORIGIN" title="Permanent link">&para;</a></h3>
 <p>Stage file proxy origin. Note that HTTP Auth provided by Shield will be<br />automatically added to the origin URL.</p>
-<p>Default value: <code>https://your-site-url.example/</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="LAGOON_PROJECT"><code>LAGOON_PROJECT</code><a class="headerlink" href="#LAGOON_PROJECT" title="Permanent link">&para;</a></h3>
-<p>Lagoon project name. May be different from <a href="#DREVOPS_PROJECT"><code>$DREVOPS_PROJECT</code></a>.</p>
-<p>Default value: <code>your_site</code></p>
-<p>Defined in: <code>.env</code></p>
-<h3 id="NEWRELIC_ENABLED"><code>NEWRELIC_ENABLED</code><a class="headerlink" href="#NEWRELIC_ENABLED" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">https://your-site-url.example/</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="LAGOON_PROJECT"><code class="language-text highlight">LAGOON_PROJECT</code><a class="headerlink" href="#LAGOON_PROJECT" title="Permanent link">&para;</a></h3>
+<p>Lagoon project name. May be different from <a href="#DREVOPS_PROJECT"><code class="language-text highlight">$DREVOPS_PROJECT</code></a>.</p>
+<p>Default value: <code class="language-text highlight">your_site</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="NEWRELIC_ENABLED"><code class="language-text highlight">NEWRELIC_ENABLED</code><a class="headerlink" href="#NEWRELIC_ENABLED" title="Permanent link">&para;</a></h3>
 <p>Enable New Relic in Lagoon environment.</p>
 <p>Set as project-wide variable.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>LAGOON ENVIRONMENT</code></p>
-<h3 id="NEWRELIC_LICENSE"><code>NEWRELIC_LICENSE</code><a class="headerlink" href="#NEWRELIC_LICENSE" title="Permanent link">&para;</a></h3>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">LAGOON ENVIRONMENT</code></p>
+<h3 id="NEWRELIC_LICENSE"><code class="language-text highlight">NEWRELIC_LICENSE</code><a class="headerlink" href="#NEWRELIC_LICENSE" title="Permanent link">&para;</a></h3>
 <p>New Relic license.</p>
 <p>Set as project-wide variable.</p>
-<p>Default value: <code>UNDEFINED</code></p>
-<p>Defined in: <code>LAGOON ENVIRONMENT</code></p>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">LAGOON ENVIRONMENT</code></p>
 
 
   

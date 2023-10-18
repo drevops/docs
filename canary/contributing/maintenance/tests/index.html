@@ -23,10 +23,8 @@
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
-      
-        <title>Tests - DrevOps<sup>&reg;</sup> - Drupal project template</title>
-      
-    
+<title>DrevOps - Drupal project template</title>
+
     
       <link rel="stylesheet" href="../../../assets/stylesheets/main.35e1ed30.min.css">
       
@@ -835,27 +833,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Ahoy 🚧
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tools/automated-updates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Automated updates
+    Ahoy
   </span>
   
 
@@ -875,7 +853,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Behat 🚧
+    Behat
   </span>
   
 
@@ -955,7 +933,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Git artifact 🚧
+    Git artifact
   </span>
   
 
@@ -1035,7 +1013,27 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    PHPUnit 🚧
+    PHPUnit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/renovate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Renovate
   </span>
   
 
@@ -1055,7 +1053,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Twigcs 🚧
+    Twigcs
   </span>
   
 
@@ -2167,73 +2165,52 @@ Bats is a TAP-compliant testing framework for Bash. It provides a simple way to
 verify that the UNIX programs you write behave as expected.</p>
 <p>See <a href="https://bats-core.readthedocs.io/">Bats documentation</a> for more information.</p>
 <h2 id="Installation">Installation<a class="headerlink" href="#Installation" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>npm<span class="w"> </span>install<span class="w"> </span>--prefix<span class="w"> </span>.drevops/tests
-</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>--prefix<span class="w"> </span>.drevops/tests
+</code></pre></div>
 <h2 id="Usage">Usage<a class="headerlink" href="#Usage" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span>
-<span class="normal"><a href="#__codelineno-1-14">14</a></span>
-<span class="normal"><a href="#__codelineno-1-15">15</a></span>
-<span class="normal"><a href="#__codelineno-1-16">16</a></span>
-<span class="normal"><a href="#__codelineno-1-17">17</a></span>
-<span class="normal"><a href="#__codelineno-1-18">18</a></span>
-<span class="normal"><a href="#__codelineno-1-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># Run a single test.</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>bats<span class="w"> </span>.drevops/tests/bats/helpers.bats
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1"># Some tests require Composer and Docker Hub tokens.</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nv">TEST_GITHUB_TOKEN</span><span class="o">=</span>&lt;yourtoken&gt;<span class="w"> </span><span class="nv">TEST_DOCKER_USER</span><span class="o">=</span>&lt;youruser&gt;<span class="w"> </span><span class="nv">TEST_DOCKER_PASS</span><span class="o">=</span>&lt;yourpass&gt;<span class="w"> </span>bats<span class="w"> </span>.drevops/tests/bats/workflow.smoke.bats
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="c1"># To preserve test run directory.</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>bats<span class="w"> </span>--no-tempdir-cleanup<span class="w"> </span>.drevops/tests/bats/helpers.bats
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="c1"># To override Bats temporary directory where tests are ran (required for Docker tests).</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$HOME</span>/.bats-tmp<span class="w"> </span><span class="c1"># run once</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="nv">TMPDIR</span><span class="o">=</span><span class="nv">$HOME</span>/.bats-tmp<span class="w"> </span>bats<span class="w"> </span>.drevops/tests/bats/helpers.bats
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="c1"># Run all tests, preserving the temporary directory.</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="nv">TEST_GITHUB_TOKEN</span><span class="o">=</span>&lt;yourtoken&gt;<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="nv">TEST_DOCKER_USER</span><span class="o">=</span>&lt;youruser&gt;<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="nv">TEST_DOCKER_PASS</span><span class="o">=</span>&lt;yourpass&gt;<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="nv">TMPDIR</span><span class="o">=</span><span class="nv">$HOME</span>/.bats-tmp<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19"></a>bats<span class="w"> </span>--no-tempdir-cleanup<span class="w"> </span>.drevops/tests/bats/*.bats
-</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># Run a single test.</span>
+bats<span class="w"> </span>.drevops/tests/bats/helpers.bats
+
+<span class="c1"># Some tests require Composer and Docker Hub tokens.</span>
+<span class="nv">TEST_GITHUB_TOKEN</span><span class="o">=</span>&lt;yourtoken&gt;<span class="w"> </span><span class="nv">TEST_DOCKER_USER</span><span class="o">=</span>&lt;youruser&gt;<span class="w"> </span><span class="nv">TEST_DOCKER_PASS</span><span class="o">=</span>&lt;yourpass&gt;<span class="w"> </span>bats<span class="w"> </span>.drevops/tests/bats/workflow.smoke.bats
+
+<span class="c1"># To preserve test run directory.</span>
+bats<span class="w"> </span>--no-tempdir-cleanup<span class="w"> </span>.drevops/tests/bats/helpers.bats
+
+<span class="c1"># To override Bats temporary directory where tests are ran (required for Docker tests).</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$HOME</span>/.bats-tmp<span class="w"> </span><span class="c1"># run once</span>
+<span class="nv">TMPDIR</span><span class="o">=</span><span class="nv">$HOME</span>/.bats-tmp<span class="w"> </span>bats<span class="w"> </span>.drevops/tests/bats/helpers.bats
+
+<span class="c1"># Run all tests, preserving the temporary directory.</span>
+<span class="nv">TEST_GITHUB_TOKEN</span><span class="o">=</span>&lt;yourtoken&gt;<span class="w"> </span><span class="se">\</span>
+<span class="nv">TEST_DOCKER_USER</span><span class="o">=</span>&lt;youruser&gt;<span class="w"> </span><span class="se">\</span>
+<span class="nv">TEST_DOCKER_PASS</span><span class="o">=</span>&lt;yourpass&gt;<span class="w"> </span><span class="se">\</span>
+<span class="nv">TMPDIR</span><span class="o">=</span><span class="nv">$HOME</span>/.bats-tmp<span class="w"> </span><span class="se">\</span>
+bats<span class="w"> </span>--no-tempdir-cleanup<span class="w"> </span>.drevops/tests/bats/*.bats
+</code></pre></div>
 <h2 id="Updating-test-assets">Updating test assets<a class="headerlink" href="#Updating-test-assets" title="Permanent link">&para;</a></h2>
 <p>Some tests use test fixtures such as Drupal database snapshots.</p>
 <h3 id="Updating-demo-database-file-dump">Updating demo database file dump<a class="headerlink" href="#Updating-demo-database-file-dump" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Run fresh build of DrevOps locally:
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;DREVOPS_DRUPAL_PROFILE=standard&quot;</span>&gt;&gt;.env.local
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;DREVOPS_PROVISION_USE_PROFILE=1&quot;</span>&gt;&gt;.env.local
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>rm<span class="w"> </span>.data/db.sql
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="nv">AHOY_CONFIRM_RESPONSE</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>ahoy<span class="w"> </span>build
-</span></code></pre></div></td></tr></table></div></li>
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;DREVOPS_DRUPAL_PROFILE=standard&quot;</span>&gt;&gt;.env.local
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;DREVOPS_PROVISION_USE_PROFILE=1&quot;</span>&gt;&gt;.env.local
+rm<span class="w"> </span>.data/db.sql
+<span class="nv">AHOY_CONFIRM_RESPONSE</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>ahoy<span class="w"> </span>build
+</code></pre></div></li>
 <li>Check that everything looks correctly on the site.</li>
 <li>Export DB
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>ahoy<span class="w"> </span>export-db
-</span></code></pre></div></td></tr></table></div></li>
-<li>Make sure that exported DB does not have data in <code>cache_*</code> and <code>watchdog</code> tables.</li>
-<li>Upload DB to <a href="https://github.com/drevops/drevops/wiki">https://github.com/drevops/drevops/wiki</a> as a test file (<code>db.distN.sql</code>).</li>
-<li>Update references in code from <code>db.demo.sql</code> to <code>db.distN.sql</code>.</li>
+<div class="language-bash highlight"><pre><span></span><code>ahoy<span class="w"> </span>export-db
+</code></pre></div></li>
+<li>Make sure that exported DB does not have data in <code class="language-text highlight">cache_*</code> and <code class="language-text highlight">watchdog</code> tables.</li>
+<li>Upload DB to <a href="https://github.com/drevops/drevops/wiki">https://github.com/drevops/drevops/wiki</a> as a test file (<code class="language-text highlight">db.distN.sql</code>).</li>
+<li>Update references in code from <code class="language-text highlight">db.demo.sql</code> to <code class="language-text highlight">db.distN.sql</code>.</li>
 <li>Run CI build.</li>
-<li>Revert updated references to <code>db.demo.sql</code>.</li>
-<li>Update <code>db.demo.sql</code> in Wiki.</li>
-<li>Merge branch to <code>main</code>.</li>
+<li>Revert updated references to <code class="language-text highlight">db.demo.sql</code>.</li>
+<li>Update <code class="language-text highlight">db.demo.sql</code> in Wiki.</li>
+<li>Merge branch to <code class="language-text highlight">main</code>.</li>
 <li>Wait for CI to pass.</li>
-<li>Remove <code>db.distN.sql</code> from Wiki.</li>
+<li>Remove <code class="language-text highlight">db.distN.sql</code> from Wiki.</li>
 </ol>
 <h3 id="Updating-demo-database-Docker-image">Updating demo database Docker image<a class="headerlink" href="#Updating-demo-database-Docker-image" title="Permanent link">&para;</a></h3>
 <div class="admonition note">

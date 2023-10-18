@@ -23,10 +23,8 @@
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
-      
-        <title>Docker 🚧 - DrevOps<sup>&reg;</sup> - Drupal project template</title>
-      
-    
+<title>DrevOps - Drupal project template</title>
+
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
       
@@ -837,27 +835,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Ahoy 🚧
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../automated-updates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Automated updates
+    Ahoy
   </span>
   
 
@@ -877,7 +855,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Behat 🚧
+    Behat
   </span>
   
 
@@ -1024,7 +1002,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Git artifact 🚧
+    Git artifact
   </span>
   
 
@@ -1104,7 +1082,27 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    PHPUnit 🚧
+    PHPUnit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../renovate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Renovate
   </span>
   
 
@@ -1124,7 +1122,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Twigcs 🚧
+    Twigcs
   </span>
   
 
@@ -2136,16 +2134,16 @@ You're not viewing the latest version.
 <p class="admonition-title">Work in progress</p>
 <p>The documentation section is still a work in progress.</p>
 </div>
-<h2 id="Using-docker-composeyml">Using <code>docker-compose.yml</code><a class="headerlink" href="#Using-docker-composeyml" title="Permanent link">&para;</a></h2>
-<p>Note that <code>docker-compose.yml</code> does not support default values evaluation in
+<h2 id="Using-docker-composeyml">Using <code class="language-text highlight">docker-compose.yml</code><a class="headerlink" href="#Using-docker-composeyml" title="Permanent link">&para;</a></h2>
+<p>Note that <code class="language-text highlight">docker-compose.yml</code> does not support default values evaluation in
 variables assignment. E.g.,</p>
 <div class="codehilite"><pre><span></span><code>environment:
   VARIABLE2: ${VARIABLE1:-$VARIABLE3}
 </code></pre></div>
 
-<p><code>$VARIABLE3</code> will not be evaluated if <code>$VARIABLE1</code>
-is not provided (it will be a literal string <code>$VARIABLE3</code>).</p>
-<h3 id="Validate-docker-composeyml">Validate <code>docker-compose.yml</code><a class="headerlink" href="#Validate-docker-composeyml" title="Permanent link">&para;</a></h3>
+<p><code class="language-text highlight">$VARIABLE3</code> will not be evaluated if <code class="language-text highlight">$VARIABLE1</code>
+is not provided (it will be a literal string <code class="language-text highlight">$VARIABLE3</code>).</p>
+<h3 id="Validate-docker-composeyml">Validate <code class="language-text highlight">docker-compose.yml</code><a class="headerlink" href="#Validate-docker-composeyml" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code>docker compose -f docker-compose.yml config
 </code></pre></div>
 
@@ -2156,7 +2154,7 @@ the same shared files using volumes and these volumes do not need to be
 mounted from the host.</p>
 <p>But for development environment, when the code constantly changes on the host,
 we need to have these changes synchronized into all containers. Since we are
-using single <code>docker-compose.yml</code> file for all environments, we have to
+using single <code class="language-text highlight">docker-compose.yml</code> file for all environments, we have to
 accommodate both cases, so we are specifying an override for the same directory
 as a mounted volume as a commented-out lines, which will be automatically
 uncommented in CI.</p>

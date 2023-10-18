@@ -16,17 +16,15 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../automated-updates/">
+        <link rel="next" href="../behat/">
       
       
       <link rel="icon" href="../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
-      
-        <title>Ahoy 🚧 - DrevOps<sup>&reg;</sup> - Drupal project template</title>
-      
-    
+<title>DrevOps - Drupal project template</title>
+
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
       
@@ -142,7 +140,7 @@ You're not viewing the latest version.
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ahoy 🚧
+              Ahoy
             
           </span>
         </div>
@@ -842,36 +840,73 @@ You're not viewing the latest version.
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Ahoy
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Ahoy 🚧
+    Ahoy
   </span>
   
 
       </a>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../automated-updates/" class="md-nav__link">
         
-  
-  <span class="md-ellipsis">
-    Automated updates
-  </span>
-  
 
-      </a>
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#Environment-variables" class="md-nav__link">
+    Environment variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -887,7 +922,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Behat 🚧
+    Behat
   </span>
   
 
@@ -967,7 +1002,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Git artifact 🚧
+    Git artifact
   </span>
   
 
@@ -1047,7 +1082,27 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    PHPUnit 🚧
+    PHPUnit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../renovate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Renovate
   </span>
   
 
@@ -1067,7 +1122,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Twigcs 🚧
+    Twigcs
   </span>
   
 
@@ -2010,6 +2065,41 @@ You're not viewing the latest version.
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#Environment-variables" class="md-nav__link">
+    Environment variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2040,10 +2130,58 @@ You're not viewing the latest version.
 
 
 <h1 id="Ahoy">Ahoy<a class="headerlink" href="#Ahoy" title="Permanent link">&para;</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Work in progress</p>
-<p>The documentation section is still a work in progress.</p>
-</div>
+<p><a href="https://github.com/ahoy-cli/ahoy">https://github.com/ahoy-cli/ahoy</a></p>
+<blockquote>
+<p>Automate and organize your workflows, no matter what technology you use.</p>
+<p>Ahoy is command line tool that gives each of your projects their own CLI app
+with zero code and dependencies.</p>
+</blockquote>
+<p>Usually, Ahoy is used to wrap the commands to make the development workflow
+consistent and easy to use.</p>
+<p>DrevOps comes with <a href="https://github.com/drevops/drevops/tree/main/.ahoy.yml">pre-configured Ahoy file</a> that has
+commands wrapped around the most common tasks:</p>
+<ul>
+<li>Working with Docker</li>
+<li>Building the project locally</li>
+<li>Running tests</li>
+<li>Running code quality checks</li>
+</ul>
+<p>It also provides an example of <a href="https://github.com/drevops/drevops/tree/main/.ahoy.local.example.yml">local Ahoy file</a>
+to be used in your projects. Once copied to <code class="language-text highlight">.ahoy.local.yml</code>, the file will
+be excluded from the repository and can be used to add local project-specific
+commands.</p>
+<h2 id="Usage">Usage<a class="headerlink" href="#Usage" title="Permanent link">&para;</a></h2>
+<div class="language-shell highlight"><pre><span></span><code><span class="c1"># Run a command in the global Ahoy file.</span>
+ahoy<span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGUMENTS<span class="o">]</span><span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+
+<span class="c1"># Run a command in the local Ahoy file.</span>
+ahoy<span class="w"> </span><span class="nb">local</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGUMENTS<span class="o">]</span><span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+
+<span class="c1"># Show all available commands.</span>
+ahoy<span class="w"> </span>--help
+</code></pre></div>
+<h2 id="Configuration">Configuration<a class="headerlink" href="#Configuration" title="Permanent link">&para;</a></h2>
+<p>See <a href="https://github.com/ahoy-cli/ahoy#example-of-new-yaml-setup-in-v2">configuration reference</a>.</p>
+<p>Adding a new command with passed arguments:</p>
+<div class="language-objective-c highlight"><pre><span></span><code><span class="nl">commands</span><span class="p">:</span>
+<span class="w">  </span><span class="nl">custom</span><span class="p">:</span>
+<span class="w">    </span><span class="nl">cmd</span><span class="p">:</span><span class="w"> </span><span class="p">.</span><span class="n">vendor</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">phpunit</span><span class="w"> </span><span class="o">--</span><span class="n">group</span><span class="o">=</span><span class="s">&quot;smoke&quot;</span><span class="w"> </span><span class="s">&quot;$@&quot;</span>
+</code></pre></div>
+<p>Adding a new multi-line command with usage details and calling another Ahoy
+commands after confirmation:</p>
+<div class="language-objective-c highlight"><pre><span></span><code><span class="nl">commands</span><span class="p">:</span>
+<span class="w">  </span><span class="nl">custom</span><span class="p">:</span>
+<span class="w">    </span><span class="nl">usage</span><span class="p">:</span><span class="w"> </span><span class="n">Custom</span><span class="w"> </span><span class="n">action</span>
+<span class="w">    </span><span class="nl">cmd</span><span class="p">:</span><span class="w"> </span><span class="o">|</span>
+<span class="w">      </span><span class="n">ahoy</span><span class="w"> </span><span class="n">confirm</span><span class="w"> </span><span class="s">&quot;Are you sure?&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">      </span><span class="p">.</span><span class="n">vendor</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">phpunit</span><span class="w"> </span><span class="o">--</span><span class="n">group</span><span class="o">=</span><span class="s">&quot;smoke&quot;</span><span class="w"> </span><span class="s">&quot;$@&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">      </span><span class="n">ahoy</span><span class="w"> </span><span class="n">info</span>
+</code></pre></div>
+<h3 id="Environment-variables">Environment variables<a class="headerlink" href="#Environment-variables" title="Permanent link">&para;</a></h3>
+<p>The configuration is set up to load environment variables from <code class="language-text highlight">.env</code> and
+<code class="language-text highlight">.env.local</code> files, giving the precedence to the values in the existing
+environment. See more details in the <a href="../../workflows/variables/">Variables</a>
+section.</p>
 
 
   

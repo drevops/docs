@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.drevops.com/canary/integrations/ci/">
+        <link rel="canonical" href="https://docs.drevops.com/canary/tools/renovate/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../phpunit/">
       
       
-        <link rel="next" href="azure-pipelines/">
+        <link rel="next" href="../twigcs/">
       
       
       <link rel="icon" href="../../assets/favicon.ico">
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#Workflows" class="md-skip">
+        <a href="#Automated-updates" class="md-skip">
           Skip to content
         </a>
       
@@ -140,7 +140,7 @@ You're not viewing the latest version.
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Workflows
+              Renovate
             
           </span>
         </div>
@@ -291,11 +291,13 @@ You're not viewing the latest version.
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../tools/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -311,13 +313,11 @@ You're not viewing the latest version.
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../integrations/" class="md-tabs__link">
           
   
     
@@ -746,6 +746,8 @@ You're not viewing the latest version.
       
   
   
+    
+  
   
     
     
@@ -787,17 +789,17 @@ You're not viewing the latest version.
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../tools/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -814,7 +816,7 @@ You're not viewing the latest version.
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             🛠 Tools
@@ -829,7 +831,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/ahoy/" class="md-nav__link">
+      <a href="../ahoy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -849,7 +851,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/behat/" class="md-nav__link">
+      <a href="../behat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -869,7 +871,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/doctor/" class="md-nav__link">
+      <a href="../doctor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -889,7 +891,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/docker/" class="md-nav__link">
+      <a href="../docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -909,7 +911,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/drush/" class="md-nav__link">
+      <a href="../drush/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -929,7 +931,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/git-artifact/" class="md-nav__link">
+      <a href="../git-artifact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -949,7 +951,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/phpcs/" class="md-nav__link">
+      <a href="../phpcs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -969,7 +971,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/phpmd/" class="md-nav__link">
+      <a href="../phpmd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -989,7 +991,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/phpstan/" class="md-nav__link">
+      <a href="../phpstan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1009,7 +1011,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/phpunit/" class="md-nav__link">
+      <a href="../phpunit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1027,9 +1029,29 @@ You're not viewing the latest version.
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../tools/renovate/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Renovate
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1038,6 +1060,40 @@ You're not viewing the latest version.
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Self-hosted-vs-GitHub-app" class="md-nav__link">
+    Self-hosted vs GitHub app
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1049,7 +1105,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/twigcs/" class="md-nav__link">
+      <a href="../twigcs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1069,7 +1125,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/xdebug/" class="md-nav__link">
+      <a href="../xdebug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1094,8 +1150,6 @@ You're not viewing the latest version.
       
   
   
-    
-  
   
     
     
@@ -1115,17 +1169,17 @@ You're not viewing the latest version.
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../integrations/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1142,7 +1196,7 @@ You're not viewing the latest version.
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             🧩 Integrations
@@ -1155,8 +1209,6 @@ You're not viewing the latest version.
                 
   
   
-    
-  
   
     
     
@@ -1180,17 +1232,17 @@ You're not viewing the latest version.
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../integrations/ci/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1201,13 +1253,13 @@ You're not viewing the latest version.
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             CI
@@ -1222,7 +1274,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="azure-pipelines/" class="md-nav__link">
+      <a href="../../integrations/ci/azure-pipelines/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1242,7 +1294,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="github-actions/" class="md-nav__link">
+      <a href="../../integrations/ci/github-actions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1262,7 +1314,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="gitlab-ci/" class="md-nav__link">
+      <a href="../../integrations/ci/gitlab-ci/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1282,7 +1334,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="circleci/" class="md-nav__link">
+      <a href="../../integrations/ci/circleci/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1341,7 +1393,7 @@ You're not viewing the latest version.
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../hosting/" class="md-nav__link ">
+            <a href="../../integrations/hosting/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1373,7 +1425,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../hosting/acquia/" class="md-nav__link">
+      <a href="../../integrations/hosting/acquia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1393,7 +1445,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../hosting/lagoon/" class="md-nav__link">
+      <a href="../../integrations/hosting/lagoon/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1413,7 +1465,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../hosting/pantheon/" class="md-nav__link">
+      <a href="../../integrations/hosting/pantheon/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1433,7 +1485,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../hosting/platformsh/" class="md-nav__link">
+      <a href="../../integrations/hosting/platformsh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2000,6 +2052,28 @@ You're not viewing the latest version.
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Self-hosted-vs-GitHub-app" class="md-nav__link">
+    Self-hosted vs GitHub app
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2013,7 +2087,7 @@ You're not viewing the latest version.
                   
 
   
-    <a href="https://github.com/drevops/drevops/edit/main/.drevops/docs/content/integrations/ci/README.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/drevops/drevops/edit/main/.drevops/docs/content/tools/renovate.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -2022,18 +2096,38 @@ You're not viewing the latest version.
     
       
     
-    <a href="https://github.com/drevops/drevops/raw/main/.drevops/docs/content/integrations/ci/README.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/drevops/drevops/raw/main/.drevops/docs/content/tools/renovate.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="Workflows">Workflows<a class="headerlink" href="#Workflows" title="Permanent link">&para;</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Work in progress</p>
-<p>The documentation section is still a work in progress.</p>
-</div>
+<h1 id="Automated-updates">Automated updates<a class="headerlink" href="#Automated-updates" title="Permanent link">&para;</a></h1>
+<p>DrevOps uses <a href="https://renovatebot.com">Renovate</a> for automated dependency updates.</p>
+<p>The configuration is stored in <a href="https://github.com/drevops/drevops/tree/main/renovate.json"><code class="language-text highlight">renovate.json</code></a>. It is
+based on <a href="https://github.com/drevops/renovate-drupal">Renovate configuration for automated Drupal dependency updates</a>
+project.</p>
+<h3 id="Features">Features<a class="headerlink" href="#Features" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Dual schedules for Drupal package updates:<ul>
+<li>Daily update schedule for critical Drupal core and related packages created in
+  the <code class="language-text highlight">deps/drupal-minor-patch-core</code> branch.</li>
+<li>Weekly update schedule for all other packages created in
+  the <code class="language-text highlight">deps/drupal-minor-patch-contrib</code> branch.</li>
+</ul>
+</li>
+<li>Docker image updates in <code class="language-text highlight">Dockerfile</code> and <code class="language-text highlight">docker-compose.yml</code> files in the <code class="language-text highlight">deps/docker</code> branch.</li>
+<li>GitHub Actions updates in the <code class="language-text highlight">deps/github-actions</code> branch.</li>
+<li>Automatically adds a <code class="language-text highlight">dependencies</code> label to a pull request.</li>
+<li>Automatically adds assignees to a pull request.</li>
+<li>Configuration for running Renovate self-hosted instance using CircleCI.</li>
+</ol>
+<h3 id="Self-hosted-vs-GitHub-app">Self-hosted vs GitHub app<a class="headerlink" href="#Self-hosted-vs-GitHub-app" title="Permanent link">&para;</a></h3>
+<p>Renovate can run as a hosted GitHub app or as a standalone self-hosted service
+in CircleCI.</p>
+<p>A self-hosted service can be beneficial when your project is restricted in terms
+of third-party access.</p>
 
 
   

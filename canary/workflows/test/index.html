@@ -19,10 +19,8 @@
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
-      
-        <title>✅ Test - DrevOps<sup>&reg;</sup> - Drupal project template</title>
-      
-    
+<title>DrevOps - Drupal project template</title>
+
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
       
@@ -829,27 +827,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Ahoy 🚧
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tools/automated-updates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Automated updates
+    Ahoy
   </span>
   
 
@@ -869,7 +847,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Behat 🚧
+    Behat
   </span>
   
 
@@ -949,7 +927,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Git artifact 🚧
+    Git artifact
   </span>
   
 
@@ -1029,7 +1007,27 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    PHPUnit 🚧
+    PHPUnit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/renovate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Renovate
   </span>
   
 
@@ -1049,7 +1047,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Twigcs 🚧
+    Twigcs
   </span>
   
 
@@ -2128,31 +2126,23 @@ You're not viewing the latest version.
 <h1 id="-Test">✅ Test<a class="headerlink" href="#-Test" title="Permanent link">&para;</a></h1>
 <p>DrevOps supports running Unit (PHPUnit) and BDD (Behat) tests.</p>
 <p>For local development, the tests can be run using handy Ahoy commands:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span>
-<span class="normal"><a href="#__codelineno-0-8">8</a></span>
-<span class="normal"><a href="#__codelineno-0-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>ahoy<span class="w"> </span><span class="nb">test</span><span class="w"> </span><span class="c1"># Run all tests</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>ahoy<span class="w"> </span>test-unit<span class="w"> </span><span class="c1"># Run Unit tests</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>ahoy<span class="w"> </span>test-kernel<span class="w"> </span><span class="c1"># Run Kernel tests</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>ahoy<span class="w"> </span>test-functional<span class="w"> </span><span class="c1"># Run Functional tests</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>ahoy<span class="w"> </span>test-bdd<span class="w"> </span><span class="c1"># Run BDD tests</span>
-</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>ahoy<span class="w"> </span><span class="nb">test</span><span class="w"> </span><span class="c1"># Run all tests</span>
+
+ahoy<span class="w"> </span>test-unit<span class="w"> </span><span class="c1"># Run Unit tests</span>
+
+ahoy<span class="w"> </span>test-kernel<span class="w"> </span><span class="c1"># Run Kernel tests</span>
+
+ahoy<span class="w"> </span>test-functional<span class="w"> </span><span class="c1"># Run Functional tests</span>
+
+ahoy<span class="w"> </span>test-bdd<span class="w"> </span><span class="c1"># Run BDD tests</span>
+</code></pre></div>
 <p>In CI, tests are run by calling the test binaries directly.</p>
 <h2 id="Unit-testing">Unit testing<a class="headerlink" href="#Unit-testing" title="Permanent link">&para;</a></h2>
 <p>DrevOps uses PHPUnit as a framework for Unit testing.</p>
-<p>It is configured to use a copy of Drupal core's <code>core/phpunit.xml.dist</code>
+<p>It is configured to use a copy of Drupal core's <code class="language-text highlight">core/phpunit.xml.dist</code>
 configuration file. This is done to allow per-project customisations.</p>
 <h3 id="Reporting">Reporting<a class="headerlink" href="#Reporting" title="Permanent link">&para;</a></h3>
-<p>Test reports are stored in <code>$DREVOPS_TEST_RESULTS_DIR/phpunit</code> directory
+<p>Test reports are stored in <code class="language-text highlight">$DREVOPS_TEST_RESULTS_DIR/phpunit</code> directory
 separated into multiple files and named after the suite name.
 These reports are usually used in CI to track tests performance and stability.</p>
 <h3 id="Scaffold">Scaffold<a class="headerlink" href="#Scaffold" title="Permanent link">&para;</a></h3>
@@ -2168,7 +2158,7 @@ is running: with the number of custom modules multiplied by the number of
 environment types, it is easy to miss certain settings which may lead to
 unexpected issues with deployments.</p>
 <p>It is intended to be used in a consumer site and kept up-to-date with the
-changes to the <code>settings.php</code> file.</p>
+changes to the <code class="language-text highlight">settings.php</code> file.</p>
 <h4 id="CI-configuration-tests">CI configuration tests<a class="headerlink" href="#CI-configuration-tests" title="Permanent link">&para;</a></h4>
 <p>DrevOps provides a <a href="https://github.com/drevops/drevops/tree/main/tests/phpunit/CircleCiConfigTest.php">CI configuration tests</a>
 to assert that CI configuration is correct. It is intended to be used in a consumer
@@ -2193,27 +2183,27 @@ and a <a href="https://github.com/drevops/drevops/tree/main/docker-compose.yml">
 included steps from <a href="https://github.com/drevops/behat-steps">Behat steps</a> package.</p>
 <p>Custom steps can be added into this file.</p>
 <h3 id="Profiles">Profiles<a class="headerlink" href="#Profiles" title="Permanent link">&para;</a></h3>
-<p>Behat <code>default</code> profile configured with sensible defaults to allow running Behat
+<p>Behat <code class="language-text highlight">default</code> profile configured with sensible defaults to allow running Behat
 with provided extensions.</p>
-<p>The profile can be overridden using <code>$DREVOPS_CI_BEHAT_PROFILE</code> environment
+<p>The profile can be overridden using <code class="language-text highlight">$DREVOPS_CI_BEHAT_PROFILE</code> environment
 variable.</p>
 <h3 id="Parallel-runs">Parallel runs<a class="headerlink" href="#Parallel-runs" title="Permanent link">&para;</a></h3>
 <p>In CI, Behat tests can be tagged to be split between multiple runners. The tags
 are then used by profiles with the identical names to run them.</p>
 <p>Out of the box, DrevOps provides support for unlimited parallel runners, but
-only 2 parallel profiles <code>p0</code> and <code>p1</code>: a feature can be tagged by either <code>@p0</code>
-or <code>@p1</code>to run in a dedicated runner, or with both tags to run in both runners.</p>
-<p>Note that you can easily add more <code>p*</code> profiles in your <code>behat.yml</code> by copying
-existing <code>p1</code>profile and changing several lines.</p>
-<p>Features without <code>@p*</code> tags will always run in the first CI runner, so even
+only 2 parallel profiles <code class="language-text highlight">p0</code> and <code class="language-text highlight">p1</code>: a feature can be tagged by either <code class="language-text highlight">@p0</code>
+or <code class="language-text highlight">@p1</code>to run in a dedicated runner, or with both tags to run in both runners.</p>
+<p>Note that you can easily add more <code class="language-text highlight">p*</code> profiles in your <code class="language-text highlight">behat.yml</code> by copying
+existing <code class="language-text highlight">p1</code>profile and changing several lines.</p>
+<p>Features without <code class="language-text highlight">@p*</code> tags will always run in the first CI runner, so even
 if you forget to tag the feature, it will still be allocated to a runner.</p>
-<p>If CI has only one runner - a <code>default</code> profile will be used and all tests
-(except for those that tagged with <code>@skipped</code>) will be run.</p>
+<p>If CI has only one runner - a <code class="language-text highlight">default</code> profile will be used and all tests
+(except for those that tagged with <code class="language-text highlight">@skipped</code>) will be run.</p>
 <h3 id="Skipping-tests">Skipping tests<a class="headerlink" href="#Skipping-tests" title="Permanent link">&para;</a></h3>
-<p>Add <code>@skipped</code> tag to a feature or scenario to exclude it from the test run.</p>
+<p>Add <code class="language-text highlight">@skipped</code> tag to a feature or scenario to exclude it from the test run.</p>
 <h3 id="Screenshots">Screenshots<a class="headerlink" href="#Screenshots" title="Permanent link">&para;</a></h3>
-<p>Test screenshots are stored into <code>.logs/screenshots</code> location by default,
-which can be overwritten using <code>$BEHAT_SCREENSHOT_DIR</code> variable (courtesy of
+<p>Test screenshots are stored into <code class="language-text highlight">.logs/screenshots</code> location by default,
+which can be overwritten using <code class="language-text highlight">$BEHAT_SCREENSHOT_DIR</code> variable (courtesy of
 <a href="https://github.com/drevops/behat-screenshot">Behat Screenshot</a> package). In CI, screenshots are stored as artifacts
 and are accessible in the Artifacts tab.</p>
 <h3 id="Format">Format<a class="headerlink" href="#Format" title="Permanent link">&para;</a></h3>
@@ -2221,8 +2211,8 @@ and are accessible in the Artifacts tab.</p>
 Behat output formatter to show progress as TAP and fails inline. This allows to
 continue test runs after failures while maintaining a minimal output.</p>
 <h3 id="Reporting_1">Reporting<a class="headerlink" href="#Reporting_1" title="Permanent link">&para;</a></h3>
-<p>Test reports produced if <code>$DREVOPS_TEST_RESULTS_DIR</code> is set. They are stored in
-<code>$DREVOPS_TEST_RESULTS_DIR/behat</code> directory. These reports are usually used in
+<p>Test reports produced if <code class="language-text highlight">$DREVOPS_TEST_RESULTS_DIR</code> is set. They are stored in
+<code class="language-text highlight">$DREVOPS_TEST_RESULTS_DIR/behat</code> directory. These reports are usually used in
 CI to track tests performance and stability.</p>
 <h3 id="Scaffold_1">Scaffold<a class="headerlink" href="#Scaffold_1" title="Permanent link">&para;</a></h3>
 <p>DrevOps provides a BDD test scaffold for custom <a href="https://github.com/drevops/drevops/tree/main/web/modules/custom/ys_core/tests/src">modules</a>

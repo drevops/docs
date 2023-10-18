@@ -19,10 +19,8 @@
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
-      
-        <title>🏗️ Build - DrevOps<sup>&reg;</sup> - Drupal project template</title>
-      
-    
+<title>DrevOps - Drupal project template</title>
+
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
       
@@ -829,27 +827,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Ahoy 🚧
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tools/automated-updates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Automated updates
+    Ahoy
   </span>
   
 
@@ -869,7 +847,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Behat 🚧
+    Behat
   </span>
   
 
@@ -949,7 +927,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Git artifact 🚧
+    Git artifact
   </span>
   
 
@@ -1029,7 +1007,27 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    PHPUnit 🚧
+    PHPUnit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/renovate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Renovate
   </span>
   
 
@@ -1049,7 +1047,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Twigcs 🚧
+    Twigcs
   </span>
   
 
@@ -2128,11 +2126,11 @@ tasks:</p>
 <li>Verifying that the stack is functioning correctly and the site is
   accessible</li>
 </ul>
-<p>To initiate the build process, simply run the command <code>ahoy build</code>.</p>
+<p>To initiate the build process, simply run the command <code class="language-text highlight">ahoy build</code>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Do not forget to download your database with <code>ahoy download-db</code> before
-running <code>ahoy build</code> or your site will not have a source database dump to
+<p>Do not forget to download your database with <code class="language-text highlight">ahoy download-db</code> before
+running <code class="language-text highlight">ahoy build</code> or your site will not have a source database dump to
 import.</p>
 </div>
 <h2 id="Build-steps">Build steps<a class="headerlink" href="#Build-steps" title="Permanent link">&para;</a></h2>
@@ -2162,14 +2160,14 @@ import.</p>
   N --&gt; P["10. Check that the site\nis available"]
 
   P --&gt; finish(["End"])</code></pre>
-<h3 id="1-Initialise-variables-from-env-envlocal-and-environment">1. Initialise variables from <code>.env</code>, <code>.env.local</code> and environment<a class="headerlink" href="#1-Initialise-variables-from-env-envlocal-and-environment" title="Permanent link">&para;</a></h3>
+<h3 id="1-Initialise-variables-from-env-envlocal-and-environment">1. Initialise variables from <code class="language-text highlight">.env</code>, <code class="language-text highlight">.env.local</code> and environment<a class="headerlink" href="#1-Initialise-variables-from-env-envlocal-and-environment" title="Permanent link">&para;</a></h3>
 <p>Variables are read from multiple locations in <a href="/tools/variables/#Override-order-bottom-values-win">the predefined order</a>.</p>
 <h3 id="2-Validate-Docker-Compose-configuration">2. Validate Docker Compose configuration<a class="headerlink" href="#2-Validate-Docker-Compose-configuration" title="Permanent link">&para;</a></h3>
 <p>The script validates the Docker Compose configuration and exits if it is not
 valid. This is designed to catch errors in the configuration early.</p>
 <h3 id="3-Validate-Composer-configuration">3. Validate Composer configuration<a class="headerlink" href="#3-Validate-Composer-configuration" title="Permanent link">&para;</a></h3>
 <p>The script validates the Composer configuration and exits if it is not valid.
-The <code>composer.lock</code> will be validated as well.</p>
+The <code class="language-text highlight">composer.lock</code> will be validated as well.</p>
 <h3 id="4-Database-in-Docker-image">4. Database in Docker image?<a class="headerlink" href="#4-Database-in-Docker-image" title="Permanent link">&para;</a></h3>
 <p>If the database is stored in the Docker image rather than a dump file, the
 script will pull the image from the registry and will use it as a database.<br />
@@ -2179,7 +2177,7 @@ See more in <a href="/tools/database/#Database-in-Docker-image">the Database sec
 Only required files will be copied into the image and only production
 dependencies will be installed. See more in <a href="/tools/docker/overview">the Docker section</a>.</p>
 <h3 id="6-Code-export-directory-set">6. Code export directory set?<a class="headerlink" href="#6-Code-export-directory-set" title="Permanent link">&para;</a></h3>
-<p>If the <code>$DREVOPS_CODE_EXPORT_DIR</code> variable is set, the script will export the
+<p>If the <code class="language-text highlight">$DREVOPS_CODE_EXPORT_DIR</code> variable is set, the script will export the
 built code into the specified directory, which than can be used to build a
 deployment artifact. This is used in CI to support hosting environments
 that support only artifact code deployments (no build pipeline), like Acquia.</p>
@@ -2190,7 +2188,7 @@ step 5 dependencies to avoid adding the production image and code artifact
 with unnecessary dependencies (which also widens the security perimeter and
 increases the build time).</p>
 <h3 id="8-Is-theme-available">8. Is theme available?<a class="headerlink" href="#8-Is-theme-available" title="Permanent link">&para;</a></h3>
-<p>If the environment variable <code>$DREVOPS_DRUPAL_THEME</code> is set, the script will
+<p>If the environment variable <code class="language-text highlight">$DREVOPS_DRUPAL_THEME</code> is set, the script will
 install the front-end dependencies and compile assets. Note that this already
 happens during the Docker build process, so this step runs <strong>only locally</strong>
 to update the assets to use development versions based on the current theme
