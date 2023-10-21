@@ -899,6 +899,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -1012,7 +1014,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Docker 🚧
+    Docker
   </span>
   
 
@@ -1032,7 +1034,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Drush 🚧
+    Drush
   </span>
   
 
@@ -1148,6 +1150,26 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
+      <a href="../../tools/pygmy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pygmy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../tools/renovate/" class="md-nav__link">
         
   
@@ -1192,7 +1214,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Xdebug 🚧
+    Xdebug
   </span>
   
 
@@ -2236,10 +2258,10 @@ step would be to add all the missing pieces that DrevOps provides, such as CI
 integrations, tool configuration, workflows, deployment scripts,
 hosting-specific configurations, documentation.</p>
 <p>Then you would have to test all of that and make sure that it works together.
-And that there are no false positives (passing CI on broken tests can go
-unnoticed up until the release and would block it).</p>
+And that there are no false positives (for example, passing CI on broken tests
+can go unnoticed up until the release and would block it).</p>
 <h2 id="Can-I-use-DrevOps-with-my-existing-project">Can I use DrevOps with my existing project?<a class="headerlink" href="#Can-I-use-DrevOps-with-my-existing-project" title="Permanent link">&para;</a></h2>
-<p>Yes, you can install DrevOps on top of your existing project.</p>
+<p>Yes, you can install DrevOps into your existing project.</p>
 <h2 id="Can-I-use-DrevOps-with-my-existing-project-and-keep-my-existing-CI">Can I use DrevOps with my existing project and keep my existing CI?<a class="headerlink" href="#Can-I-use-DrevOps-with-my-existing-project-and-keep-my-existing-CI" title="Permanent link">&para;</a></h2>
 <p>Yes, but you would need to update your CI configuration to use DrevOps'
 workflow scripts.</p>
@@ -2252,6 +2274,10 @@ hosting provider.</p>
 <p>BLT uses a different approach to building Drupal projects, where your project
 becomes dependent on BLT. DrevOps is a project template, which means that you
 can override anything and everything in it. The code is all yours.</p>
+<p>BLT also abstracts (wraps) tooling into own commands. DrevOps encourages the use
+of tools the way it was designed.</p>
+<p>DrevOps does provide an Ahoy command file to wrap some the tools to use locally,
+but you do not have to use it.</p>
 <h2 id="I-do-not-like-some-of-the-decisions-made-in-DrevOps-Can-I-change-them">I do not like some of the decisions made in DrevOps. Can I change them?<a class="headerlink" href="#I-do-not-like-some-of-the-decisions-made-in-DrevOps-Can-I-change-them" title="Permanent link">&para;</a></h2>
 <p>Yes, you can change anything you want. DrevOps is a project template, which
 means that you can disable/remove certain features.</p>
@@ -2264,10 +2290,15 @@ rich features to all projects, regardless of their size.</p>
 DrevOps is not for you. However, there were cases when people have discovered
 some new tools and approaches by using DrevOps and have decided to keep them
 in their projects. So, you may want to give it a try.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We are working on providing a more streamlined way of choosing the features
+during the project creation process.</p>
+</div>
 <h2 id="I-think-it-is-too-opinionated">I think it is too opinionated.<a class="headerlink" href="#I-think-it-is-too-opinionated" title="Permanent link">&para;</a></h2>
 <p>DrevOps is opinionated to the point to make it work as a template. There are
 some changes that you can make to the project, but there are also some that have
-to stay in order to make it work.</p>
+to stay in order to make tools talk to each other.</p>
 <p>There could be some cases when it is unreasonably opinionated - we consider this
 as a bug and would be happy to fix it. Please provide your feedback in the
 <a href="https://github.com/drevops/drevops/issues">issue queue</a>.</p>
@@ -2278,6 +2309,11 @@ resolved.</p>
 <p>This is a trade-off between having an upgradable project template, where you
 have full control, and a dependency package, where someone else has full control
 of the code that drives your project.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We are looking at utilising the approach from both worlds: distribution
+through a package with an ability to override the scaffolded code.</p>
+</div>
 <h2 id="How-easy-is-it-choose-the-features-that-I-need">How easy is it choose the features that I need?<a class="headerlink" href="#How-easy-is-it-choose-the-features-that-I-need" title="Permanent link">&para;</a></h2>
 <p>DrevOps provides an installer that allows you to choose the features that you
 need interactively.</p>
@@ -2291,7 +2327,7 @@ same way as it would be built on the hosting (if your hosting uses Docker).</p>
 <p>The other reason is that CircleCI supports passing the build artifacts between
 jobs via cache. This becomes really powerful on large consumer sites, where
 building the project takes a long time. DrevOps mitigates this by providing
-a CI configuration to download and cache the database overnight and use this
+a CI configuration used to download and cache the database overnight and use this
 cache for all the builds during the day, skipping the long database download
 process.</p>
 <p>And for the really large projects, CircleCI supports Docker image caching,

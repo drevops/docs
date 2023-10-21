@@ -140,7 +140,7 @@ You're not viewing the latest version.
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Drush 🚧
+              Drush
             
           </span>
         </div>
@@ -782,6 +782,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -895,7 +897,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Docker 🚧
+    Docker
   </span>
   
 
@@ -920,15 +922,52 @@ You're not viewing the latest version.
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Drush
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Drush 🚧
+    Drush
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1041,6 +1080,26 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
+      <a href="../pygmy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pygmy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../renovate/" class="md-nav__link">
         
   
@@ -1085,7 +1144,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Xdebug 🚧
+    Xdebug
   </span>
   
 
@@ -2008,6 +2067,21 @@ You're not viewing the latest version.
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2038,10 +2112,31 @@ You're not viewing the latest version.
 
 
 <h1 id="Drush">Drush<a class="headerlink" href="#Drush" title="Permanent link">&para;</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Work in progress</p>
-<p>The documentation section is still a work in progress.</p>
-</div>
+<p><a href="https://www.drush.org/">https://www.drush.org/</a></p>
+<blockquote>
+<p>Drush is a command line shell and Unix scripting interface for Drupal. Drush
+core ships with lots of useful commands and generators. Similarly, it runs
+update.php, executes SQL queries, runs content migrations, and misc utilities
+like cron or cache rebuild. Drush can be extended by 3<sup>rd</sup> party commandfiles.</p>
+</blockquote>
+<p>Drush is used throughout DrevOps to interact with Drupal from the workflow
+scripts and Behat tests.</p>
+<p>It also allows a developer to interact with the site via CLI during development.</p>
+<p>While all the standard Drush commands supported, DrevOps also provides some
+shorthand commands to abstract some of the common tasks:</p>
+<ul>
+<li>downloading the database dump from the remote environment</li>
+<li>importing the database dump into the local environment</li>
+<li>running database updates and clearing caches</li>
+</ul>
+<p>See <a href="../../workflows">workflows</a> for more details.</p>
+<h2 id="Usage">Usage<a class="headerlink" href="#Usage" title="Permanent link">&para;</a></h2>
+<p>Drush should be used from the inside of the container.</p>
+<p><div class="language-shell highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>cli<span class="w"> </span>drush<span class="w"> </span>&lt;command&gt;
+</code></pre></div>
+or
+<div class="language-shell highlight"><pre><span></span><code>ahoy<span class="w"> </span>drush<span class="w"> </span>&lt;command&gt;
+</code></pre></div></p>
 
 
   

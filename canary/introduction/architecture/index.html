@@ -387,6 +387,8 @@ You're not viewing the latest version.
           
             
               
+                
+              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -577,8 +579,8 @@ You're not viewing the latest version.
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#Core-principles" class="md-nav__link">
-    Core principles
+  <a href="#Zen-of-DrevOps" class="md-nav__link">
+    Zen of DrevOps
   </a>
   
 </li>
@@ -870,6 +872,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -983,7 +987,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Docker 🚧
+    Docker
   </span>
   
 
@@ -1003,7 +1007,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Drush 🚧
+    Drush
   </span>
   
 
@@ -1119,6 +1123,26 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
+      <a href="../../tools/pygmy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pygmy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../tools/renovate/" class="md-nav__link">
         
   
@@ -1163,7 +1187,7 @@ You're not viewing the latest version.
         
   
   <span class="md-ellipsis">
-    Xdebug 🚧
+    Xdebug
   </span>
   
 
@@ -2074,7 +2098,9 @@ You're not viewing the latest version.
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -2093,8 +2119,8 @@ You're not viewing the latest version.
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#Core-principles" class="md-nav__link">
-    Core principles
+  <a href="#Zen-of-DrevOps" class="md-nav__link">
+    Zen of DrevOps
   </a>
   
 </li>
@@ -2175,17 +2201,18 @@ You're not viewing the latest version.
 <p>DrevOps offers a pre-configured project template that is reliable, tested and
 ready-to-use. Its main goal is to streamline onboarding, making it as quick and
 efficient as possible.</p>
-<h2 id="Core-principles">Core principles<a class="headerlink" href="#Core-principles" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Rely on the upstream dependencies as much as possible.</li>
-<li>Keep your project repository structure as close to the
-   <a href="https://github.com/drupal-composer/drupal-project">drupal-composer/drupal-project</a> as possible.</li>
-<li>Keep tooling configuration as minimal as possible and aligned with the
-   community standards. But provide a way to override it if needed (e.g.,
-   configuration files).</li>
-<li>Use scripts to orchestrate workflows and control them via environment variables.</li>
-<li>Automatically test (with coverage reporting) and document everything.</li>
-</ol>
+<h2 id="Zen-of-DrevOps">Zen of DrevOps<a class="headerlink" href="#Zen-of-DrevOps" title="Permanent link">&para;</a></h2>
+<p>Similar to <a href="https://www.python.org/dev/peps/pep-0020/">Zen of Python</a>, DrevOps
+has its own set of principles.</p>
+<ul>
+<li>Simple is better than complex.</li>
+<li>Rely as much on upstream as possible.</li>
+<li>Favor standard practices over custom implementations.</li>
+<li>Errors should never pass silently.</li>
+<li>Explicit logging helps.</li>
+<li>Readability counts.</li>
+<li>If the implementation is hard to explain, it's a bad idea.</li>
+</ul>
 <h2 id="Repository-structure">Repository structure<a class="headerlink" href="#Repository-structure" title="Permanent link">&para;</a></h2>
 <p>The repository file structure follows the structure defined in
 <a href="https://github.com/drupal-composer/drupal-project">drupal-composer/drupal-project</a>
@@ -2195,184 +2222,63 @@ with addition of several configuration files and directories.</p>
 <p>The directory structure is <strong>exactly what you are going to get</strong> after
 installation - there are no files being copied or moved from <em>magic</em> places.</p>
 </div>
-<p>Click on the directory or file name below to navigate to the corresponding entry
-in the codebase.</p>
-<table>
-<thead>
-<tr>
-<th>Directory</th>
-<th>Type</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/.circleci"><code class="language-text highlight">.circleci</code></a></td>
-<td>Directory</td>
-<td>CircleCI configuration files.</td>
-</tr>
-<tr>
-<td><code class="language-text highlight">.data</code></td>
-<td>Directory</td>
-<td>Directory for downloaded database dump files. Excluded from the repository.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/.docker"><code class="language-text highlight">.docker</code></a></td>
-<td>Directory</td>
-<td>Docker configuration files.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/.github"><code class="language-text highlight">.github</code></a></td>
-<td>Directory</td>
-<td>GitHub configuration files.</td>
-</tr>
-<tr>
-<td><code class="language-text highlight">.logs</code></td>
-<td>Directory</td>
-<td>Test logs and screenshots. Excluded from the repository.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/config"><code class="language-text highlight">config</code></a></td>
-<td>Directory</td>
-<td>Directory for drupal exported configuration.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/docs"><code class="language-text highlight">docs</code></a></td>
-<td>Directory</td>
-<td>Your project-specific documentation.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/drush"><code class="language-text highlight">drush</code></a></td>
-<td>Directory</td>
-<td>Drush configuration files.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/hooks"><code class="language-text highlight">hooks</code></a></td>
-<td>Directory</td>
-<td>Acquia hooks. Removed if Acquia hosting is not in use.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/patches"><code class="language-text highlight">patches</code></a></td>
-<td>Directory</td>
-<td>Patches for Drupal core and contrib modules.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/scripts"><code class="language-text highlight">scripts</code></a></td>
-<td>Directory</td>
-<td>Composer, DrevOps and custom project-specific scripts.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/tests"><code class="language-text highlight">tests</code></a></td>
-<td>Directory</td>
-<td>Tests integration tests and test for scripts.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/web"><code class="language-text highlight">web</code></a></td>
-<td>Directory</td>
-<td>Drupal web root directory.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/.ahoy.yml"><code class="language-text highlight">.ahoy.yml</code></a></td>
-<td>File</td>
-<td>Ahoy configuration file.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/.ahoy.local.example.yml"><code class="language-text highlight">.ahoy.local.example.yml</code></a></td>
-<td>File</td>
-<td>An example of local Ahoy configuration file.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/.dockerignore"><code class="language-text highlight">.dockerignore</code></a></td>
-<td>File</td>
-<td><a href="https://docs.docker.com/engine/reference/builder/#dockerignore-file">Docker configuration file</a> to control the inclusion or exclusion of the files passed to Docker for the build.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/.editorconfig"><code class="language-text highlight">.editorconfig</code></a></td>
-<td>File</td>
-<td><a href="https://editorconfig.org/">EditorConfig</a> helps maintain consistent coding styles for multiple developers working on the same project across various editors and IDEs.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/.env"><code class="language-text highlight">.env</code></a></td>
-<td>File</td>
-<td>Environment variables list file. Main place to control project workflow using DrevOps variables. See <a href="../../workflows/variables/">Variables</a> section for more details.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/.env.local.default"><code class="language-text highlight">.env.local.default</code></a></td>
-<td>File</td>
-<td>Example of the local environment file used to override environment variables to alter the workflow when developing locally. See <a href="../../workflows/variables/">Variables</a> section for more details.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/.gitignore"><code class="language-text highlight">.gitignore</code></a></td>
-<td>File</td>
-<td>Specifies intentionally untracked files to ignore.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/.gitignore.deployment"><code class="language-text highlight">.gitignore.deployment</code></a></td>
-<td>File</td>
-<td>Specifies intentionally untracked files to ignore when deploying an artifact. See <a href="../../workflows/deployment/">Deploy</a> section for more details.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/.lagoon.yml"><code class="language-text highlight">.lagoon.yml</code></a></td>
-<td>File</td>
-<td>Lagoon configuration file. Removed if Lagoon hosting is not in use.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/.twig_cs.php"><code class="language-text highlight">.twig_cs.php</code></a></td>
-<td>File</td>
-<td>Twigcs <a href="https://github.com/friendsoftwig/twigcs#file-based-configuration">configuration</a> file.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/behat.yml"><code class="language-text highlight">behat.yml</code></a></td>
-<td>File</td>
-<td>Behat <a href="https://docs.behat.org/en/latest/user_guide/configuration.html">configuration</a> file.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/composer.json"><code class="language-text highlight">composer.json</code></a></td>
-<td>File</td>
-<td>Composer <a href="https://getcomposer.org/doc/04-schema.md">configuration</a> file.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/docker-compose.yml"><code class="language-text highlight">docker-compose.yml</code></a></td>
-<td>File</td>
-<td>Configuration file for <a href="https://docs.docker.com/compose/">Docker Compose</a>.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/docker-compose.override.default.yml"><code class="language-text highlight">docker-compose.override.default.yml</code></a></td>
-<td>File</td>
-<td>Example override file for Docker Compose configuration.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/phpcs.xml"><code class="language-text highlight">phpcs.xml</code></a></td>
-<td>File</td>
-<td>PHP CodeSniffer <a href="https://github.com/squizlabs/PHP_CodeSniffer/wiki/Advanced-Usage#using-a-default-configuration-file">configuration</a> file.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/phpmd.xml"><code class="language-text highlight">phpmd.xml</code></a></td>
-<td>File</td>
-<td>PHP Mess Detector <a href="https://github.com/phpmd/phpmd">configuration</a> file.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/phpstan.neon"><code class="language-text highlight">phpstan.neon</code></a></td>
-<td>File</td>
-<td>PHPStan <a href="https://phpstan.org/config-reference">configuration</a> file.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/phpunit.xml"><code class="language-text highlight">phpunit.xml</code></a></td>
-<td>File</td>
-<td>PHPUnit <a href="https://docs.phpunit.de/en/9.6/configuration.html">configuration</a> file.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/README.md"><code class="language-text highlight">README.md</code></a></td>
-<td>File</td>
-<td>Project main readme file.</td>
-</tr>
-<tr>
-<td><a href="https://github.com/drevops/drevops/tree/main/renovate.json"><code class="language-text highlight">renovate.json</code></a></td>
-<td>File</td>
-<td>Renovate <a href="https://docs.renovatebot.com/self-hosted-configuration/">configuration</a> file.</td>
-</tr>
-</tbody>
-</table>
+<div class="language-carbon highlight"><pre><span></span><code><span class="err">├──</span><span class="w"> </span><span class="p">.</span><span class="nx">circleci</span><span class="w">                </span><span class="err">#</span><span class="w"> </span><span class="nx">CircleCI</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="nx">files</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="p">.</span><span class="nx">data</span><span class="w">                    </span><span class="err">#</span><span class="w"> </span><span class="nx">Database</span><span class="w"> </span><span class="nx">dump</span><span class="w"> </span><span class="nx">files</span><span class="w"> </span><span class="nx">directory</span><span class="p">.</span><span class="w"> </span><span class="nx">Excluded</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="p">.</span><span class="nx">docker</span><span class="w">                  </span><span class="err">#</span><span class="w"> </span><span class="nx">Docker</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="nx">files</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">config</span><span class="w">               </span><span class="err">#</span><span class="w">   </span><span class="nx">Additional</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">every</span><span class="w"> </span><span class="nx">Docker</span><span class="w"> </span><span class="nx">service</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">scripts</span><span class="w">              </span><span class="err">#</span><span class="w">   </span><span class="nx">Scripts</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">Docker</span><span class="w"> </span><span class="nx">services</span><span class="w"> </span><span class="nx">during</span><span class="w"> </span><span class="nx">image</span><span class="w"> </span><span class="nx">build</span>
+<span class="err">├──</span><span class="w"> </span><span class="p">.</span><span class="nx">github</span><span class="w">                  </span><span class="err">#</span><span class="w"> </span><span class="nx">GitHub</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="nx">files</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="p">.</span><span class="nx">logs</span><span class="w">                    </span><span class="err">#</span><span class="w"> </span><span class="nx">Test</span><span class="w"> </span><span class="nx">logs</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">screenshots</span><span class="p">.</span><span class="w"> </span><span class="nx">Excluded</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">config</span><span class="w">                   </span><span class="err">#</span><span class="w"> </span><span class="nx">Drupal</span><span class="w"> </span><span class="nx">configuration</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">ci</span><span class="w">                   </span><span class="err">#</span><span class="w">   </span><span class="nx">Config</span><span class="w"> </span><span class="nx">split</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">CI</span><span class="w"> </span><span class="nx">environment</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="k">default</span><span class="w">              </span><span class="err">#</span><span class="w">   </span><span class="nx">Default</span><span class="w"> </span><span class="nx">configuration</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">dev</span><span class="w">                  </span><span class="err">#</span><span class="w">   </span><span class="nx">Config</span><span class="w"> </span><span class="nx">split</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">DEV</span><span class="w"> </span><span class="nx">environment</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">local</span><span class="w">                </span><span class="err">#</span><span class="w">   </span><span class="nx">Config</span><span class="w"> </span><span class="nx">split</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">local</span><span class="w"> </span><span class="nx">environment</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">test</span><span class="w">                 </span><span class="err">#</span><span class="w">   </span><span class="nx">Config</span><span class="w"> </span><span class="nx">split</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">environment</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">docs</span><span class="w">                     </span><span class="err">#</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">project</span><span class="w"> </span><span class="nx">documentation</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">drush</span><span class="w">                    </span><span class="err">#</span><span class="w"> </span><span class="nx">Drush</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="nx">files</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">hooks</span><span class="w">                    </span><span class="err">#</span><span class="w"> </span><span class="nx">Acquia</span><span class="w"> </span><span class="nx">hooks</span><span class="p">.</span><span class="w"> </span><span class="nx">Removed</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">Acquia</span><span class="w"> </span><span class="nx">hosting</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">common</span><span class="w">               </span><span class="err">#</span><span class="w">   </span><span class="nx">Hook</span><span class="w"> </span><span class="nx">implementations</span><span class="w"> </span><span class="nx">that</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nx">on</span><span class="w"> </span><span class="nx">all</span><span class="w"> </span><span class="nx">environments</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="kn">library</span><span class="w">              </span><span class="err">#</span><span class="w">   </span><span class="nx">Library</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">hook</span><span class="w"> </span><span class="nx">implementations</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">prod</span><span class="w">                 </span><span class="err">#</span><span class="w">   </span><span class="nx">Hook</span><span class="w"> </span><span class="nx">implementations</span><span class="w"> </span><span class="nx">that</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">prod</span><span class="w"> </span><span class="nx">environment</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">patches</span><span class="w">                  </span><span class="err">#</span><span class="w"> </span><span class="nx">Patches</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">packages</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">scripts</span><span class="w">                  </span><span class="err">#</span><span class="w"> </span><span class="nx">Composer</span><span class="p">,</span><span class="w"> </span><span class="nx">DrevOps</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">custom</span><span class="w"> </span><span class="nx">project</span><span class="w"> </span><span class="nx">scripts</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">composer</span><span class="w">             </span><span class="err">#</span><span class="w">   </span><span class="nx">Composer</span><span class="w"> </span><span class="nx">scripts</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">custom</span><span class="w">               </span><span class="err">#</span><span class="w">   </span><span class="nx">Custom</span><span class="w"> </span><span class="nx">project</span><span class="w"> </span><span class="nx">scripts</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">drevops</span><span class="w">              </span><span class="err">#</span><span class="w">   </span><span class="nx">DrevOps</span><span class="w"> </span><span class="nx">workflow</span><span class="w"> </span><span class="nx">scripts</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">tests</span><span class="w">                    </span><span class="err">#</span><span class="w"> </span><span class="nx">Integration</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="nx">tests</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">behat</span><span class="w">                </span><span class="err">#</span><span class="w">   </span><span class="nx">Behat</span><span class="w"> </span><span class="nx">BDD</span><span class="w"> </span><span class="nx">tests</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">phpunit</span><span class="w">              </span><span class="err">#</span><span class="w">   </span><span class="nx">Configuration</span><span class="w"> </span><span class="nx">unit</span><span class="w"> </span><span class="nx">tests</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">web</span><span class="w">                      </span><span class="err">#</span><span class="w"> </span><span class="nx">Drupal</span><span class="w"> </span><span class="nx">web</span><span class="w"> </span><span class="nx">root</span><span class="w"> </span><span class="nx">directory</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">modules</span><span class="o">/</span><span class="nx">custom</span><span class="o">/</span><span class="nx">ys_core</span><span class="w">    </span><span class="err">#</span><span class="w">  </span><span class="nx">Custom</span><span class="w"> </span><span class="nx">module</span><span class="w"> </span><span class="nx">scaffold</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">tests</span><span class="o">/</span><span class="nx">src</span><span class="w">        </span><span class="err">#</span><span class="w">         </span><span class="nx">Tests</span><span class="w"> </span><span class="nx">scaffold</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">Functional</span><span class="w">   </span><span class="err">#</span><span class="w">           </span><span class="nx">Functional</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">scaffold</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">example</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">Kernel</span><span class="w">       </span><span class="err">#</span><span class="w">           </span><span class="nx">Kernel</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">scaffold</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">example</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">Traits</span><span class="w">       </span><span class="err">#</span><span class="w">           </span><span class="nx">Helper</span><span class="w"> </span><span class="nx">traits</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">use</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">tests</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">Unit</span><span class="w">         </span><span class="err">#</span><span class="w">           </span><span class="nx">Unit</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">scaffold</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">example</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">ys_core</span><span class="p">.</span><span class="nx">deploy</span><span class="w">   </span><span class="err">#</span><span class="w">         </span><span class="nx">Drush</span><span class="w"> </span><span class="nx">deploy</span><span class="w"> </span><span class="nx">example</span><span class="p">.</span>
+<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">modules</span><span class="o">/</span><span class="nx">custom</span><span class="o">/</span><span class="nx">ys_search</span><span class="w">  </span><span class="err">#</span><span class="w">  </span><span class="nx">Custom</span><span class="w"> </span><span class="nx">search</span><span class="w"> </span><span class="nx">module</span><span class="w"> </span><span class="nx">scaffold</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="p">.</span><span class="nx">ahoy</span><span class="p">.</span><span class="nx">yml</span><span class="w">                </span><span class="err">#</span><span class="w"> </span><span class="nx">Ahoy</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="p">.</span><span class="nx">ahoy</span><span class="p">.</span><span class="nx">local</span><span class="p">.</span><span class="nx">example</span><span class="p">.</span><span class="nx">yml</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="nx">Ahoy</span><span class="w"> </span><span class="nx">local</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="p">.</span><span class="nx">dockerignore</span><span class="w">            </span><span class="err">#</span><span class="w"> </span><span class="nx">Docker</span><span class="w"> </span><span class="nx">ignore</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="p">.</span><span class="nx">editorconfig</span><span class="w">            </span><span class="err">#</span><span class="w"> </span><span class="nx">Helps</span><span class="w"> </span><span class="nx">maintain</span><span class="w"> </span><span class="nx">consistent</span><span class="w"> </span><span class="nx">coding</span><span class="w"> </span><span class="nx">styles</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="p">.</span><span class="nx">env</span><span class="w">                     </span><span class="err">#</span><span class="w"> </span><span class="nx">Environment</span><span class="w"> </span><span class="nx">variables</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">control</span><span class="w"> </span><span class="nx">project</span><span class="w"> </span><span class="nx">workflow</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">DrevOps</span><span class="w"> </span><span class="nx">variables</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">local</span><span class="p">.</span><span class="k">default</span><span class="w">       </span><span class="err">#</span><span class="w"> </span><span class="nx">Environment</span><span class="w"> </span><span class="nx">variables</span><span class="w"> </span><span class="nx">local</span><span class="w"> </span><span class="nx">overrides</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="p">.</span><span class="nx">gitignore</span><span class="w">               </span><span class="err">#</span><span class="w"> </span><span class="nx">Intentionally</span><span class="w"> </span><span class="nx">untracked</span><span class="w"> </span><span class="nx">files</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">ignore</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">Git</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="p">.</span><span class="nx">gitignore</span><span class="p">.</span><span class="nx">deployment</span><span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="nx">Intentionally</span><span class="w"> </span><span class="nx">untracked</span><span class="w"> </span><span class="nx">files</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">ignore</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">artifact</span><span class="w"> </span><span class="nx">deployment</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="p">.</span><span class="nx">lagoon</span><span class="p">.</span><span class="nx">yml</span><span class="w">              </span><span class="err">#</span><span class="w"> </span><span class="nx">Lagoon</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span><span class="w"> </span><span class="nx">Removed</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">Lagoon</span><span class="w"> </span><span class="nx">hosting</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="p">.</span><span class="nx">twig_cs</span><span class="p">.</span><span class="nx">php</span><span class="w">             </span><span class="err">#</span><span class="w"> </span><span class="nx">Twigcs</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">behat</span><span class="p">.</span><span class="nx">yml</span><span class="w">                </span><span class="err">#</span><span class="w"> </span><span class="nx">Behat</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">composer</span><span class="p">.</span><span class="nx">json</span><span class="w">            </span><span class="err">#</span><span class="w"> </span><span class="nx">Composer</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">docker</span><span class="o">-</span><span class="nx">compose</span><span class="p">.</span><span class="nx">yml</span><span class="w">       </span><span class="err">#</span><span class="w"> </span><span class="nx">Docker</span><span class="w"> </span><span class="nx">Compose</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">docker</span><span class="o">-</span><span class="nx">compose</span><span class="p">.</span><span class="k">override</span><span class="p">.</span><span class="k">default</span><span class="p">.</span><span class="nx">yml</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="nx">Docker</span><span class="w"> </span><span class="nx">Compose</span><span class="w"> </span><span class="nx">local</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">phpcs</span><span class="p">.</span><span class="nx">xml</span><span class="w">                </span><span class="err">#</span><span class="w"> </span><span class="nx">PHP</span><span class="w"> </span><span class="nx">CodeSniffer</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">phpmd</span><span class="p">.</span><span class="nx">xml</span><span class="w">                </span><span class="err">#</span><span class="w"> </span><span class="nx">PHP</span><span class="w"> </span><span class="nx">Mess</span><span class="w"> </span><span class="nx">Detector</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">phpstan</span><span class="p">.</span><span class="nx">neon</span><span class="w">             </span><span class="err">#</span><span class="w"> </span><span class="nx">PHPStan</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">phpunit</span><span class="p">.</span><span class="nx">xml</span><span class="w">              </span><span class="err">#</span><span class="w"> </span><span class="nx">PHPUnit</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">README</span><span class="p">.</span><span class="nx">md</span><span class="w">                </span><span class="err">#</span><span class="w"> </span><span class="nx">Project</span><span class="w"> </span><span class="nx">main</span><span class="w"> </span><span class="nx">readme</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span>
+<span class="err">└──</span><span class="w"> </span><span class="nx">renovate</span><span class="p">.</span><span class="nx">json</span><span class="w">            </span><span class="err">#</span><span class="w"> </span><span class="nx">Renovate</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span>
+</code></pre></div>
 <h2 id="Scripts">Scripts<a class="headerlink" href="#Scripts" title="Permanent link">&para;</a></h2>
 <p>DrevOps provides a set of <a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a>-compliant
 scripts designed to orchestrate workflows.</p>
@@ -2383,21 +2289,35 @@ scripts designed to orchestrate workflows.</p>
 <p>Using scripts instead of compiled binaries allows for <strong>in-place per-project
 overrides</strong> without needing to learn an additional programming language, compile
 sources, or rely on upstream dependencies.</p>
-<p>In the future, we will be providing <code class="language-text highlight">pre-</code> and <code class="language-text highlight">post-</code> hooks for scripts so
+<p>We are looking into providing <code class="language-text highlight">pre-</code> and <code class="language-text highlight">post-</code> hooks for scripts so
 that you can extend the functionality without modifying the original source
 code.</p>
+<p>We are also looking into a more streamlined way of updating the scripts.</p>
 </div>
 <h3 id="Centralised-workflows">Centralised workflows<a class="headerlink" href="#Centralised-workflows" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>A workflow is a sequence of steps or tasks to accomplish a specific goal.</p>
+</blockquote>
+<p>DrevOps comes with as set of pre-defined workflows to standardise the development
+process.</p>
+<p>For example, the <code class="language-text highlight">scripts/drevops/download-db.sh</code> script is used to download a
+database from any supported hosting provider or a custom location.</p>
+<p>Another example is a <code class="language-text highlight">scripts/drevops/provision.sh</code> script that is used to
+provision a website in a consistent way, allowing to alter the flow using
+<a href="../../workflows/variables/">environment variables</a> and enhance it via custom
+scripts.</p>
 <p>The scripts aim to centralize workflows instead of adjusting them for every
-environment (local, CI, dev, prod, etc.), reducing multiple points of failure.</p>
-<p>This means that a developer updating a workflow for local environment, for
+environment (local, CI, dev, prod, etc.), reducing multiple points of failure.
+This means that a developer updating a workflow for local environment, for
 example, will not accidentally forget to update it for the CI environment, and
 so on.</p>
-<pre class="mermaid"><code>flowchart LR
+<p>In the diagram below, the <code class="language-text highlight">download-db.sh</code> and <code class="language-text highlight">provision.sh</code> scripts are
+<strong>consistently</strong> called from the configuration files within an environment.</p>
+<pre class="mermaid"><code>    flowchart LR
     subgraph Environment
-        A[Local&lt;br/&gt;&lt;small&gt;.ahoy.yml&lt;/small&gt;]
-        B[CI&lt;br/&gt;&lt;small&gt;config.yml&lt;/small&gt;]
-        C[Hosting&lt;br/&gt;&lt;small&gt;.lagoon.yml&lt;/small&gt;]
+        A[Local&lt;br/&gt;&lt;small&gt;&lt;code&gt;.ahoy.yml&lt;/code&gt;&lt;/small&gt;]
+        B[CI&lt;br/&gt;&lt;small&gt;&lt;code&gt;config.yml&lt;/code&gt;&lt;/small&gt;]
+        C[Hosting&lt;br/&gt;&lt;small&gt;&lt;code&gt;.lagoon.yml&lt;/code&gt;&lt;/small&gt;]
     end
 
     subgraph Scripts
@@ -2411,23 +2331,27 @@ so on.</p>
     B --&gt; Scripts
     C --&gt; Scripts
     C --&gt; Scripts</code></pre>
-<p><a href="../../workflows/variables/">Environment variables</a> control the flow, with the same
-operations and order, but certain operations can be enabled or disabled
-depending on the environment.</p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>A script used for downloading a database is called from Ahoy for
-local development, from CI configuration, and from the hosting configuration
-file is the same <code class="language-text highlight">scripts/drevops/download-db.sh</code> script.</p>
-</div>
+<p>See <a href="../../workflows">Workflows</a> section for more details.</p>
 <h3 id="Router-scripts">Router scripts<a class="headerlink" href="#Router-scripts" title="Permanent link">&para;</a></h3>
 <p>The script from the example above is a <em>router</em> script that invokes other,
 more specific scripts (by sourcing them) based on the project configuration.
-This
-design <strong>keeps the entry point consistent</strong> while allowing implementation
-updates as needed without modifying the entry point everywhere.</p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
+This design <strong>keeps the entry point consistent</strong> while allowing implementation
+updates as needed without modifying the entry point in multiple places.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The router script always starts with a verb to indicate the action it performs.
+Specific scripts always start with a name of the router script.</p>
+</div>
+<p>In the diagram below, for example, the <code class="language-text highlight">download-db.sh</code> script, being a router
+script, invokes another script specific to the database download source
+(controlled with an environment variable).</p>
+<p>Changing the database download source from <code class="language-text highlight">lagoon</code> to <code class="language-text highlight">s3</code> would
+not require changes to any local, CI, or hosting scripts.</p>
+<p>In addition, a developer would not need to learn how to use <code class="language-text highlight">s3</code> to
+download a database or even know how that download process is setup.</p>
+<p>If a new database download method is introduced, the router
+script <code class="language-text highlight">download-db.sh</code> can be easily extended to accommodate it,
+without altering configuration files for services.</p>
 <pre class="mermaid"><code>---
 title: Example of a router script
 ---
@@ -2441,25 +2365,19 @@ flowchart LR
     F -- Lagoon --&gt; J[download-db-lagoon.sh]
     F -- Docker registry --&gt; K[download-db-docker-registry.sh]
     F -- Your custom source --&gt; L[download-db-your-source.sh]</code></pre>
-<p>Changing the database download source from <code class="language-text highlight">lagoon</code> to <code class="language-text highlight">s3</code> would
-not require changes to any local, CI, or hosting scripts.</p>
-<p>In addition, a developer would not need to learn how to use <code class="language-text highlight">s3</code> to
-download a database or even know how that download process is setup.</p>
-<p>If a new database download method is introduced, the router
-script <code class="language-text highlight">download-db.sh</code> can be easily extended to accommodate it,
-without altering configuration files for services.</p>
-</div>
 <h3 id="Environment-variables">Environment variables<a class="headerlink" href="#Environment-variables" title="Permanent link">&para;</a></h3>
 <p>The workflow within scripts is controlled via environment variables.</p>
 <p>To alter the workflow for a specific environment, the variables would need to be
-set within that environment via the configuration file or other means supported
-by the environment (e.g. CircleCI and Acquia support injecting variables via
-UI).</p>
+set within that environment via the <code class="language-text highlight">.env</code> configuration file or other means
+supported by the environment (e.g. CircleCI and Acquia support injecting
+variables via UI).</p>
 <p>See <a href="../../workflows/variables/">Variables</a> section for more details.</p>
 
 
   
 
+
+  
 
 
 
