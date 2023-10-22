@@ -2210,7 +2210,7 @@ step 5 dependencies to avoid adding the production image and code artifact
 with unnecessary dependencies (which also widens the security perimeter and
 increases the build time).</p>
 <h3 id="8-Is-theme-available">8. Is theme available?<a class="headerlink" href="#8-Is-theme-available" title="Permanent link">&para;</a></h3>
-<p>If the environment variable <code class="language-text highlight">$DREVOPS_DRUPAL_THEME</code> is set, the script will
+<p>If the environment variable <code class="language-text highlight">$DRUPAL_THEME</code> is set, the script will
 install the front-end dependencies and compile assets. Note that this already
 happens during the Docker build process, so this step runs <strong>only locally</strong>
 to update the assets to use development versions based on the current theme

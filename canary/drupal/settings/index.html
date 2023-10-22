@@ -2267,10 +2267,10 @@ advanced environments.</p>
 </div>
 <h4 id="Environment-detection-override">Environment detection override<a class="headerlink" href="#Environment-detection-override" title="Permanent link">&para;</a></h4>
 <p>It is also possible to force specific environment by setting
-<code class="language-text highlight">DREVOPS_ENVIRONMENT</code> environment variable. In this case, the environment
+<code class="language-text highlight">DRUPAL_ENVIRONMENT</code> environment variable. In this case, the environment
 detection will take place and will load any additional per-platform settings,
 but the final value of <code class="language-text highlight">$settings[&#39;environment&#39;]</code> will be set to the value of
-<code class="language-text highlight">DREVOPS_ENVIRONMENT</code> variable.</p>
+<code class="language-text highlight">DRUPAL_ENVIRONMENT</code> variable.</p>
 <p>This is useful in cases where a certain behaviour is required for a specific
 environment, but the environment detection logic does not provide it. Or as a
 temporary override during testing.</p>

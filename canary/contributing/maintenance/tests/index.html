@@ -2215,7 +2215,7 @@ bats<span class="w"> </span>--no-tempdir-cleanup<span class="w"> </span>.drevops
 <h3 id="Updating-demo-database-file-dump">Updating demo database file dump<a class="headerlink" href="#Updating-demo-database-file-dump" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Run fresh build of DrevOps locally:
-<div class="language-bash highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;DREVOPS_DRUPAL_PROFILE=standard&quot;</span>&gt;&gt;.env.local
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;DRUPAL_PROFILE=standard&quot;</span>&gt;&gt;.env.local
 <span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;DREVOPS_PROVISION_USE_PROFILE=1&quot;</span>&gt;&gt;.env.local
 rm<span class="w"> </span>.data/db.sql
 <span class="nv">AHOY_CONFIRM_RESPONSE</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>ahoy<span class="w"> </span>build
