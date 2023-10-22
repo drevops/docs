@@ -1623,6 +1623,13 @@ You're not viewing the latest version.
 </li>
         
           <li class="md-nav__item">
+  <a href="#AHOY_CONFIRM_WAIT_SKIP" class="md-nav__link">
+    AHOY_CONFIRM_WAIT_SKIP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#COMPOSE_PROJECT_NAME" class="md-nav__link">
     COMPOSE_PROJECT_NAME
   </a>
@@ -1903,6 +1910,13 @@ You're not viewing the latest version.
 </li>
         
           <li class="md-nav__item">
+  <a href="#DREVOPS_LOCALDEV_URL" class="md-nav__link">
+    DREVOPS_LOCALDEV_URL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#DREVOPS_NOTIFY_CHANNELS" class="md-nav__link">
     DREVOPS_NOTIFY_CHANNELS
   </a>
@@ -2108,6 +2122,13 @@ You're not viewing the latest version.
           <li class="md-nav__item">
   <a href="#DRUPAL_UNBLOCK_ADMIN" class="md-nav__link">
     DRUPAL_UNBLOCK_ADMIN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#GITHUB_TOKEN" class="md-nav__link">
+    GITHUB_TOKEN
   </a>
   
 </li>
@@ -2627,6 +2648,13 @@ You're not viewing the latest version.
 </li>
         
           <li class="md-nav__item">
+  <a href="#AHOY_CONFIRM_WAIT_SKIP" class="md-nav__link">
+    AHOY_CONFIRM_WAIT_SKIP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#COMPOSE_PROJECT_NAME" class="md-nav__link">
     COMPOSE_PROJECT_NAME
   </a>
@@ -2907,6 +2935,13 @@ You're not viewing the latest version.
 </li>
         
           <li class="md-nav__item">
+  <a href="#DREVOPS_LOCALDEV_URL" class="md-nav__link">
+    DREVOPS_LOCALDEV_URL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#DREVOPS_NOTIFY_CHANNELS" class="md-nav__link">
     DREVOPS_NOTIFY_CHANNELS
   </a>
@@ -3117,6 +3152,13 @@ You're not viewing the latest version.
 </li>
         
           <li class="md-nav__item">
+  <a href="#GITHUB_TOKEN" class="md-nav__link">
+    GITHUB_TOKEN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#LAGOON_PROJECT" class="md-nav__link">
     LAGOON_PROJECT
   </a>
@@ -3187,6 +3229,10 @@ You're not viewing the latest version.
 <h3 id="AHOY_CONFIRM_RESPONSE"><code class="language-text highlight">AHOY_CONFIRM_RESPONSE</code><a class="headerlink" href="#AHOY_CONFIRM_RESPONSE" title="Permanent link">&para;</a></h3>
 <p>Set to <code class="language-text highlight">y</code> to suppress Ahoy prompts.</p>
 <p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">.env.local.default</code></p>
+<h3 id="AHOY_CONFIRM_WAIT_SKIP"><code class="language-text highlight">AHOY_CONFIRM_WAIT_SKIP</code><a class="headerlink" href="#AHOY_CONFIRM_WAIT_SKIP" title="Permanent link">&para;</a></h3>
+<p>When Ahoy prompts are suppressed (<a href="#AHOY_CONFIRM_RESPONSE"><code class="language-text highlight">$AHOY_CONFIRM_RESPONSE</code></a> is <code class="language-text highlight">1</code>), the command<br />will wait for <code class="language-text highlight">3</code> seconds before proceeding.<br />Set this variable to "<code class="language-text highlight">1</code>" to skip the wait.</p>
+<p>Default value: <code class="language-text highlight">1</code></p>
 <p>Defined in: <code class="language-text highlight">.env.local.default</code></p>
 <h3 id="COMPOSE_PROJECT_NAME"><code class="language-text highlight">COMPOSE_PROJECT_NAME</code><a class="headerlink" href="#COMPOSE_PROJECT_NAME" title="Permanent link">&para;</a></h3>
 <p>Docker Compose project name.</p>
@@ -3290,9 +3336,9 @@ You're not viewing the latest version.
 <p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
 <p>Defined in: <code class="language-text highlight">.env</code></p>
 <h3 id="DREVOPS_DB_DOWNLOAD_FORCE"><code class="language-text highlight">DREVOPS_DB_DOWNLOAD_FORCE</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_FORCE" title="Permanent link">&para;</a></h3>
-<p>Set to <code class="language-text highlight">1</code> to override existing downloaded DB dump without asking.</p>
-<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
-<p>Defined in: <code class="language-text highlight">.env.local.default</code></p>
+<p>Always override existing downloaded DB dump.</p>
+<p>Default value: <code class="language-text highlight">1</code></p>
+<p>Defined in: <code class="language-text highlight">.env.local.default</code>, <code class="language-text highlight">.env.local.default</code></p>
 <h3 id="DREVOPS_DB_DOWNLOAD_FTP_FILE"><code class="language-text highlight">DREVOPS_DB_DOWNLOAD_FTP_FILE</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_FTP_FILE" title="Permanent link">&para;</a></h3>
 <p>Database dump FTP file name.</p>
 <p>Default value: <code class="language-text highlight">db.sql</code></p>
@@ -3364,6 +3410,10 @@ You're not viewing the latest version.
 <p>Dedicated branch to identify the production environment.</p>
 <p>Default value: <code class="language-text highlight">main</code></p>
 <p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="DREVOPS_LOCALDEV_URL"><code class="language-text highlight">DREVOPS_LOCALDEV_URL</code><a class="headerlink" href="#DREVOPS_LOCALDEV_URL" title="Permanent link">&para;</a></h3>
+<p>Local development URL.<br />Override only if you need to use a different URL than the default.</p>
+<p>Default value: <code class="language-text highlight">&lt;current_dir&gt;.docker.amazee.io</code></p>
+<p>Defined in: <code class="language-text highlight">.env.local.default</code></p>
 <h3 id="DREVOPS_NOTIFY_CHANNELS"><code class="language-text highlight">DREVOPS_NOTIFY_CHANNELS</code><a class="headerlink" href="#DREVOPS_NOTIFY_CHANNELS" title="Permanent link">&para;</a></h3>
 <p>The channels of the notifications.</p>
 <p>Can be a combination of comma-separated values: email,newrelic,github,jira</p>
@@ -3491,6 +3541,10 @@ You're not viewing the latest version.
 <p>Unblock admin account when logging in.</p>
 <p>Default value: <code class="language-text highlight">1</code></p>
 <p>Defined in: <code class="language-text highlight">.env</code></p>
+<h3 id="GITHUB_TOKEN"><code class="language-text highlight">GITHUB_TOKEN</code><a class="headerlink" href="#GITHUB_TOKEN" title="Permanent link">&para;</a></h3>
+<p>GitHub token used to overcome API rate limits or access private repositories.<br /><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/see" title="GitHub User: see">@see</a> <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token</a></p>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">.env.local.default</code></p>
 <h3 id="LAGOON_PROJECT"><code class="language-text highlight">LAGOON_PROJECT</code><a class="headerlink" href="#LAGOON_PROJECT" title="Permanent link">&para;</a></h3>
 <p>Lagoon project name. May be different from <a href="#DREVOPS_PROJECT"><code class="language-text highlight">$DREVOPS_PROJECT</code></a>.</p>
 <p>Default value: <code class="language-text highlight">your_site</code></p>
