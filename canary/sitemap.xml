@@ -2,282 +2,282 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.drevops.com/canary/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/contributing/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/contributing/code-of-conduct/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/contributing/roadmap/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/contributing/maintenance/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/contributing/maintenance/documentation/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/contributing/maintenance/scripts/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/contributing/maintenance/tests/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/drupal/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/drupal/composer/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/drupal/module-scaffold/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/drupal/provision/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/drupal/settings/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/drupal/theme-scaffold/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/integrations/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/integrations/ci/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/integrations/ci/azure-pipelines/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/integrations/ci/circleci/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/integrations/ci/github-actions/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/integrations/ci/gitlab-ci/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/integrations/ci/overview/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/integrations/hosting/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/integrations/hosting/acquia/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/integrations/hosting/lagoon/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/integrations/hosting/pantheon/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/integrations/hosting/platformsh/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/introduction/architecture/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/introduction/faqs/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/introduction/features/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/introduction/installation/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/tools/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/tools/ahoy/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/tools/behat/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/tools/docker/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/tools/doctor/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/tools/drush/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/tools/git-artifact/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/tools/phpcs/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/tools/phpmd/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/tools/phpstan/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/tools/phpunit/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/tools/pygmy/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/tools/renovate/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/tools/twigcs/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/tools/xdebug/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/workflows/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/workflows/build/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/workflows/deployment/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/workflows/development/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/workflows/documentation/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/workflows/qa/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/workflows/test/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/workflows/variables/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/workflows/releasing/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/workflows/releasing/git-flow/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/canary/workflows/releasing/github-flow/</loc>
-         <lastmod>2023-10-27</lastmod>
+         <lastmod>2023-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
