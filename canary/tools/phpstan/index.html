@@ -784,6 +784,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -1126,6 +1128,26 @@ You're not viewing the latest version.
   
   <span class="md-ellipsis">
     Renovate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rector
   </span>
   
 
@@ -2157,21 +2179,30 @@ You're not viewing the latest version.
 <p><a href="https://phpstan.org/user-guide/getting-started">https://phpstan.org/user-guide/getting-started</a></p>
 <blockquote>
 <p>PHPStan focuses on finding errors in your code without actually running it. It
-catches whole classes of bugs even before you write tests for the code. It moves
-PHP closer to compiled languages in the sense that the correctness of each line
+catches whole classes of bugs even before you write tests for the code. It
+moves
+PHP closer to compiled languages in the sense that the correctness of each
+line
 of the code can be checked before you run the actual line.</p>
 </blockquote>
-<p>DrevOps comes with <a href="https://github.com/drevops/drevops/tree/main/phpstan.neon">pre-configured PHPStan ruleset</a> for
+<p>DrevOps comes with <a href="https://github.com/drevops/drevops/tree/main/phpstan.neon">pre-configured PHPStan ruleset</a>
+for
 Drupal projects.</p>
 <h2 id="Usage">Usage<a class="headerlink" href="#Usage" title="Permanent link">&para;</a></h2>
-<p><div class="language-shell highlight"><pre><span></span><code>vendor/bin/phpstan
+<div class="language-shell highlight"><pre><span></span><code>vendor/bin/phpstan
 </code></pre></div>
-or
+<p>or</p>
 <div class="language-shell highlight"><pre><span></span><code>ahoy<span class="w"> </span>lint-be
-</code></pre></div></p>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PHPStan does not fix code. It only reports errors. To fix errors, use
+Rector. See <a href="../rector">Rector</a> for more information.</p>
+</div>
 <h2 id="Configuration">Configuration<a class="headerlink" href="#Configuration" title="Permanent link">&para;</a></h2>
 <p>See <a href="https://phpstan.org/config-reference">configuration reference</a>.</p>
-<p>All global configuration takes place in the <a href="https://github.com/drevops/drevops/tree/main/phpstan.neon"><code class="language-text highlight">phpstan.neon</code></a>
+<p>All global configuration takes place in
+the <a href="https://github.com/drevops/drevops/tree/main/phpstan.neon"><code class="language-text highlight">phpstan.neon</code></a>
 file.</p>
 <p>By default, PHPStan will check with the Drupal context in mind thanks to
 <a href="https://github.com/mglaman/phpstan-drupal">mglaman/phpstan-drupal</a>.</p>
@@ -2189,8 +2220,7 @@ file.</p>
 the <a href="https://github.com/drevops/drevops/tree/main/phpstan.neon"><code class="language-text highlight">phpstan.neon</code></a> file:</p>
 <div class="language-yaml highlight"><pre><span></span><code><span class="nt">parameters</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">ignoreErrors</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span>
-<span class="w">      </span><span class="c1"># Comment about why this rules is excluded.</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="c1"># Comment about why this rules is excluded.</span>
 <span class="w">      </span><span class="c1"># &#39;message&#39; is a regular expression with `#` as begin and end delimiters.</span>
 <span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;#.*no</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">specified</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">iterable</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">array.#&#39;</span>
 <span class="w">      </span><span class="nt">paths</span><span class="p">:</span>
@@ -2199,7 +2229,8 @@ the <a href="https://github.com/drevops/drevops/tree/main/phpstan.neon"><code cl
 </code></pre></div>
 <p>PHPStan does not support ignoring of <strong>all PHPStan rules</strong> within a file.</p>
 <p>PHPStan does not support ignoring of <strong>a specific rule</strong> within a file.</p>
-<p>PHPStan <a href="https://github.com/phpstan/phpstan/issues/4452">does not support</a> ignoring of the <strong>code blocks</strong>.</p>
+<p>PHPStan <a href="https://github.com/phpstan/phpstan/issues/4452">does not support</a>
+ignoring of the <strong>code blocks</strong>.</p>
 <p>To ignore only the current and the <strong>next line</strong>:</p>
 <div class="language-php highlight"><pre><span></span><code><span class="c1">// @phpstan-ignore-next-line</span>
 <span class="nv">$a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
