@@ -2275,8 +2275,8 @@ or
 <p>Twigcs does not support ignoring of the <strong>code blocks</strong>.</p>
 <p>Twigcs does not support ignoring the current and the <strong>next line</strong>.</p>
 <p>Twigcs supports ignoring violations for unused variables:</p>
-<div class="language-twig highlight"><pre><span></span><code><span class="c">{# twigcs use-var bar #}</span>
-<span class="cp">{%</span> <span class="k">set</span> <span class="nv">bar</span> <span class="o">=</span> <span class="m">1</span> <span class="cp">%}</span>
+<div class="language-twig highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">set</span> <span class="nv">bar</span> <span class="o">=</span> <span class="m">1</span> <span class="cp">%}</span>
+<span class="c">{# twigcs use-var bar #}</span>
 </code></pre></div>
 <h2 id="Ignoring-fail-in-CI">Ignoring fail in CI<a class="headerlink" href="#Ignoring-fail-in-CI" title="Permanent link">&para;</a></h2>
 <p>This tool runs in CI by default and fails the build if there are any violations.</p>
