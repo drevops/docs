@@ -2334,13 +2334,13 @@ the configuration provided
 by <a href="https://github.com/palantirnet/drupal-rector">Drupal Rector</a>.</p>
 <h2 id="Usage">Usage<a class="headerlink" href="#Usage" title="Permanent link">&para;</a></h2>
 <h3 id="Check-for-violations">Check for violations<a class="headerlink" href="#Check-for-violations" title="Permanent link">&para;</a></h3>
-<p><div class="language-shell highlight"><pre><span></span><code>vendor/bin/rector<span class="w"> </span>process<span class="w"> </span>--dry-run<span class="w"> </span>.<span class="w"> </span><span class="c1"># Only see the diff of changes, do not save them to files.</span>
+<p><div class="language-shell highlight"><pre><span></span><code>vendor/bin/rector<span class="w"> </span>--dry-run<span class="w"> </span><span class="c1"># Only see the diff of changes, do not save them to files.</span>
 </code></pre></div>
 or
 <div class="language-shell highlight"><pre><span></span><code>ahoy<span class="w"> </span>lint-be
 </code></pre></div></p>
 <h3 id="Fix-violations">Fix violations<a class="headerlink" href="#Fix-violations" title="Permanent link">&para;</a></h3>
-<p><div class="language-shell highlight"><pre><span></span><code>vendor/bin/rector<span class="w"> </span>process<span class="w"> </span>.
+<p><div class="language-shell highlight"><pre><span></span><code>vendor/bin/rector<span class="w"> </span>process
 </code></pre></div>
 or
 <div class="language-shell highlight"><pre><span></span><code>ahoy<span class="w"> </span>lint-fix
@@ -2360,11 +2360,18 @@ code style fixes.</p>
 <p>A full list of available config sets can be found in
 the <a href="https://getrector.com/documentation/rules-overview">Rules overview</a> page.</p>
 <div class="language-php highlight"><pre><span></span><code><span class="nv">$rectorConfig</span><span class="o">-&gt;</span><span class="na">sets</span><span class="p">([</span>
-  <span class="c1">// Provided by Rector.</span>
-  <span class="nx">SetList</span><span class="o">::</span><span class="na">TYPE_DECLARATION</span><span class="p">,</span>
-  <span class="c1">// Provided by Drupal Rector.</span>
-  <span class="nx">Drupal8SetList</span><span class="o">::</span><span class="na">DRUPAL_8</span><span class="p">,</span>
-  <span class="nx">Drupal9SetList</span><span class="o">::</span><span class="na">DRUPAL_9</span><span class="p">,</span>
+    <span class="c1">// Provided by Rector.</span>
+    <span class="nx">SetList</span><span class="o">::</span><span class="na">PHP_80</span><span class="p">,</span>
+    <span class="nx">SetList</span><span class="o">::</span><span class="na">PHP_81</span><span class="p">,</span>
+    <span class="nx">SetList</span><span class="o">::</span><span class="na">CODE_QUALITY</span><span class="p">,</span>
+    <span class="nx">SetList</span><span class="o">::</span><span class="na">CODING_STYLE</span><span class="p">,</span>
+    <span class="nx">SetList</span><span class="o">::</span><span class="na">DEAD_CODE</span><span class="p">,</span>
+    <span class="nx">SetList</span><span class="o">::</span><span class="na">INSTANCEOF</span><span class="p">,</span>
+    <span class="nx">SetList</span><span class="o">::</span><span class="na">TYPE_DECLARATION</span><span class="p">,</span>
+    <span class="c1">// Provided by Drupal Rector.</span>
+    <span class="nx">Drupal8SetList</span><span class="o">::</span><span class="na">DRUPAL_8</span><span class="p">,</span>
+    <span class="nx">Drupal9SetList</span><span class="o">::</span><span class="na">DRUPAL_9</span><span class="p">,</span>
+    <span class="nx">Drupal10SetList</span><span class="o">::</span><span class="na">DRUPAL_10</span><span class="p">,</span>
 <span class="p">]);</span>
 </code></pre></div>
 <h2 id="Ignoring">Ignoring<a class="headerlink" href="#Ignoring" title="Permanent link">&para;</a></h2>
