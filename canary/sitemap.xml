@@ -186,6 +186,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.drevops.com/canary/tools/hadolint/</loc>
+         <lastmod>2024-01-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.drevops.com/canary/tools/phpcs/</loc>
          <lastmod>2024-01-22</lastmod>
          <changefreq>daily</changefreq>

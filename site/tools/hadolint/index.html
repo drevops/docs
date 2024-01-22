@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.drevops.com/canary/contributing/code-of-conduct/">
+        <link rel="canonical" href="https://docs.drevops.com/canary/tools/hadolint/">
       
       
-        <link rel="prev" href="../roadmap/">
+        <link rel="prev" href="../phpcs/">
       
       
-        <link rel="next" href="../maintenance/">
+        <link rel="next" href="../phpmd/">
       
       
       <link rel="icon" href="../../assets/favicon.ico">
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#Code-of-conduct" class="md-skip">
+        <a href="#Hadolint" class="md-skip">
           Skip to content
         </a>
       
@@ -137,7 +137,7 @@ You're not viewing the latest version.
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Code of conduct
+              Hadolint
             
           </span>
         </div>
@@ -311,11 +311,13 @@ You're not viewing the latest version.
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../tools/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -351,13 +353,11 @@ You're not viewing the latest version.
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../contributing/" class="md-tabs__link">
           
   
     
@@ -1047,6 +1047,8 @@ You're not viewing the latest version.
       
   
   
+    
+  
   
   
     
@@ -1095,17 +1097,17 @@ You're not viewing the latest version.
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../tools/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1122,7 +1124,7 @@ You're not viewing the latest version.
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             🛠 Tools
@@ -1138,7 +1140,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/ahoy/" class="md-nav__link">
+      <a href="../ahoy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1159,7 +1161,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/behat/" class="md-nav__link">
+      <a href="../behat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1180,7 +1182,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/doctor/" class="md-nav__link">
+      <a href="../doctor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1201,7 +1203,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/docker/" class="md-nav__link">
+      <a href="../docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1222,7 +1224,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/drush/" class="md-nav__link">
+      <a href="../drush/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1243,7 +1245,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/git-artifact/" class="md-nav__link">
+      <a href="../git-artifact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1264,7 +1266,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/phpcs/" class="md-nav__link">
+      <a href="../phpcs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1282,10 +1284,30 @@ You're not viewing the latest version.
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../tools/hadolint/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Hadolint
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1294,6 +1316,53 @@ You're not viewing the latest version.
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Ignoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ignoring
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Ignoring-fail-in-CI" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ignoring fail in CI
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1306,7 +1375,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/phpmd/" class="md-nav__link">
+      <a href="../phpmd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1327,7 +1396,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/phpstan/" class="md-nav__link">
+      <a href="../phpstan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1348,7 +1417,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/phpunit/" class="md-nav__link">
+      <a href="../phpunit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1369,7 +1438,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/pygmy/" class="md-nav__link">
+      <a href="../pygmy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1390,7 +1459,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/rector/" class="md-nav__link">
+      <a href="../rector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1411,7 +1480,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/renovate/" class="md-nav__link">
+      <a href="../renovate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1432,7 +1501,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/twigcs/" class="md-nav__link">
+      <a href="../twigcs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1453,7 +1522,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../tools/xdebug/" class="md-nav__link">
+      <a href="../xdebug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1857,8 +1926,6 @@ You're not viewing the latest version.
       
   
   
-    
-  
   
   
     
@@ -1881,17 +1948,17 @@ You're not viewing the latest version.
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../contributing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1908,7 +1975,7 @@ You're not viewing the latest version.
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             🌟 Contributing
@@ -1924,7 +1991,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../roadmap/" class="md-nav__link">
+      <a href="../../contributing/roadmap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1942,19 +2009,10 @@ You're not viewing the latest version.
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../contributing/code-of-conduct/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1963,7 +2021,6 @@ You're not viewing the latest version.
   
 
       </a>
-      
     </li>
   
 
@@ -2005,7 +2062,7 @@ You're not viewing the latest version.
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../maintenance/" class="md-nav__link ">
+            <a href="../../contributing/maintenance/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2038,7 +2095,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../maintenance/scripts/" class="md-nav__link">
+      <a href="../../contributing/maintenance/scripts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2059,7 +2116,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../maintenance/tests/" class="md-nav__link">
+      <a href="../../contributing/maintenance/tests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2080,7 +2137,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../maintenance/documentation/" class="md-nav__link">
+      <a href="../../contributing/maintenance/documentation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2129,6 +2186,41 @@ You're not viewing the latest version.
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Ignoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ignoring
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Ignoring-fail-in-CI" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ignoring fail in CI
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2142,7 +2234,7 @@ You're not viewing the latest version.
                   
 
   
-    <a href="https://github.com/drevops/drevops/edit/main/.drevops/docs/content/contributing/code-of-conduct.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/drevops/drevops/edit/main/.drevops/docs/content/tools/hadolint.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -2151,17 +2243,39 @@ You're not viewing the latest version.
     
       
     
-    <a href="https://github.com/drevops/drevops/raw/main/.drevops/docs/content/contributing/code-of-conduct.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/drevops/drevops/raw/main/.drevops/docs/content/tools/hadolint.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="Code-of-conduct">Code of conduct<a class="headerlink" href="#Code-of-conduct" title="Permanent link">&para;</a></h1>
-<p>Please note that this project is released with
-a <a href="https://github.com/drevops/drevops/tree/main/CODE_OF_CONDUCT.md">Contributor Code of Conduct</a>. By participating in this
-project you agree to abide by its terms.</p>
+<h1 id="Hadolint">Hadolint<a class="headerlink" href="#Hadolint" title="Permanent link">&para;</a></h1>
+<p><a href="https://github.com/hadolint/hadolint">https://github.com/hadolint/hadolint</a></p>
+<blockquote>
+<p>A smarter Dockerfile linter that helps you build best practice Docker images.</p>
+</blockquote>
+<p>DrevOps does not install Hadolint. Please follow the [
+instructions(<a href="https://github.com/hadolint/hadolint#install">https://github.com/hadolint/hadolint#install</a>) to install it on your
+system.</p>
+<h2 id="Usage">Usage<a class="headerlink" href="#Usage" title="Permanent link">&para;</a></h2>
+<div class="language-shell highlight"><pre><span></span><code>hadolint<span class="w"> </span>.docker/*.dockerfile
+</code></pre></div>
+<h2 id="Ignoring">Ignoring<a class="headerlink" href="#Ignoring" title="Permanent link">&para;</a></h2>
+<p>To ignore <strong>all Hadolint rules</strong> within a file, place in the file header:
+<div class="language-Dockerfile highlight"><pre><span></span><code><span class="c"># hadolint global ignore=DL3003,DL3006,SC1035</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">ubuntu</span>
+</code></pre></div></p>
+<p>To ignore only the current and the <strong>next line</strong>:
+<div class="language-Dockerfile highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">ubuntu</span>
+
+<span class="c"># hadolint ignore=DL3003,SC1035</span>
+<span class="k">RUN</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/tmp<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;hello!&quot;</span>
+</code></pre></div></p>
+<h2 id="Ignoring-fail-in-CI">Ignoring fail in CI<a class="headerlink" href="#Ignoring-fail-in-CI" title="Permanent link">&para;</a></h2>
+<p>This tool runs in CI by default and fails the build if there are any violations.</p>
+<p>Set <code class="language-text highlight">DREVOPS_CI_HADOLINT_IGNORE_FAILURE</code> environment variable to <code class="language-text highlight">1</code> to ignore
+failures. The tool will still run and report violations, if any.</p>
 
 
 
