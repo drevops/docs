@@ -2,297 +2,297 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.drevops.com/1.19.0/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/contributing/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/contributing/code-of-conduct/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/contributing/roadmap/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/contributing/maintenance/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/contributing/maintenance/documentation/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/contributing/maintenance/scripts/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/contributing/maintenance/tests/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/drupal/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/drupal/composer/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/drupal/module-scaffold/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/drupal/provision/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/drupal/settings/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/drupal/theme-scaffold/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/integrations/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/integrations/ci/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/integrations/ci/azure-pipelines/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/integrations/ci/circleci/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/integrations/ci/github-actions/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/integrations/ci/gitlab-ci/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/integrations/ci/overview/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/integrations/hosting/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/integrations/hosting/acquia/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/integrations/hosting/lagoon/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/integrations/hosting/pantheon/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/integrations/hosting/platformsh/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/introduction/architecture/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/introduction/faqs/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/introduction/features/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/introduction/installation/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/tools/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/tools/ahoy/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/tools/behat/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/tools/docker/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/tools/doctor/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/tools/drush/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/tools/git-artifact/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/tools/hadolint/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/tools/phpcs/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/tools/phpmd/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/tools/phpstan/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/tools/phpunit/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/tools/pygmy/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/tools/rector/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/tools/renovate/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/tools/twigcs/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/tools/xdebug/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/workflows/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/workflows/build/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/workflows/deployment/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/workflows/development/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/workflows/documentation/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/workflows/packages/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/workflows/qa/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/workflows/test/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/workflows/variables/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/workflows/releasing/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/workflows/releasing/git-flow/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.drevops.com/1.19.0/workflows/releasing/github-flow/</loc>
-         <lastmod>2024-02-15</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
