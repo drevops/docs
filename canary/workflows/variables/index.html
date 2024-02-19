@@ -1627,15 +1627,6 @@ You're not viewing the latest version.
 </li>
         
           <li class="md-nav__item">
-  <a href="#DREVOPS_DOCKER_RESTORE_IMAGE" class="md-nav__link">
-    <span class="md-ellipsis">
-      DREVOPS_DOCKER_RESTORE_IMAGE
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#DREVOPS_DOCKER_VERBOSE" class="md-nav__link">
     <span class="md-ellipsis">
       DREVOPS_DOCKER_VERBOSE
@@ -1738,15 +1729,6 @@ You're not viewing the latest version.
   <a href="#DREVOPS_DRUPAL_PRIVATE_FILES" class="md-nav__link">
     <span class="md-ellipsis">
       DREVOPS_DRUPAL_PRIVATE_FILES
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#DREVOPS_DRUPAL_SHOW_LOGIN_LINK" class="md-nav__link">
-    <span class="md-ellipsis">
-      DREVOPS_DRUPAL_SHOW_LOGIN_LINK
     </span>
   </a>
   
@@ -2305,6 +2287,15 @@ You're not viewing the latest version.
   <a href="#DREVOPS_PURGE_CACHE_ACQUIA_SKIP" class="md-nav__link">
     <span class="md-ellipsis">
       DREVOPS_PURGE_CACHE_ACQUIA_SKIP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#DREVOPS_SHOW_LOGIN" class="md-nav__link">
+    <span class="md-ellipsis">
+      DREVOPS_SHOW_LOGIN
     </span>
   </a>
   
@@ -4780,15 +4771,6 @@ You're not viewing the latest version.
 </li>
         
           <li class="md-nav__item">
-  <a href="#DREVOPS_DOCKER_RESTORE_IMAGE" class="md-nav__link">
-    <span class="md-ellipsis">
-      DREVOPS_DOCKER_RESTORE_IMAGE
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#DREVOPS_DOCKER_VERBOSE" class="md-nav__link">
     <span class="md-ellipsis">
       DREVOPS_DOCKER_VERBOSE
@@ -4891,15 +4873,6 @@ You're not viewing the latest version.
   <a href="#DREVOPS_DRUPAL_PRIVATE_FILES" class="md-nav__link">
     <span class="md-ellipsis">
       DREVOPS_DRUPAL_PRIVATE_FILES
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#DREVOPS_DRUPAL_SHOW_LOGIN_LINK" class="md-nav__link">
-    <span class="md-ellipsis">
-      DREVOPS_DRUPAL_SHOW_LOGIN_LINK
     </span>
   </a>
   
@@ -5464,6 +5437,15 @@ You're not viewing the latest version.
 </li>
         
           <li class="md-nav__item">
+  <a href="#DREVOPS_SHOW_LOGIN" class="md-nav__link">
+    <span class="md-ellipsis">
+      DREVOPS_SHOW_LOGIN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#DREVOPS_TASK_COPY_DB_ACQUIA_DST" class="md-nav__link">
     <span class="md-ellipsis">
       DREVOPS_TASK_COPY_DB_ACQUIA_DST
@@ -6019,21 +6001,21 @@ You're not viewing the latest version.
 <h3 id="DREVOPS_COMPOSER_VERBOSE"><code class="language-text highlight">DREVOPS_COMPOSER_VERBOSE</code><a class="headerlink" href="#DREVOPS_COMPOSER_VERBOSE" title="Permanent link">&para;</a></h3>
 <p>Print output from Composer install.</p>
 <p>Default value: <code class="language-text highlight">1</code></p>
-<p>Defined in: <code class="language-text highlight">.env</code>, <code class="language-text highlight">scripts/drevops/build.sh</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
 <h3 id="DREVOPS_DB_DIR"><code class="language-text highlight">DREVOPS_DB_DIR</code><a class="headerlink" href="#DREVOPS_DB_DIR" title="Permanent link">&para;</a></h3>
 <p>Database dump directory.</p>
 <p>Default value: <code class="language-text highlight">./.data</code></p>
-<p>Defined in: <code class="language-text highlight">.env</code>, <code class="language-text highlight">scripts/drevops/build.sh</code>, <code class="language-text highlight">scripts/drevops/download-db-acquia.sh</code>, <code class="language-text highlight">scripts/drevops/download-db-curl.sh</code>, <code class="language-text highlight">scripts/drevops/download-db-ftp.sh</code>, <code class="language-text highlight">scripts/drevops/download-db-lagoon.sh</code>, <code class="language-text highlight">scripts/drevops/download-db.sh</code>, <code class="language-text highlight">scripts/drevops/provision.sh</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code>, <code class="language-text highlight">scripts/drevops/download-db-acquia.sh</code>, <code class="language-text highlight">scripts/drevops/download-db-curl.sh</code>, <code class="language-text highlight">scripts/drevops/download-db-docker-registry.sh</code>, <code class="language-text highlight">scripts/drevops/download-db-ftp.sh</code>, <code class="language-text highlight">scripts/drevops/download-db-lagoon.sh</code>, <code class="language-text highlight">scripts/drevops/download-db.sh</code>, <code class="language-text highlight">scripts/drevops/provision.sh</code></p>
 <h3 id="DREVOPS_DB_DOCKER_IMAGE"><code class="language-text highlight">DREVOPS_DB_DOCKER_IMAGE</code><a class="headerlink" href="#DREVOPS_DB_DOCKER_IMAGE" title="Permanent link">&para;</a></h3>
 <p>Name of the database docker image to use.</p>
 <p>See <a href="https://github.com/drevops/mariadb-drupal-data">https://github.com/drevops/mariadb-drupal-data</a> to seed your DB image.</p>
 <p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
-<p>Defined in: <code class="language-text highlight">.env</code>, <code class="language-text highlight">scripts/drevops/build.sh</code>, <code class="language-text highlight">scripts/drevops/download-db-docker-registry.sh</code>, <code class="language-text highlight">scripts/drevops/export-db.sh</code>, <code class="language-text highlight">scripts/drevops/info.sh</code>, <code class="language-text highlight">scripts/drevops/provision.sh</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code>, <code class="language-text highlight">scripts/drevops/download-db-docker-registry.sh</code>, <code class="language-text highlight">scripts/drevops/export-db.sh</code>, <code class="language-text highlight">scripts/drevops/info.sh</code>, <code class="language-text highlight">scripts/drevops/provision.sh</code></p>
 <h3 id="DREVOPS_DB_DOCKER_IMAGE_BASE"><code class="language-text highlight">DREVOPS_DB_DOCKER_IMAGE_BASE</code><a class="headerlink" href="#DREVOPS_DB_DOCKER_IMAGE_BASE" title="Permanent link">&para;</a></h3>
 <p>Name of the database fall-back docker image to use.</p>
 <p>If the image specified in <a href="#DREVOPS_DB_DOCKER_IMAGE"><code class="language-text highlight">$DREVOPS_DB_DOCKER_IMAGE</code></a> does not exist and base<br />image was provided - it will be used as a "clean slate" for the database.</p>
 <p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
-<p>Defined in: <code class="language-text highlight">.env</code>, <code class="language-text highlight">scripts/drevops/build.sh</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code>, <code class="language-text highlight">scripts/drevops/download-db-docker-registry.sh</code></p>
 <h3 id="DREVOPS_DB_DOWNLOAD_ACQUIA_DB_NAME"><code class="language-text highlight">DREVOPS_DB_DOWNLOAD_ACQUIA_DB_NAME</code><a class="headerlink" href="#DREVOPS_DB_DOWNLOAD_ACQUIA_DB_NAME" title="Permanent link">&para;</a></h3>
 <p>Acquia database name to download the database from.</p>
 <p>Default value: <code class="language-text highlight">your_site</code></p>
@@ -6271,14 +6253,10 @@ You're not viewing the latest version.
 <p>The tag of the image to push to.</p>
 <p>Default value: <code class="language-text highlight">latest</code></p>
 <p>Defined in: <code class="language-text highlight">scripts/drevops/deploy-docker.sh</code></p>
-<h3 id="DREVOPS_DOCKER_RESTORE_IMAGE"><code class="language-text highlight">DREVOPS_DOCKER_RESTORE_IMAGE</code><a class="headerlink" href="#DREVOPS_DOCKER_RESTORE_IMAGE" title="Permanent link">&para;</a></h3>
-<p>Docker image archive file name.</p>
-<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
-<p>Defined in: <code class="language-text highlight">scripts/drevops/restore-docker-image.sh</code></p>
 <h3 id="DREVOPS_DOCKER_VERBOSE"><code class="language-text highlight">DREVOPS_DOCKER_VERBOSE</code><a class="headerlink" href="#DREVOPS_DOCKER_VERBOSE" title="Permanent link">&para;</a></h3>
 <p>Set to <code class="language-text highlight">1</code> to print debug information from Docker build.</p>
 <p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
-<p>Defined in: <code class="language-text highlight">.env.local.default</code>, <code class="language-text highlight">.env</code>, <code class="language-text highlight">scripts/drevops/build.sh</code></p>
+<p>Defined in: <code class="language-text highlight">.env.local.default</code>, <code class="language-text highlight">.env</code></p>
 <h3 id="DREVOPS_DOCTOR_CHECK_BOOTSTRAP"><code class="language-text highlight">DREVOPS_DOCTOR_CHECK_BOOTSTRAP</code><a class="headerlink" href="#DREVOPS_DOCTOR_CHECK_BOOTSTRAP" title="Permanent link">&para;</a></h3>
 <p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
 <p>Defined in: <code class="language-text highlight">scripts/drevops/doctor.sh</code></p>
@@ -6316,14 +6294,10 @@ You're not viewing the latest version.
 <p>Path to private files.</p>
 <p>Default value: <code class="language-text highlight">./${DREVOPS_WEBROOT/sites/default/files/private}</code></p>
 <p>Defined in: <code class="language-text highlight">scripts/drevops/provision.sh</code></p>
-<h3 id="DREVOPS_DRUPAL_SHOW_LOGIN_LINK"><code class="language-text highlight">DREVOPS_DRUPAL_SHOW_LOGIN_LINK</code><a class="headerlink" href="#DREVOPS_DRUPAL_SHOW_LOGIN_LINK" title="Permanent link">&para;</a></h3>
-<p>Show Drupal one-time login link.</p>
-<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
-<p>Defined in: <code class="language-text highlight">scripts/drevops/info.sh</code></p>
 <h3 id="DREVOPS_EXPORT_CODE_DIR"><code class="language-text highlight">DREVOPS_EXPORT_CODE_DIR</code><a class="headerlink" href="#DREVOPS_EXPORT_CODE_DIR" title="Permanent link">&para;</a></h3>
 <p>Directory to store exported code.</p>
 <p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
-<p>Defined in: <code class="language-text highlight">CI config</code>, <code class="language-text highlight">scripts/drevops/build.sh</code></p>
+<p>Defined in: <code class="language-text highlight">CI config</code></p>
 <h3 id="DREVOPS_EXPORT_DB_DOCKER_DEPLOY_PROCEED"><code class="language-text highlight">DREVOPS_EXPORT_DB_DOCKER_DEPLOY_PROCEED</code><a class="headerlink" href="#DREVOPS_EXPORT_DB_DOCKER_DEPLOY_PROCEED" title="Permanent link">&para;</a></h3>
 <p>Proceed with Docker image deployment after it was exported.</p>
 <p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
@@ -6516,12 +6490,12 @@ You're not viewing the latest version.
 <h3 id="DREVOPS_NPM_VERBOSE"><code class="language-text highlight">DREVOPS_NPM_VERBOSE</code><a class="headerlink" href="#DREVOPS_NPM_VERBOSE" title="Permanent link">&para;</a></h3>
 <p>Print output from NPM install.</p>
 <p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
-<p>Defined in: <code class="language-text highlight">.env</code>, <code class="language-text highlight">scripts/drevops/build.sh</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code></p>
 <h3 id="DREVOPS_PROJECT"><code class="language-text highlight">DREVOPS_PROJECT</code><a class="headerlink" href="#DREVOPS_PROJECT" title="Permanent link">&para;</a></h3>
 <p>Project name.</p>
 <p>Drives internal naming within the codebase.<br />Does not affect the names of containers and development URL - those depend on<br />the project directory and can be overridden with <a href="#COMPOSE_PROJECT_NAME"><code class="language-text highlight">$COMPOSE_PROJECT_NAME</code></a>.</p>
 <p>Default value: <code class="language-text highlight">your_site</code></p>
-<p>Defined in: <code class="language-text highlight">.env</code>, <code class="language-text highlight">scripts/drevops/build.sh</code>, <code class="language-text highlight">scripts/drevops/info.sh</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code>, <code class="language-text highlight">scripts/drevops/info.sh</code></p>
 <h3 id="DREVOPS_PROVISION_ACQUIA_SKIP"><code class="language-text highlight">DREVOPS_PROVISION_ACQUIA_SKIP</code><a class="headerlink" href="#DREVOPS_PROVISION_ACQUIA_SKIP" title="Permanent link">&para;</a></h3>
 <p>Skip Drupal site provisioning in Acquia environment.</p>
 <p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
@@ -6577,6 +6551,10 @@ You're not viewing the latest version.
 <p>Skip purging of edge cache in Acquia environment.</p>
 <p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
 <p>Defined in: <code class="language-text highlight">ACQUIA ENVIRONMENT</code></p>
+<h3 id="DREVOPS_SHOW_LOGIN"><code class="language-text highlight">DREVOPS_SHOW_LOGIN</code><a class="headerlink" href="#DREVOPS_SHOW_LOGIN" title="Permanent link">&para;</a></h3>
+<p>Show one-time login link.</p>
+<p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
+<p>Defined in: <code class="language-text highlight">scripts/drevops/info.sh</code></p>
 <h3 id="DREVOPS_TASK_COPY_DB_ACQUIA_DST"><code class="language-text highlight">DREVOPS_TASK_COPY_DB_ACQUIA_DST</code><a class="headerlink" href="#DREVOPS_TASK_COPY_DB_ACQUIA_DST" title="Permanent link">&para;</a></h3>
 <p>Destination environment name to copy DB to.</p>
 <p>Default value: <code class="language-text highlight">UNDEFINED</code></p>
@@ -6697,7 +6675,7 @@ You're not viewing the latest version.
 <h3 id="DREVOPS_WEBROOT"><code class="language-text highlight">DREVOPS_WEBROOT</code><a class="headerlink" href="#DREVOPS_WEBROOT" title="Permanent link">&para;</a></h3>
 <p>Name of the webroot directory with Drupal codebase.</p>
 <p>Default value: <code class="language-text highlight">web</code></p>
-<p>Defined in: <code class="language-text highlight">.env</code>, <code class="language-text highlight">scripts/drevops/build.sh</code>, <code class="language-text highlight">scripts/drevops/download-db-lagoon.sh</code>, <code class="language-text highlight">scripts/drevops/info.sh</code>, <code class="language-text highlight">scripts/drevops/provision.sh</code>, <code class="language-text highlight">scripts/drevops/reset.sh</code></p>
+<p>Defined in: <code class="language-text highlight">.env</code>, <code class="language-text highlight">scripts/drevops/download-db-lagoon.sh</code>, <code class="language-text highlight">scripts/drevops/info.sh</code>, <code class="language-text highlight">scripts/drevops/provision.sh</code>, <code class="language-text highlight">scripts/drevops/reset.sh</code></p>
 <h3 id="DRUPAL_ADMIN_EMAIL"><code class="language-text highlight">DRUPAL_ADMIN_EMAIL</code><a class="headerlink" href="#DRUPAL_ADMIN_EMAIL" title="Permanent link">&para;</a></h3>
 <p>Drupal admin email. May need to be reset if database was sanitized.</p>
 <p>Default value: <code class="language-text highlight">webmaster@your-site-url.example</code></p>
