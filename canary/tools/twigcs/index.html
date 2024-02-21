@@ -2272,29 +2272,35 @@ You're not viewing the latest version.
 
 
 <h1 id="Twigcs">Twigcs<a class="headerlink" href="#Twigcs" title="Permanent link">&para;</a></h1>
-<p><a href="https://github.com/friendsoftwig/twigcs">https://github.com/friendsoftwig/twigcs</a></p>
+<p><a href="https://github.com/VincentLanglet/Twig-CS-Fixer">https://github.com/VincentLanglet/Twig-CS-Fixer</a></p>
 <blockquote>
 <p>The missing checkstyle for twig!</p>
 <p>Twigcs aims to be what phpcs is to php. It checks your codebase for violations on coding standards.</p>
 </blockquote>
-<p>DrevOps comes with <a href="https://github.com/drevops/drevops/tree/main/.twig_cs.php">pre-configured Twigcs ruleset</a> for Drupal projects.</p>
+<p>DrevOps comes with <a href="https://github.com/drevops/drevops/tree/main/.twig-cs-fixer.php">pre-configured Twigcs ruleset</a> for Drupal projects.</p>
 <h2 id="Usage">Usage<a class="headerlink" href="#Usage" title="Permanent link">&para;</a></h2>
-<p><div class="language-shell highlight"><pre><span></span><code>vendor/bin/twigcs
+<p><div class="language-shell highlight"><pre><span></span><code>vendor/bin/twig-cs-fixer
 </code></pre></div>
 or
 <div class="language-shell highlight"><pre><span></span><code>ahoy<span class="w"> </span>lint-be
 </code></pre></div></p>
 <h2 id="Configuration">Configuration<a class="headerlink" href="#Configuration" title="Permanent link">&para;</a></h2>
-<p>See <a href="https://github.com/friendsoftwig/twigcs#file-based-configuration">configuration reference</a>.</p>
-<p>All global configuration takes place in the <a href="https://github.com/drevops/drevops/tree/main/.twig_cs.php"><code class="language-text highlight">.twig_cs.php</code></a> file.</p>
+<p>See <a href="https://github.com/VincentLanglet/Twig-CS-Fixer/blob/main/docs/configuration.md">configuration reference</a>.</p>
+<p>All global configuration takes place in the <a href="https://github.com/drevops/drevops/tree/main/.twig-cs-fixer.php"><code class="language-text highlight">.twig-cs-fixer.php</code></a> file.</p>
 <p>Targets include custom modules and themes.</p>
 <p>Adding or removing targets:
-<div class="language-php highlight"><pre><span></span><code><span class="k">return</span> <span class="nx">Twigcs\Config\Config</span><span class="o">::</span><span class="na">create</span><span class="p">()</span>
-  <span class="o">-&gt;</span><span class="na">setName</span><span class="p">(</span><span class="s1">&#39;custom-config&#39;</span><span class="p">)</span>
-  <span class="o">-&gt;</span><span class="na">setSeverity</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">)</span>
-  <span class="o">-&gt;</span><span class="na">setReporter</span><span class="p">(</span><span class="s1">&#39;console&#39;</span><span class="p">)</span>
-  <span class="o">-&gt;</span><span class="na">setRuleSet</span><span class="p">(</span><span class="nx">Twigcs\Ruleset\Official</span><span class="o">::</span><span class="na">class</span><span class="p">)</span>
-<span class="hll">  <span class="o">-&gt;</span><span class="na">addFinder</span><span class="p">(</span><span class="nx">Twigcs\Finder\TemplateFinder</span><span class="o">::</span><span class="na">create</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">in</span><span class="p">(</span><span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/web/themes/custom/mytheme&#39;</span><span class="p">));</span>
+<div class="language-php highlight"><pre><span></span><code><span class="nv">$ruleset</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">TwigCsFixer\Ruleset\Ruleset</span><span class="p">();</span>
+<span class="nv">$ruleset</span><span class="o">-&gt;</span><span class="na">addStandard</span><span class="p">(</span><span class="k">new</span> <span class="nx">TwigCsFixer\Standard\Twig</span><span class="p">());</span>
+
+<span class="nv">$finder</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">TwigCsFixer\File\Finder</span><span class="p">();</span>
+<span class="nv">$finder</span><span class="o">-&gt;</span><span class="na">in</span><span class="p">(</span><span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/web/modules/custom&#39;</span><span class="p">);</span>
+<span class="nv">$finder</span><span class="o">-&gt;</span><span class="na">in</span><span class="p">(</span><span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/web/themes/custom&#39;</span><span class="p">);</span>
+
+<span class="nv">$config</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">TwigCsFixer\Config\Config</span><span class="p">();</span>
+<span class="nv">$config</span><span class="o">-&gt;</span><span class="na">setRuleset</span><span class="p">(</span><span class="nv">$ruleset</span><span class="p">);</span>
+<span class="nv">$config</span><span class="o">-&gt;</span><span class="na">setFinder</span><span class="p">(</span><span class="nv">$finder</span><span class="p">);</span>
+
+<span class="hll"><span class="k">return</span> <span class="nv">$config</span><span class="p">;</span>
 </span></code></pre></div></p>
 <h2 id="Ignoring">Ignoring<a class="headerlink" href="#Ignoring" title="Permanent link">&para;</a></h2>
 <p>Twigcs does not support ignoring a file inline.</p>
