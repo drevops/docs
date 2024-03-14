@@ -2282,7 +2282,7 @@ You're not viewing the latest version.
 <p><div class="language-shell highlight"><pre><span></span><code>vendor/bin/twig-cs-fixer
 </code></pre></div>
 or
-<div class="language-shell highlight"><pre><span></span><code>ahoy<span class="w"> </span>lint-be
+<div class="language-shell highlight"><pre><span></span><code>ahoy<span class="w"> </span>lint-fe
 </code></pre></div></p>
 <h2 id="Configuration">Configuration<a class="headerlink" href="#Configuration" title="Permanent link">&para;</a></h2>
 <p>See <a href="https://github.com/VincentLanglet/Twig-CS-Fixer/blob/main/docs/configuration.md">configuration reference</a>.</p>
@@ -2300,48 +2300,44 @@ or
 <span class="nv">$config</span><span class="o">-&gt;</span><span class="na">setRuleset</span><span class="p">(</span><span class="nv">$ruleset</span><span class="p">);</span>
 <span class="nv">$config</span><span class="o">-&gt;</span><span class="na">setFinder</span><span class="p">(</span><span class="nv">$finder</span><span class="p">);</span>
 
-<span class="hll"><span class="k">return</span> <span class="nv">$config</span><span class="p">;</span>
-</span></code></pre></div></p>
+<span class="k">return</span> <span class="nv">$config</span><span class="p">;</span>
+</code></pre></div></p>
 <h2 id="Ignoring">Ignoring<a class="headerlink" href="#Ignoring" title="Permanent link">&para;</a></h2>
+<p>Ignoring rules <strong>globally</strong> takes place in the  <a href="https://github.com/drevops/drevops/tree/main/.twig-cs-fixer.php"><code class="language-text highlight">.twig-cs-fixer.php</code></a> file:
+<div class="language-php highlight"><pre><span></span><code><span class="nv">$finder</span><span class="o">-&gt;</span><span class="na">exclude</span><span class="p">(</span><span class="s1">&#39;myCustomDirectory&#39;</span><span class="p">);</span>
+</code></pre></div></p>
 <p>All errors have an identifier with the syntax: <code class="language-text highlight">A.B:C:D</code> with
-- A: The rule short name (mainly made from the class name)
-- B: The error identifier (like the error level or a specific name)
-- C: The line the error occurs
-- D: The position of the token in the line the error occurs</p>
-<p>NB: The four parts are optional, all those format are working
-- A
-- A.B
-- A.B:C
-- A.B:C:D
-- A:C
-- A:C:D
-- A::D</p>
-<p>When you want to disable a rule, you can use of the following syntax:
-<div class="language-twig highlight"><pre><span></span><code><span class="c">{# twig-cs-fixer-disable A.B:C:D #}</span><span class="x"> =&gt; Apply to the whole file</span>
-<span class="c">{# twig-cs-fixer-disable-line A.B:C:D #}</span><span class="x"> =&gt; Apply to the line of the comment</span>
-<span class="c">{# twig-cs-fixer-disable-next-line A.B:C:D #}</span><span class="x"> =&gt; Apply to the next line of the comment</span>
+- <code class="language-text highlight">A</code>: The rule short name (mainly made from the class name)
+- <code class="language-text highlight">B</code>: The error identifier (like the error level or a specific name)
+- <code class="language-text highlight">C</code>: The line the error occurs
+- <code class="language-text highlight">D</code>: The position of the token in the line the error occurs</p>
+<p>The four parts are optional, all those format are working
+- <code class="language-text highlight">A</code>
+- <code class="language-text highlight">A.B</code>
+- <code class="language-text highlight">A.B:C</code>
+- <code class="language-text highlight">A.B:C:D</code>
+- <code class="language-text highlight">A:C</code>
+- <code class="language-text highlight">A:C:D</code>
+- <code class="language-text highlight">A::D</code></p>
+<p>If you need to know the errors identifier you have/want to ignore, you can run
+the linter command with the <code class="language-text highlight">--debug</code> option.</p>
+<p>To ignore <strong>all Twig CS Fixer rules</strong> within a file, place in the file header:
+<div class="language-twig highlight"><pre><span></span><code><span class="c">{# twig-cs-fixer-disable #}</span>
 </code></pre></div></p>
-<p>For instance:</p>
-<div class="language-twig highlight"><pre><span></span><code><span class="c">{# twig-cs-fixer-disable #}</span><span class="x"> =&gt; Disable every rule for the whole file</span>
-<span class="c">{# twig-cs-fixer-disable-line #}</span><span class="x"> =&gt; Disable every rule for the current line</span>
-<span class="c">{# twig-cs-fixer-disable-next-line #}</span><span class="x"> =&gt; Disable every rule for the next line</span>
-
-<span class="c">{# twig-cs-fixer-disable DelimiterSpacing #}</span><span class="x"> =&gt; Disable the rule &#39;DelimiterSpacing&#39; for the whole file</span>
-<span class="c">{# twig-cs-fixer-disable DelimiterSpacing:2 #}</span><span class="x"> =&gt; Disable the rule &#39;DelimiterSpacing&#39; for the line 2 of the file</span>
-<span class="c">{# twig-cs-fixer-disable-line DelimiterSpacing.After #}</span><span class="x"> =&gt; Disable the error &#39;After&#39; of the rule &#39;DelimiterSpacing&#39; for the current line</span>
-<span class="c">{# twig-cs-fixer-disable-next-line DelimiterSpacing::1 #}</span><span class="x"> =&gt; Disable the rule &#39;DelimiterSpacing&#39; for the next line but only for the token 1</span>
-</code></pre></div>
-<p>You can also disable multiple errors with a single comment, by separating them
-with a space or a comma:
-<div class="language-twig highlight"><pre><span></span><code><span class="c">{# twig-cs-fixer-disable DelimiterSpacing OperatorNameSpacing #}</span><span class="x"> =&gt; Disable OperatorNameSpacing and OperatorNameSpacing for the whole file</span>
-<span class="c">{# twig-cs-fixer-disable-line DelimiterSpacing.Before,OperatorNameSpacing.After #}</span><span class="x"> =&gt; Disable DelimiterSpacing.Before and OperatorNameSpacing.After for the current line</span>
+<p>To ignore <strong>a specific rule</strong> within a file, place in the file header:
+<div class="language-twig highlight"><pre><span></span><code><span class="c">{# twig-cs-fixer-disable A.B:C:D #}</span>
 </code></pre></div></p>
-<p>If you need to know the errors identifier you have/want to ignore, you can run the
-linter command with the <code class="language-text highlight">--debug</code> options.</p>
+<p>Twig CS Fixer does not support ignoring of the <strong>code blocks</strong>.</p>
+<p>To ignore only the <strong>current line</strong>:
+<div class="language-twig highlight"><pre><span></span><code><span class="c">{# twig-cs-fixer-disable-next-line A.B:C:D #}</span>
+</code></pre></div></p>
+<p>To ignore only the <strong>next line</strong>:
+<div class="language-twig highlight"><pre><span></span><code><span class="c">{# twig-cs-fixer-disable-line A.B:C:D #}</span>
+</code></pre></div></p>
 <h2 id="Ignoring-fail-in-CI">Ignoring fail in CI<a class="headerlink" href="#Ignoring-fail-in-CI" title="Permanent link">&para;</a></h2>
 <p>This tool runs in CI by default and fails the build if there are any violations.</p>
-<p>Set <code class="language-text highlight">DREVOPS_CI_TWIG_CS_FIXER_IGNORE_FAILURE</code> environment variable to <code class="language-text highlight">1</code> to ignore
-failures. The tool will still run and report violations, if any.</p>
+<p>Set <code class="language-text highlight">DREVOPS_CI_TWIG_CS_FIXER_IGNORE_FAILURE</code> environment variable to <code class="language-text highlight">1</code> to
+ignore failures. The tool will still run and report violations, if any.</p>
 
 
 
